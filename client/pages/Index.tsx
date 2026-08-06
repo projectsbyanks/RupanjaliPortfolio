@@ -163,7 +163,7 @@ export default function Index() {
             I'm interested in what each way of thinking can reveal about the
             other.
           </p>
-          <h2 className="text-center font-display text-5xl italic leading-[0.9] tracking-[-0.04em] text-ink sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] xl:leading-[86px]">
+          <h2 className="text-center font-vogue text-5xl italic leading-[0.9] tracking-[-0.04em] text-ink sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] xl:leading-[86px]">
             In Studio
             <br />
             with Rupanjali Kukal
