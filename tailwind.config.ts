@@ -14,10 +14,16 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Playfair Display", "serif"],
-        serif: ["Times New Roman", "Times", "serif"],
+        // Design tokens (defined as CSS variables in global.css)
+        display: ["var(--font-display)"],
+        heading: ["var(--font-heading)"],
+        body: ["var(--font-body)"],
+        // Back-compat aliases mapping onto the same tokens
+        serif: ["var(--font-body)"],
+        vogue: ["var(--font-display)"],
+        sf: ["var(--font-heading)"],
+        // Inter kept for the shadcn/ui component library
         sans: ["Inter", "system-ui", "sans-serif"],
-        vogue: ["Very Vogue Display", "serif"],
       },
       colors: {
         ink: "#1A1A1A",

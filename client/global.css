@@ -1,13 +1,16 @@
 /** @import must precede all other statements */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 @import "tailwindcss";
 
 /* Theme, content globs, and plugins are declared in tailwind.config.ts. */
 @config "../tailwind.config.ts";
 
+/* ------------------------------------------------------------------ */
+/* Self-hosted display font (Very Vogue — Regular + Italic)            */
+/* ------------------------------------------------------------------ */
 @font-face {
-  font-family: "Very Vogue Display";
+  font-family: "Very Vogue";
   src: url("/fonts/very-vogue-display.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
@@ -15,11 +18,94 @@
 }
 
 @font-face {
-  font-family: "Very Vogue Display";
+  font-family: "Very Vogue";
   src: url("/fonts/very-vogue-display-italic.otf") format("opentype");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
+}
+
+/* ------------------------------------------------------------------ */
+/* Typography design tokens                                           */
+/*   --font-display → Very Vogue (self-hosted, commercial display)    */
+/*   --font-heading → SF Pro (system-hosted on Apple devices)         */
+/*   --font-body    → Times New Roman                                 */
+/* ------------------------------------------------------------------ */
+:root {
+  --font-display: "Very Vogue", Georgia, serif;
+  --font-heading:
+    "SF Pro Display", "SF Pro Text", -apple-system, "Helvetica Neue", Arial,
+    sans-serif;
+  --font-body: "Times New Roman", Times, serif;
+}
+
+/* ------------------------------------------------------------------ */
+/* Central type scale (starting values — tune here, not inline)       */
+/* ------------------------------------------------------------------ */
+@layer components {
+  /* Large display heading used for the Hidden Layers banner */
+  .t-hero {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  /* Section titles — emphasized word gets `.italic` inline */
+  .t-section {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+  }
+
+  /* Detection / Segmentation … capability list — SF Pro Regular 40/40, -5% */
+  .t-capability {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.05em;
+  }
+
+  /* Label (e.g. "Costal Manila", contact name) */
+  .t-label {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+
+  /* Secondary label (year, contact sub-labels) */
+  .t-label-sub {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+
+  /* Body copy — Times New Roman, regular, 20 / 20 */
+  .t-body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  /* Small captions (role text, contact intro) */
+  .t-caption {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  /* Testimonial name — Very Vogue italic */
+  .t-testimonial-name {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1.1;
+  }
 }
 
 @layer base {

@@ -1,8 +1,11 @@
+import { motion, useReducedMotion } from "framer-motion";
+
 interface TestimonialCardProps {
   avatar: string;
   name: string;
   role: string;
   quote: string;
+  index?: number;
 }
 
 export default function TestimonialCard({
@@ -10,27 +13,33 @@ export default function TestimonialCard({
   name,
   role,
   quote,
+  index = 0,
 }: TestimonialCardProps) {
+  const reduce = useReducedMotion();
   return (
-    <div className="flex flex-1 min-w-[260px] flex-col gap-16 bg-cream p-4">
-      <div className="flex items-start gap-3">
+    <motion.div
+      className="flex min-h-[340px] flex-col bg-cream p-8"
+      initial={{ opacity: 0, y: reduce ? 0 : 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{
+        duration: 0.55,
+        ease: "easeOut",
+        delay: reduce ? 0 : Math.min(index * 0.08, 0.4),
+      }}
+    >
+      <div className="flex items-center gap-3">
         <img
           src={avatar}
           alt={name}
-          className="h-[60px] w-[60px] shrink-0 rounded-full object-cover"
+          className="h-14 w-14 shrink-0 rounded-full object-cover"
         />
-        <div className="flex flex-col gap-1.5">
-          <div className="font-display text-2xl italic tracking-[-0.02em] text-ink">
-            {name}
-          </div>
-          <div className="font-serif text-sm tracking-[-0.05em] text-ink">
-            {role}
-          </div>
+        <div className="flex flex-col gap-1">
+          <div className="t-testimonial-name text-ink">{name}</div>
+          <div className="t-caption text-ink">{role}</div>
         </div>
       </div>
-      <p className="font-serif text-lg tracking-[-0.05em] text-ink">
-        {quote}
-      </p>
-    </div>
+      <p className="t-body mt-auto pt-16 text-left text-ink">{quote}</p>
+    </motion.div>
   );
 }

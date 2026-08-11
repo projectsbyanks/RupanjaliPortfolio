@@ -20,7 +20,7 @@ export default function SiteNav() {
           end={link.to === "/"}
           className={({ isActive }) =>
             cn(
-              "font-serif text-base tracking-[-0.05em] text-ink transition-opacity hover:opacity-70",
+              "font-sf text-base tracking-[-0.05em] text-ink transition-opacity hover:opacity-70",
               isActive ? "font-bold" : "font-normal",
             )
           }
