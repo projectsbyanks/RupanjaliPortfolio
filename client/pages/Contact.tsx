@@ -1,0 +1,122 @@
+import { FormEvent } from "react";
+import { motion } from "framer-motion";
+import { toast } from "sonner";
+import SiteLayout from "@/components/site/SiteLayout";
+import SectionHeading from "@/components/site/SectionHeading";
+import ContactDetails from "@/components/site/ContactDetails";
+import { useFadeUp } from "@/lib/reveal";
+
+// NOTE: placeholder image (reused art asset) — swap for the real sketch.
+const CONTACT_IMAGE = "/assets/contact-art.jpg";
+
+const inputClass =
+  "w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 font-heading text-base text-ink placeholder:text-neutral-400 outline-none transition-colors focus:border-ink";
+
+function Field({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex flex-col gap-2">
+      <label className="font-heading text-base font-semibold text-ink">
+        {label}
+      </label>
+      {children}
+    </div>
+  );
+}
+
+export default function Contact() {
+  const fadeUp = useFadeUp();
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    toast.success("Thanks! Your message has been noted.");
+    e.currentTarget.reset();
+  };
+
+  return (
+    <SiteLayout>
+      <div className="flex flex-col gap-[242px] pt-[242px]">
+        {/* Heading + form */}
+        <section className="flex flex-col gap-12 lg:flex-row lg:gap-16">
+          <div className="flex flex-col gap-6 lg:w-1/3">
+            <SectionHeading
+              title={
+                <>
+                  Start the
+                  <br />
+                  <span className="italic">Conversation</span>
+                </>
+              }
+            />
+            <motion.p
+              className="t-body max-w-[24ch] text-ink"
+              {...fadeUp(0.15)}
+            >
+              If you have questions or you need to contact me to discuss ideas
+              or art.
+            </motion.p>
+          </div>
+
+          <motion.form
+            onSubmit={handleSubmit}
+            className="flex w-full max-w-xl flex-col gap-6 lg:flex-1"
+            {...fadeUp(0.1)}
+          >
+            <Field label="Your Good Name">
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Name"
+                className={inputClass}
+              />
+            </Field>
+            <Field label="Your Email ID">
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Email Address"
+                className={inputClass}
+              />
+            </Field>
+            <Field label="Let's Discuss">
+              <textarea
+                name="message"
+                required
+                placeholder="Message"
+                rows={10}
+                className={`${inputClass} resize-none`}
+              />
+            </Field>
+            <button
+              type="submit"
+              className="w-fit rounded-lg bg-ink px-6 py-3 font-heading text-base font-medium text-white transition-transform duration-300 hover:-translate-y-0.5"
+            >
+              Send Message
+            </button>
+          </motion.form>
+        </section>
+
+        {/* Image + contact details */}
+        <section className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
+          <motion.div className="overflow-hidden" {...fadeUp()}>
+            <img
+              src={CONTACT_IMAGE}
+              alt="Rupanjali Kukal"
+              className="h-[423px] w-[423px] object-cover"
+            />
+          </motion.div>
+          <motion.div className="w-full max-w-xs" {...fadeUp(0.15)}>
+            <ContactDetails />
+          </motion.div>
+        </section>
+      </div>
+    </SiteLayout>
+  );
+}

@@ -1,6 +1,7 @@
 import SiteLayout from "@/components/site/SiteLayout";
 import TestimonialCard from "@/components/site/TestimonialCard";
 import GalleryCard from "@/components/site/GalleryCard";
+import FooterBanner from "@/components/site/FooterBanner";
 import { ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
@@ -80,10 +81,10 @@ function AchievementText({ index = 0 }: { index?: number }) {
       className="flex flex-1 flex-col"
       {...ACHIEVEMENT_MOTION(!!reduce, index)}
     >
-      <h4 className="font-body text-[26px] font-bold leading-tight tracking-[-0.02em] text-ink">
+      <h4 className="font-body text-[26px] font-bold leading-tight tracking-[-0.05em] text-ink">
         {ACHIEVEMENT.title}
       </h4>
-      <div className="mt-2 font-body text-2xl text-ink">{ACHIEVEMENT.year}</div>
+      <div className="mt-2 font-body text-2xl font-light tracking-[-0.05em] text-ink">{ACHIEVEMENT.year}</div>
       <p className="t-body mt-6 text-neutral-400">{ACHIEVEMENT.description}</p>
     </motion.div>
   );
@@ -105,7 +106,7 @@ function AchievementImage({ index = 0 }: { index?: number }) {
         />
       </div>
       <span className="t-label font-medium text-ink">Costal Manila</span>
-      <div className="mt-2 font-body text-2xl text-ink">{ACHIEVEMENT.year}</div>
+      <div className="mt-2 font-body text-2xl font-light tracking-[-0.05em] text-ink">{ACHIEVEMENT.year}</div>
       <p className="t-body mt-6 text-neutral-400">{MOMENTS_DESC}</p>
     </motion.div>
   );
@@ -234,7 +235,7 @@ export default function Index() {
                 <br />
                 Layers
               </h3>
-              <p className="mt-6 max-w-[34ch] text-justify font-body text-[24px] font-normal leading-[24px] text-white">
+              <p className="mt-6 max-w-[34ch] t-body text-justify text-white">
                 Where the language of artificial intelligence becomes a lens
                 for exploring perception, identity, and creation through art.
               </p>
@@ -494,13 +495,7 @@ export default function Index() {
           </motion.div>
         </section>
 
-        <motion.div className="overflow-hidden" {...fadeUp()}>
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/eb8234c9ae7d41fb82b2c2ef34371d72cad9d170?width=2800"
-            alt=""
-            className="aspect-[175/31] w-full object-cover"
-          />
-        </motion.div>
+        <FooterBanner />
       </div>
     </SiteLayout>
   );

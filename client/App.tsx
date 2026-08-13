@@ -7,6 +7,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import ResearchNews from "./pages/ResearchNews";
+import HiddenLayers from "./pages/HiddenLayers";
+import MyArt from "./pages/MyArt";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import NotFound from "./pages/NotFound";
 
@@ -20,26 +25,11 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route
-            path="/research-news"
-            element={<PlaceholderPage title="Research News" />}
-          />
-          <Route
-            path="/hidden-layers"
-            element={<PlaceholderPage title="Hidden Layers" />}
-          />
-          <Route
-            path="/my-art"
-            element={<PlaceholderPage title="My Art" />}
-          />
-          <Route
-            path="/about"
-            element={<PlaceholderPage title="About Me" />}
-          />
-          <Route
-            path="/contact"
-            element={<PlaceholderPage title="Contact Me" />}
-          />
+          <Route path="/research-news" element={<ResearchNews />} />
+          <Route path="/hidden-layers" element={<HiddenLayers />} />
+          <Route path="/my-art" element={<MyArt />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

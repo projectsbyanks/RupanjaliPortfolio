@@ -84,19 +84,22 @@
     line-height: 1.2;
   }
 
-  /* Body copy — Times New Roman, regular, 20 / 20 */
+  /* Body copy — Times New Roman, light, 20 / 20 */
   .t-body {
     font-family: var(--font-body);
-    font-weight: 400;
+    font-weight: 300;
     font-size: 20px;
     line-height: 20px;
+    letter-spacing: -0.05em;
   }
 
   /* Small captions (role text, contact intro) */
   .t-caption {
     font-family: var(--font-body);
+    font-weight: 300;
     font-size: 0.95rem;
     line-height: 1.45;
+    letter-spacing: -0.05em;
   }
 
   /* Testimonial name — Very Vogue italic */
@@ -105,6 +108,24 @@
     font-style: italic;
     font-size: 1.5rem;
     line-height: 1.1;
+  }
+
+  /* Research News: talk-list title — SF Pro Regular 24/40, -5% */
+  .t-talk-title {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: -0.05em;
+  }
+
+  /* Research News: expertise heading — SF Pro Medium 32/40, -5% */
+  .t-expertise {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.05em;
   }
 }
 

@@ -10,6 +10,7 @@ interface GalleryCardProps {
   index?: number;
   showDescription?: boolean;
   showLabel?: boolean;
+  onImageClick?: (src: string) => void;
 }
 
 export default function GalleryCard({
@@ -22,6 +23,7 @@ export default function GalleryCard({
   index = 0,
   showDescription = true,
   showLabel = true,
+  onImageClick,
 }: GalleryCardProps) {
   const reduce = useReducedMotion();
   const hasText = showDescription || showLabel;
@@ -42,7 +44,8 @@ export default function GalleryCard({
           <img
             src={image}
             alt={`${title} ${year}`}
-            className={`w-full object-cover transition-transform duration-700 ease-out hover:scale-105 ${imageClassName}`}
+            onClick={onImageClick ? () => onImageClick(image) : undefined}
+            className={`w-full object-cover transition-transform duration-700 ease-out hover:scale-105 ${imageClassName} ${onImageClick ? "cursor-zoom-in" : ""}`}
           />
         </div>
       ) : null}

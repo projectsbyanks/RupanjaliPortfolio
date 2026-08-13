@@ -10,7 +10,7 @@ const NAV_LINKS = [
   { label: "Contact Me", to: "/contact" },
 ];
 
-export default function SiteNav() {
+export default function SiteNav({ linkClassName }: { linkClassName?: string }) {
   return (
     <nav className="flex w-full flex-wrap items-center justify-center gap-x-6 gap-y-2 py-2 sm:justify-between">
       {NAV_LINKS.map((link) => (
@@ -22,6 +22,7 @@ export default function SiteNav() {
             cn(
               "font-sf text-base tracking-[-0.05em] text-ink transition-opacity hover:opacity-70",
               isActive ? "font-bold" : "font-normal",
+              linkClassName,
             )
           }
         >
