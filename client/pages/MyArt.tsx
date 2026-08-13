@@ -13,7 +13,10 @@ const INTRO =
 const DESC =
   "Every project begins with an idea and evolves through exploration, intention, and craft.";
 
-const FRAMES = Array.from({ length: 10 }, (_, i) => `/assets/frame-${i + 1}.jpg`);
+const FRAMES = [
+  "/assets/Resources/Frame 42.png",
+  ...Array.from({ length: 9 }, (_, i) => `/assets/frame-${i + 2}.jpg`),
+];
 
 function Mosaic({
   tiles = FRAMES,
@@ -132,16 +135,15 @@ export default function MyArt() {
         <section className="flex flex-col gap-12 lg:gap-[242px]">
           <div className="flex flex-col items-start gap-6 lg:flex-row lg:items-start lg:justify-center lg:gap-[224px]">
             <SectionHeading
+              className="text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px]"
               title={
                 <>
-                  My <span className="italic">Creative</span>
-                  <br />
-                  Archive
+                  My <span className="italic">Creative</span> Archive
                 </>
               }
             />
             <motion.p
-              className="t-body max-w-[394px] text-ink lg:pt-[52px]"
+              className="font-heading font-[250] text-[12px] leading-[1.45] tracking-[1px] text-ink max-w-[394px] lg:pt-[52px]"
               {...fadeUp(0.15)}
             >
               {INTRO}
