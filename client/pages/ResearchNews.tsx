@@ -41,10 +41,10 @@ export default function ResearchNews() {
 
   return (
     <SiteLayout>
-      <div className="flex flex-col gap-12 pt-16 lg:gap-24 lg:pt-20">
+      <div className="flex flex-col gap-12 pt-16 lg:gap-16 lg:pt-20">
         {/* Page title — large, no hero image */}
         <motion.h1
-          className="t-section text-ink lg:text-[80px] lg:leading-[0.9]"
+          className="t-section text-ink lg:pl-16 lg:text-[80px] lg:leading-[1.35]"
           {...fadeUp()}
         >
           <span className="italic">Research</span>
