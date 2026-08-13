@@ -56,7 +56,7 @@ export default function ResearchNews() {
           <img
             src={HERO_IMAGE}
             alt="Research News"
-            className="aspect-[7/2] w-full object-cover"
+            className="aspect-square w-full object-cover lg:aspect-[7/2]"
           />
           <div className="absolute inset-0 flex flex-col items-start justify-center gap-4 px-4 pt-[40px] lg:flex-row lg:items-center lg:gap-16 lg:px-20">
             <motion.h1
@@ -68,7 +68,7 @@ export default function ResearchNews() {
               News
             </motion.h1>
             <motion.div
-              className="flex max-w-[394px] flex-col gap-3"
+              className="hidden max-w-[394px] flex-col gap-3 lg:flex"
               {...fadeUp(0.15)}
             >
               <p className="t-body font-light text-justify text-white">{INTRO_1}</p>

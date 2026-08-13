@@ -153,23 +153,25 @@ export default function HiddenLayers() {
             src="/assets/hidden-hero.jpg"
             alt="Hidden Layers"
             onClick={() => openLightbox("/assets/hidden-hero.jpg")}
-            className="aspect-[16/9] w-full cursor-zoom-in object-cover"
+            className="aspect-[3/4] w-full cursor-zoom-in object-cover lg:aspect-[16/9]"
           />
           <div className="absolute inset-0 flex items-center px-4 pt-[40px] lg:px-20">
             <div className="flex max-w-[728px] flex-col gap-4">
               <motion.h1
-                className="font-display text-3xl leading-[0.95] tracking-[-0.02em] text-white sm:text-5xl lg:text-6xl"
+                className="font-display text-4xl leading-[0.95] tracking-[-0.02em] text-white lg:text-6xl"
                 {...fadeUp()}
               >
                 Hidden <span className="italic">Layers</span>
               </motion.h1>
               <motion.div className="flex flex-col gap-3 pl-4 lg:pl-[72px]" {...fadeUp(0.15)}>
                 <p className="t-body text-white">{HERO_LEAD}</p>
-                {HERO_PARAS.map((p, i) => (
-                  <p key={i} className="t-body text-white">
-                    {p}
-                  </p>
-                ))}
+                <div className="hidden flex-col gap-3 lg:flex">
+                  {HERO_PARAS.map((p, i) => (
+                    <p key={i} className="t-body text-white">
+                      {p}
+                    </p>
+                  ))}
+                </div>
               </motion.div>
             </div>
           </div>
