@@ -44,7 +44,7 @@ export default function ResearchNews() {
       <div className="flex flex-col gap-12 pt-16 lg:gap-24 lg:pt-20">
         {/* Page title — large, no hero image */}
         <motion.h1
-          className="t-section text-ink lg:text-[76px] lg:leading-[0.97]"
+          className="t-section text-ink lg:text-[80px] lg:leading-[0.9]"
           {...fadeUp()}
         >
           <span className="italic">Research</span>
@@ -58,14 +58,14 @@ export default function ResearchNews() {
             <motion.a
               key={i}
               href="#"
-              className="group flex items-start justify-between gap-6 py-9"
+              className="group flex items-start justify-between gap-6 py-6"
               {...fadeUp(Math.min(i * 0.08, 0.4))}
             >
-              <div className="flex flex-col gap-[16px]">
-                <h3 className="font-body font-normal text-[27px] leading-[1.35] tracking-[-0.05em] text-ink max-w-[72ch]">
+              <div className="flex flex-col gap-2">
+                <h3 className="t-talk-title max-w-[72ch] leading-[40px] text-ink">
                   {talk.title}
                 </h3>
-                <span className="font-heading font-normal text-[17px] leading-[1.4] tracking-[-0.05em] text-neutral-500">
+                <span className="font-heading font-normal text-[14px] leading-none tracking-[-0.05em] text-neutral-500">
                   {talk.date}
                 </span>
               </div>
