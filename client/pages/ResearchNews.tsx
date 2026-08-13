@@ -44,7 +44,7 @@ export default function ResearchNews() {
       <div className="flex flex-col gap-12 pt-16 lg:gap-16 lg:pt-20">
         {/* Page title — large, no hero image */}
         <motion.h1
-          className="t-section text-ink lg:pl-16 lg:text-[80px] lg:leading-[1.35]"
+          className="t-section text-ink lg:pl-16 text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px]"
           {...fadeUp()}
         >
           <span className="italic">Research</span>
