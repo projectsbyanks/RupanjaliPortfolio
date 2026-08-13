@@ -9,16 +9,16 @@ export default function ContactDetails({
       <div className="t-label font-medium text-[21px] text-ink">
         Rupanjali Kukal
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-1">
         <div className="flex flex-col gap-0">
           <div className="font-heading text-base font-normal text-ink">Phone</div>
-          <div className="t-label font-medium text-[19px] text-ink">
+          <div className="t-label font-medium text-[12px] text-ink lg:text-[19px]">
             +91 9026736177
           </div>
         </div>
         <div className="flex flex-col gap-0">
           <div className="font-heading text-base font-normal text-ink">Email</div>
-          <div className="t-label font-medium text-[19px] text-ink">
+          <div className="t-label font-medium text-[12px] text-ink lg:text-[19px]">
             rupanjali.kukal.rk@gmail.com
           </div>
         </div>

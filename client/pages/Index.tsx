@@ -227,15 +227,15 @@ export default function Index() {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/5bcfc09b640e04a7e7f3d84268d95c19be51d014?width=2800"
               alt="Hidden Layers"
-              className="aspect-[175/69] w-full object-cover transition-transform duration-700 ease-out hover:scale-[1.03]"
+              className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out hover:scale-[1.03] lg:aspect-[175/69]"
             />
-            <div className="absolute left-6 top-6 max-w-[240px] sm:left-12 sm:top-12 sm:max-w-md">
+            <div className="absolute inset-0 flex flex-col justify-center px-6 sm:px-12 lg:block lg:left-12 lg:top-12 lg:max-w-md">
               <h3 className="t-hero text-white">
                 <span className="italic">Hidden</span>
                 <br />
                 Layers
               </h3>
-              <p className="mt-6 max-w-[34ch] t-body text-justify text-white">
+              <p className="mt-5 max-w-[34ch] t-body text-justify text-white">
                 Where the language of artificial intelligence becomes a lens
                 for exploring perception, identity, and creation through art.
               </p>
