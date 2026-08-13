@@ -8,19 +8,18 @@ import Lightbox from "@/components/site/Lightbox";
 import { useFadeUp } from "@/lib/reveal";
 
 const HERO_LEAD =
-  "Where art and artificial intelligence become two ways of asking the same questions.";
+  "Where art and artificial intelligence become two ways of asking the same questions. The materials in Machine Language and Art are different—code and data in one, color and form in the other—but look closely at how meaning is constructed.";
 
 const HERO_PARAS = [
-  "My work in AI and my work as an artist have never felt entirely separate. The materials are different—code and data in one, color and form in the other—but both ask me to look closely at how meaning is constructed.",
-  "In machine learning, we teach systems to separate objects from their surroundings, recognize them across changing perspectives, connect information from different sources, follow an identity through time, and generate something new from what they have learned. In art, I find myself returning to many of those same ideas intuitively.",
-  "Hidden Layers is where I bring those two practices together.",
+  "In machine language, we teach systems to separate objects from their surroundings, recognize them across changing perspectives, connect information from different sources, follow an identity through time, and generate something new from what they have learned. In art, one can return to those same ideas intuitively.",
+  "Hidden Layers is where I attempt to bring those two practices together.",
   "Rather than using AI to create the artwork, I use art to think through AI: taking concepts that usually live inside papers, models, and equations and translating them into visual questions about perception, identity, memory, ambiguity, and change.",
 ];
 
 // Borrowed from the landing "Impact & Recognition" gallery
 const GALLERY = [
   "https://api.builder.io/api/v1/image/assets/TEMP/5db1216421a406ad3e28781fa5ce6045e61fe966?width=578",
-  "https://api.builder.io/api/v1/image/assets/TEMP/5d820eb73b3a3d42a90521ef20a62783906d0748?width=572",
+  "https://api.builder.io/api/v1/image/assets/TEMP/5db1216421a406ad3e28781fa5ce6045e61fe966?width=578",
   "https://api.builder.io/api/v1/image/assets/TEMP/42dc83651317bb4c34563b428894009e9bacf4f1?width=574",
   "https://api.builder.io/api/v1/image/assets/TEMP/ef7cd05697d7568c77b1fa2062b355e339168a55?width=572",
   "https://api.builder.io/api/v1/image/assets/TEMP/f35815cd67848505377f43866438c9e2d562a59e?width=564",
