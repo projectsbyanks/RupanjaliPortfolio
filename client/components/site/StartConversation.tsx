@@ -8,7 +8,7 @@ export default function StartConversation() {
   const fadeUp = useFadeUp();
   return (
     <section className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-2">
         <SectionHeading
           title={
             <>
@@ -19,7 +19,7 @@ export default function StartConversation() {
           }
         />
         <motion.p
-          className="t-body max-w-[22ch] text-ink lg:pt-4"
+          className="t-body max-w-[22ch] text-left text-ink lg:pt-4"
           {...fadeUp()}
         >
           If you have questions or you need to contact me to discuss ideas or art.
