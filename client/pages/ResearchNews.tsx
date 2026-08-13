@@ -47,9 +47,7 @@ export default function ResearchNews() {
           className="t-section text-ink lg:pl-16 text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px]"
           {...fadeUp()}
         >
-          <span className="italic">Research</span>
-          <br />
-          News
+          <span className="italic">Research</span> News
         </motion.h1>
 
         {/* Talks / news list with dividers */}
