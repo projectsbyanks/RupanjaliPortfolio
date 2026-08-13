@@ -18,11 +18,11 @@ const HERO_PARAS = [
 
 // Borrowed from the landing "Impact & Recognition" gallery
 const GALLERY = [
-  { image: "https://api.builder.io/api/v1/image/assets/TEMP/5d820eb73b3a3d42a90521ef20a62783906d0748?width=572", year: "01", title: "Detection", description: "What makes something worth noticing?" },
-  { image: "https://api.builder.io/api/v1/image/assets/TEMP/5d820eb73b3a3d42a90521ef20a62783906d0748?width=572", year: "02", title: "Segmentation", description: "Defining boundaries" },
-  { image: "https://api.builder.io/api/v1/image/assets/TEMP/42dc83651317bb4c34563b428894009e9bacf4f1?width=574", year: "03", title: "Tracking", description: "Change through time" },
-  { image: "https://api.builder.io/api/v1/image/assets/TEMP/ef7cd05697d7568c77b1fa2062b355e339168a55?width=572", year: "04", title: "Multimodality", description: "How many ways can the same thing be understood?" },
-  { image: "https://api.builder.io/api/v1/image/assets/TEMP/f35815cd67848505377f43866438c9e2d562a59e?width=564", year: "05", title: "Generation", description: "How does something new emerge from what already exists?" },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/5d820eb73b3a3d42a90521ef20a62783906d0748?width=572", year: "01", title: "Detection", description: "What's something worth noticing?" },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/5d820eb73b3a3d42a90521ef20a62783906d0748?width=572", year: "02", title: "Segmentation", description: "Defining boundaries." },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/42dc83651317bb4c34563b428894009e9bacf4f1?width=574", year: "03", title: "Tracking", description: "Changes through time." },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/ef7cd05697d7568c77b1fa2062b355e339168a55?width=572", year: "04", title: "Multimodality", description: "One thing, many meanings." },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/f35815cd67848505377f43866438c9e2d562a59e?width=564", year: "05", title: "Generation", description: "Creation from existence." },
 ];
 
 interface Feature {
