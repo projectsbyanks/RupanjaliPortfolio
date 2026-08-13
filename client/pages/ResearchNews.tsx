@@ -23,10 +23,28 @@ const TALKS = [
   { date: "Aug '21", title: "Started graduate school at Carnegie Mellon University." },
 ];
 
-const EXPERTISE = Array.from({ length: 5 }).map(() => ({
-  title: "Multi-Modal Foundational Model",
-  items: ["Vision Language Modelling", "Cross-Modality Model Development"],
-}));
+const EXPERTISE = [
+  {
+    title: "Multi-Modal Foundational Model",
+    items: ["Vision Language Modelling", "Cross-Modality Model Development"],
+  },
+  {
+    title: "Geospatial Modelling",
+    items: ["Geospatial Map Generation", "Human in the loop map generation and correction"],
+  },
+  {
+    title: "Perception",
+    items: ["End-to-end Tracking Systems", "Track Linking, Track Fragment Association"],
+  },
+  {
+    title: "Real-Time Deep Learning Systems",
+    items: ["High-Speed Off-road Segmentation", "Aerial Detection and Tracking"],
+  },
+  {
+    title: "AI Optimization",
+    items: ["NNI", "ONNX Modelling", "TensorRT"],
+  },
+];
 
 function ArrowIcon() {
   return (
