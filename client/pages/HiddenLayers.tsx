@@ -47,7 +47,7 @@ const FEATURES: Feature[] = [
       </>
     ),
     body: "Before we can understand something, we first have to register that it is there. In AI, detection means identifying an object within a larger visual field. In human perception, noticing is more subjective. Our attention is shaped by context, memory, expectation, and experience. Two people can look at the same scene and register completely different things. This work explores that space between what is present and what becomes visible to us—and how the act of noticing shapes everything that follows.",
-    image: "/assets/koi.jpg",
+    image: "/assets/fan.jpg",
   },
   {
     label: "Segmentation",

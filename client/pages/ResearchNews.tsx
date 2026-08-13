@@ -124,7 +124,7 @@ export default function ResearchNews() {
                     {block.items.map((item) => (
                       <li
                         key={item}
-                        className="flex items-start gap-2 font-body font-light text-[20px] leading-[20px] tracking-[-0.05em] text-ink"
+                        className="flex items-start gap-2 font-body font-light text-[20px] leading-[calc(20px+1px)] tracking-[-0.05em] text-ink"
                       >
                         <span aria-hidden="true">•</span>
                         <span>{item}</span>
