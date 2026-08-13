@@ -166,10 +166,10 @@ export default function HiddenLayers() {
                 Hidden <span className="italic">Layers</span>
               </motion.h1>
               <motion.div className="flex flex-col gap-[15px] pl-4 lg:pl-[72px]" {...fadeUp(0.15)}>
-                <p className="font-heading font-[200] text-[14px] leading-[1.45] tracking-[-1px] text-white">{HERO_LEAD}</p>
+                <p className="font-heading font-[250] text-[12px] leading-[1.45] tracking-[1px] text-white">{HERO_LEAD}</p>
                 <div className="hidden flex-col gap-[15px] lg:flex">
                   {HERO_PARAS.map((p, i) => (
-                    <p key={i} className="font-heading font-[200] text-[14px] leading-[1.45] tracking-[-1px] text-white">
+                    <p key={i} className="font-heading font-[250] text-[12px] leading-[1.45] tracking-[1px] text-white">
                       {p}
                     </p>
                   ))}
