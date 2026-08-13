@@ -60,7 +60,7 @@ export default function ResearchNews() {
               {...fadeUp(Math.min(i * 0.08, 0.4))}
             >
               <div className="flex flex-col gap-2">
-                <h3 className="t-talk-title max-w-[72ch] leading-[40px] text-ink">
+                <h3 className="t-talk-title max-w-[72ch] text-[20px] leading-[21px] text-ink">
                   {talk.title}
                 </h3>
                 <span className="font-heading font-normal text-[14px] leading-none tracking-[-0.05em] text-neutral-500">
