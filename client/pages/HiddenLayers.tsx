@@ -126,7 +126,7 @@ function FeatureSection({
           <h3 className="font-display text-3xl leading-[1.05] tracking-[-0.02em] text-ink text-left sm:text-[40px]">
             {feature.heading}
           </h3>
-          <p className="t-body max-w-md pl-0 text-justify text-ink lg:pl-[100px]">{feature.body}</p>
+          <p className="font-heading text-[16px] tracking-[1px] max-w-md pl-0 text-justify text-ink lg:pl-[100px]">{feature.body}</p>
         </motion.div>
       </div>
     </section>
