@@ -126,7 +126,7 @@ export default function MyArt() {
   return (
     <SiteLayout>
       {lbSrc && <Lightbox src={lbSrc} onClose={closeLightbox} />}
-      <div className="flex flex-col gap-16 pt-16 lg:gap-[242px] lg:pt-[242px]">
+      <div className="flex flex-col gap-16 pt-16 lg:gap-[242px] lg:pt-20">
 
         {/* 1. Hero: My Creative Archive + grid + feature image */}
         <section className="flex flex-col gap-12 lg:gap-[242px]">
@@ -141,7 +141,7 @@ export default function MyArt() {
               }
             />
             <motion.p
-              className="t-body max-w-[394px] text-justify text-ink lg:pt-4"
+              className="t-body max-w-[394px] text-ink lg:pt-[52px]"
               {...fadeUp(0.15)}
             >
               {INTRO}
@@ -174,20 +174,6 @@ export default function MyArt() {
 
         {/* 7. Line Art 4 */}
         <LineArtSection onImageClick={openLightbox} />
-
-        {/* 8. Archive */}
-        <section className="flex flex-col gap-8 px-4 lg:gap-16 lg:px-[92px]">
-          <div className="flex flex-col items-start gap-6 lg:flex-row lg:items-start lg:justify-center lg:gap-[224px]">
-            <SectionHeading title="Archive" />
-            <motion.p
-              className="t-body max-w-[394px] text-justify text-ink lg:pt-4"
-              {...fadeUp(0.15)}
-            >
-              {INTRO}
-            </motion.p>
-          </div>
-          <Mosaic tiles={FRAMES} cols={5} onImageClick={openLightbox} />
-        </section>
 
         <StartConversation />
         <FooterBanner />
