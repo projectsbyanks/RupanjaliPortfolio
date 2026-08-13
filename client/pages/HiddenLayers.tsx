@@ -155,12 +155,12 @@ export default function HiddenLayers() {
             onClick={() => openLightbox("/assets/hidden-hero.jpg")}
             className="aspect-[3/4] w-full cursor-zoom-in object-cover lg:aspect-[16/9]"
           />
-          {/* Left-side gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/25 via-black/10 to-transparent" />
+          {/* Left-side gradient overlay — black/30 on left, fades to transparent at center */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/10 to-transparent" />
           <div className="absolute inset-0 flex items-center px-4 pt-[40px] lg:px-20">
             <div className="flex max-w-[640px] flex-col gap-6">
               <motion.h1
-                className="font-display text-4xl leading-[0.95] tracking-[-0.02em] text-white lg:text-[68px]"
+                className="font-display text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px] tracking-[-0.02em] text-white"
                 {...fadeUp()}
               >
                 Hidden <span className="italic">Layers</span>
