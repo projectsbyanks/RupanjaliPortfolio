@@ -6,21 +6,21 @@ import { motion } from "framer-motion";
 import { useFadeUp } from "@/lib/reveal";
 
 const TALKS = [
-  { date: "[Mar '26]", title: 'Talk on "Data Propagation Techniques for tracking objects in Aerial and Maritime Applications" at NAML (Naval Applications of Machine Learning) 2026' },
-  { date: "[Mar '26]", title: "Promotion at Microsoft as an ML Applied Scientist II." },
-  { date: "[Feb '26]", title: '"MARS-A Foundational Map Auto-Regressor" accepted at ICLR 2026!' },
-  { date: "[Jan '26]", title: 'Submitted "Greedy Centroid Weighted Boxes Fusion for Object Detection" patent with Microsoft' },
-  { date: "[Nov '25]", title: 'Submitted "Hierarchical Weighted Non-Maximum Suppression for Multi-Class Object Detection" patent with Microsoft' },
-  { date: "[Sept '25]", title: 'Posted "Geo-R1: Unlocking VLM Geospatial Reasoning with Cross-View Reinforcement Learning" on Arxiv' },
-  { date: "[Jun '25]", title: 'Submitted "MARS-A Foundational Map Auto-Regressor" patent with Microsoft!' },
-  { date: "[Oct '24]", title: '"Click&Describe: Multimodal Aerial Grounding and Tracking" accepted at WACV 2025!' },
-  { date: "[Oct '24]", title: '"Multimodal Aerial Grounding and Tracking" short paper accepted at NeurIPS 2024: Workshop on Video Language Models!' },
-  { date: "[Aug '24]", title: 'Submitted "Click&Describe: Multimodal Aerial Grounding and Tracking" patent with Microsoft' },
-  { date: "[Jul '23]", title: "Started role as ML Applied Scientist at Microsoft." },
-  { date: "[May '23]", title: "Finished master's program at Carnegie Mellon University." },
-  { date: "[Mar '23]", title: 'Published master\'s thesis on "Real Time Off-Road Semantic Segmentation" with DARPA and Robotics Institute at Carnegie Mellon.' },
-  { date: "[May '22]", title: "Working with Sebastian Scherer at AirLab on off-road semantic segmentation for the summer." },
-  { date: "[Aug '21]", title: "Started graduate school at Carnegie Mellon University." },
+  { date: "Mar '26", title: 'Talk on "Data Propagation Techniques for tracking objects in Aerial and Maritime Applications" at NAML (Naval Applications of Machine Learning) 2026' },
+  { date: "Mar '26", title: "Promotion at Microsoft as an ML Applied Scientist II." },
+  { date: "Feb '26", title: '"MARS-A Foundational Map Auto-Regressor" accepted at ICLR 2026!' },
+  { date: "Jan '26", title: 'Submitted "Greedy Centroid Weighted Boxes Fusion for Object Detection" patent with Microsoft' },
+  { date: "Nov '25", title: 'Submitted "Hierarchical Weighted Non-Maximum Suppression for Multi-Class Object Detection" patent with Microsoft' },
+  { date: "Sept '25", title: 'Posted "Geo-R1: Unlocking VLM Geospatial Reasoning with Cross-View Reinforcement Learning" on Arxiv' },
+  { date: "Jun '25", title: 'Submitted "MARS-A Foundational Map Auto-Regressor" patent with Microsoft!' },
+  { date: "Oct '24", title: '"Click&Describe: Multimodal Aerial Grounding and Tracking" accepted at WACV 2025!' },
+  { date: "Oct '24", title: '"Multimodal Aerial Grounding and Tracking" short paper accepted at NeurIPS 2024: Workshop on Video Language Models!' },
+  { date: "Aug '24", title: 'Submitted "Click&Describe: Multimodal Aerial Grounding and Tracking" patent with Microsoft' },
+  { date: "Jul '23", title: "Started role as ML Applied Scientist at Microsoft." },
+  { date: "May '23", title: "Finished master's program at Carnegie Mellon University." },
+  { date: "Mar '23", title: 'Published master\'s thesis on "Real Time Off-Road Semantic Segmentation" with DARPA and Robotics Institute at Carnegie Mellon.' },
+  { date: "May '22", title: "Working with Sebastian Scherer at AirLab on off-road semantic segmentation for the summer." },
+  { date: "Aug '21", title: "Started graduate school at Carnegie Mellon University." },
 ];
 
 const EXPERTISE = Array.from({ length: 5 }).map(() => ({
@@ -101,12 +101,12 @@ export default function ResearchNews() {
                 className="flex flex-col gap-3 py-6"
                 {...fadeUp(Math.min(i * 0.06, 0.3))}
               >
-                <h3 className="t-talk-title text-ink">{block.title}</h3>
+                <h3 className="t-talk-title text-[20px] leading-[22px] text-ink">{block.title}</h3>
                 <ul className="flex flex-col gap-1">
                   {block.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2 font-body font-light text-[14px] leading-[15px] tracking-[-0.05em] text-ink"
+                      className="flex items-start gap-2 font-heading font-light text-[14px] leading-[15px] tracking-[-0.05em] text-ink"
                     >
                       <span aria-hidden="true">•</span>
                       <span>{item}</span>
