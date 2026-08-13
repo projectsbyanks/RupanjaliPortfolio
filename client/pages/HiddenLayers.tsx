@@ -155,19 +155,21 @@ export default function HiddenLayers() {
             onClick={() => openLightbox("/assets/hidden-hero.jpg")}
             className="aspect-[3/4] w-full cursor-zoom-in object-cover lg:aspect-[16/9]"
           />
+          {/* Left-side gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/25 via-black/10 to-transparent" />
           <div className="absolute inset-0 flex items-center px-4 pt-[40px] lg:px-20">
-            <div className="flex max-w-[728px] flex-col gap-4">
+            <div className="flex max-w-[640px] flex-col gap-6">
               <motion.h1
-                className="font-display text-4xl leading-[0.95] tracking-[-0.02em] text-white lg:text-6xl"
+                className="font-display text-4xl leading-[0.95] tracking-[-0.02em] text-white lg:text-[68px]"
                 {...fadeUp()}
               >
                 Hidden <span className="italic">Layers</span>
               </motion.h1>
-              <motion.div className="flex flex-col gap-3 pl-4 lg:pl-[72px]" {...fadeUp(0.15)}>
-                <p className="t-body text-white">{HERO_LEAD}</p>
-                <div className="hidden flex-col gap-3 lg:flex">
+              <motion.div className="flex flex-col gap-[15px] pl-4 lg:pl-[72px]" {...fadeUp(0.15)}>
+                <p className="t-body text-[16px] leading-[1.45] text-white">{HERO_LEAD}</p>
+                <div className="hidden flex-col gap-[15px] lg:flex">
                   {HERO_PARAS.map((p, i) => (
-                    <p key={i} className="t-body text-white">
+                    <p key={i} className="t-body text-[16px] leading-[1.45] text-white">
                       {p}
                     </p>
                   ))}
