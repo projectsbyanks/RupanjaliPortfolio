@@ -87,6 +87,7 @@ export default function ResearchNews() {
         {/* Research Expertise with dividers */}
         <section className="flex flex-col gap-8 lg:px-16">
           <SectionHeading
+            className="text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px]"
             title={
               <>
                 <span className="italic">Research</span> Expertise
