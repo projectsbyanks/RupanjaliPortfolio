@@ -189,6 +189,7 @@ export default function HiddenLayers() {
                   title={item.title}
                   year={item.year}
                   description={item.description}
+                  descriptionClassName={i === 0 ? "!text-left" : ""}
                   onImageClick={openLightbox}
                 />
               ))}

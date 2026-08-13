@@ -7,6 +7,7 @@ interface GalleryCardProps {
   description: string;
   className?: string;
   imageClassName?: string;
+  descriptionClassName?: string;
   index?: number;
   showDescription?: boolean;
   showLabel?: boolean;
@@ -20,6 +21,7 @@ export default function GalleryCard({
   description,
   className = "",
   imageClassName = "",
+  descriptionClassName = "",
   index = 0,
   showDescription = true,
   showLabel = true,
@@ -51,7 +53,7 @@ export default function GalleryCard({
       ) : null}
       {/* body → 16px → label → 4px → year (identical across every card) */}
       {showDescription ? (
-        <p className="t-body font-heading text-[14px] text-justify text-neutral-400">{description}</p>
+        <p className={`t-body font-heading text-[16px] text-justify text-neutral-400 ${descriptionClassName}`}>{description}</p>
       ) : null}
       {showLabel ? (
         <div className={`flex flex-col gap-1 ${showDescription ? "mt-4" : ""}`}>
