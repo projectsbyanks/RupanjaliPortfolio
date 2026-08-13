@@ -110,7 +110,7 @@ function FeatureSection({
 }) {
   const fadeUp = useFadeUp();
   return (
-    <section className="flex flex-col gap-8 px-[154px]">
+    <section className="flex flex-col gap-6 px-4 lg:gap-8 lg:px-[154px]">
       <span className="font-heading text-[20px] font-normal tracking-[-0.02em] text-ink">
         {feature.label}
       </span>
@@ -130,7 +130,7 @@ function FeatureSection({
           <h3 className="font-display text-3xl leading-[1.05] tracking-[-0.02em] text-ink text-left sm:text-[40px]">
             {feature.heading}
           </h3>
-          <p className="t-body max-w-md pl-[100px] text-justify text-ink">{feature.body}</p>
+          <p className="t-body max-w-md pl-0 text-justify text-ink lg:pl-[100px]">{feature.body}</p>
         </motion.div>
       </div>
     </section>
@@ -155,15 +155,15 @@ export default function HiddenLayers() {
             onClick={() => openLightbox("/assets/hidden-hero.jpg")}
             className="aspect-[16/9] w-full cursor-zoom-in object-cover"
           />
-          <div className="absolute inset-0 flex items-center px-10 pt-[40px] lg:px-20">
+          <div className="absolute inset-0 flex items-center px-4 pt-[40px] lg:px-20">
             <div className="flex max-w-[728px] flex-col gap-4">
               <motion.h1
-                className="font-display text-5xl leading-[0.95] tracking-[-0.02em] text-white sm:text-6xl"
+                className="font-display text-3xl leading-[0.95] tracking-[-0.02em] text-white sm:text-5xl lg:text-6xl"
                 {...fadeUp()}
               >
                 Hidden <span className="italic">Layers</span>
               </motion.h1>
-              <motion.div className="flex flex-col gap-3 pl-[72px]" {...fadeUp(0.15)}>
+              <motion.div className="flex flex-col gap-3 pl-4 lg:pl-[72px]" {...fadeUp(0.15)}>
                 <p className="t-body text-white">{HERO_LEAD}</p>
                 {HERO_PARAS.map((p, i) => (
                   <p key={i} className="t-body text-white">
@@ -176,7 +176,7 @@ export default function HiddenLayers() {
         </div>
 
         {/* Rest of page with normal padding and spacing */}
-        <div className="flex flex-col gap-[242px] pt-[40px]">
+        <div className="flex flex-col gap-12 pt-6 lg:gap-[242px] lg:pt-[40px]">
           {/* Gallery cards */}
           <section className="flex flex-col gap-12">
             <div className="grid grid-cols-2 items-start gap-6 sm:grid-cols-3 lg:grid-cols-5">

@@ -58,9 +58,9 @@ export default function ResearchNews() {
             alt="Research News"
             className="aspect-[7/2] w-full object-cover"
           />
-          <div className="absolute inset-0 flex items-center gap-16 px-10 pt-[40px] lg:px-20">
+          <div className="absolute inset-0 flex flex-col items-start justify-center gap-4 px-4 pt-[40px] lg:flex-row lg:items-center lg:gap-16 lg:px-20">
             <motion.h1
-              className="t-section shrink-0 leading-[60px] text-white"
+              className="t-section shrink-0 leading-tight text-white lg:leading-[60px]"
               {...fadeUp()}
             >
               <span className="italic">Research</span>
@@ -78,7 +78,7 @@ export default function ResearchNews() {
         </div>
 
         {/* Talks + Expertise + footer */}
-        <div className="flex flex-col gap-[242px] pt-[40px]">
+        <div className="flex flex-col gap-12 pt-6 lg:gap-[242px] lg:pt-[40px]">
           {/* Talks / news list */}
           <section className="flex flex-col gap-12">
             {TALKS.map((talk, i) => (

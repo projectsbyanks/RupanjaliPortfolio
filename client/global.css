@@ -63,8 +63,8 @@
   .t-capability {
     font-family: var(--font-heading);
     font-weight: 400;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: clamp(1.25rem, 4vw, 2.5rem);
+    line-height: 1.3;
     letter-spacing: -0.05em;
   }
 
@@ -88,8 +88,8 @@
   .t-body {
     font-family: var(--font-body);
     font-weight: 300;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: clamp(0.95rem, 2.5vw, 1.25rem);
+    line-height: 1.5;
     letter-spacing: -0.05em;
   }
 
@@ -114,8 +114,8 @@
   .t-talk-title {
     font-family: var(--font-heading);
     font-weight: 400;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    line-height: 1.5;
     letter-spacing: -0.05em;
   }
 

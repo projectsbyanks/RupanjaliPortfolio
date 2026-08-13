@@ -40,7 +40,7 @@ export default function Contact() {
 
   return (
     <SiteLayout>
-      <div className="flex flex-col gap-[242px] pt-[242px]">
+      <div className="flex flex-col gap-16 pt-16 lg:gap-[242px] lg:pt-[242px]">
         {/* Heading + form */}
         <section className="flex flex-col gap-12 lg:flex-row lg:gap-16">
           <div className="flex flex-col gap-6 lg:w-1/3">
@@ -109,7 +109,7 @@ export default function Contact() {
             <img
               src={CONTACT_IMAGE}
               alt="Rupanjali Kukal"
-              className="h-[423px] w-[423px] object-cover"
+              className="aspect-square w-full object-cover lg:h-[423px] lg:w-[423px]"
             />
           </motion.div>
           <motion.div className="w-full max-w-xs" {...fadeUp(0.15)}>

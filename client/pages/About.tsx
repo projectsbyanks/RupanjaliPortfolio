@@ -67,7 +67,7 @@ export default function About() {
   const fadeUp = useFadeUp();
   return (
     <SiteLayout>
-      <div className="flex flex-col gap-[242px] pt-[242px]">
+      <div className="flex flex-col gap-16 pt-16 lg:gap-[242px] lg:pt-[242px]">
         {/* The Artist Behind the Work */}
         <section className="flex flex-col items-center gap-10 lg:flex-row lg:items-start lg:justify-center lg:gap-16">
           <motion.div className="overflow-hidden lg:w-2/5" {...fadeUp()}>
@@ -78,7 +78,7 @@ export default function About() {
             />
           </motion.div>
           <motion.div className="flex flex-col gap-6 lg:w-2/5" {...fadeUp(0.15)}>
-            <h1 className="font-display text-5xl leading-[0.95] tracking-[-0.02em] text-ink sm:text-6xl">
+            <h1 className="font-display text-4xl leading-[0.95] tracking-[-0.02em] text-ink sm:text-5xl lg:text-6xl">
               The <span className="italic">Artist</span>
               <br />
               Behind the Work
@@ -147,7 +147,7 @@ export default function About() {
             }
           />
           <motion.div
-            className="grid grid-cols-3 gap-4 px-[90px] sm:grid-cols-4 lg:grid-cols-5"
+            className="grid grid-cols-3 gap-4 px-4 sm:grid-cols-4 lg:grid-cols-5 lg:px-[90px]"
             {...fadeUp()}
           >
             {INSPIRE.map((src, i) => (

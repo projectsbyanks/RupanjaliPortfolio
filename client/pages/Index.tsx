@@ -170,7 +170,7 @@ export default function Index() {
 
   return (
     <SiteLayout>
-      <div className="flex flex-col gap-[242px] pt-[242px]">
+      <div className="flex flex-col gap-16 pt-16 lg:gap-[242px] lg:pt-[242px]">
         {/* Hero */}
         <section className="flex flex-col gap-6">
           <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">

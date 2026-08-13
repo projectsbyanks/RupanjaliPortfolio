@@ -14,30 +14,9 @@ const DESC =
   "Every project begins with an idea and evolves through exploration, intention, and craft.";
 
 const FRAMES = Array.from({ length: 10 }, (_, i) => `/assets/frame-${i + 1}.jpg`);
-const MOSAIC = [...FRAMES, ...FRAMES];
-
-interface Category {
-  heading: ReactNode;
-  feature: string | null;
-}
-
-const CATEGORIES: Category[] = [
-  {
-    heading: <span className="italic">Flower Art</span>,
-    feature: "/assets/art-koi.jpg",
-  },
-  {
-    heading: <span className="italic">Flower Art</span>,
-    feature: "/assets/koi.jpg",
-  },
-  {
-    heading: <span className="italic">Flower Art</span>,
-    feature: null,
-  },
-];
 
 function Mosaic({
-  tiles = MOSAIC,
+  tiles = FRAMES,
   cols = 5,
   className = "",
   onImageClick,
@@ -50,8 +29,9 @@ function Mosaic({
   const fadeUp = useFadeUp();
   return (
     <motion.div
-      className={`grid gap-2 ${className}`}
-      style={{ gridTemplateColumns: `repeat(${cols}, 237px)` }}
+      className={`grid grid-cols-3 gap-2 lg:gap-2 ${className}`}
+      style={{ gridTemplateColumns: undefined }}
+      // Use inline style only at desktop via a wrapper trick — Tailwind handles mobile cols
       {...fadeUp()}
     >
       {tiles.map((src, i) => (
@@ -60,7 +40,7 @@ function Mosaic({
             src={src}
             alt=""
             onClick={onImageClick ? () => onImageClick(src) : undefined}
-            className={`h-[237px] w-[237px] object-cover transition-transform duration-500 ease-out hover:scale-110 ${onImageClick ? "cursor-zoom-in" : ""}`}
+            className={`aspect-square w-full object-cover transition-transform duration-500 ease-out hover:scale-110 lg:h-[237px] lg:w-[237px] ${onImageClick ? "cursor-zoom-in" : ""}`}
           />
         </div>
       ))}
@@ -78,19 +58,16 @@ function FeatureBlock({
   const fadeUp = useFadeUp();
   return (
     <div className="flex flex-col gap-6">
-      <motion.div
-        className="overflow-hidden"
-        {...fadeUp()}
-      >
+      <motion.div className="overflow-hidden" {...fadeUp()}>
         <img
           src={image}
           alt="Costal Manila"
           onClick={onImageClick ? () => onImageClick(image) : undefined}
-          className={`h-[1521px] w-[1217px] object-cover transition-transform duration-700 ease-out hover:scale-[1.03] ${onImageClick ? "cursor-zoom-in" : ""}`}
+          className={`w-full aspect-[4/5] object-cover transition-transform duration-700 ease-out hover:scale-[1.03] lg:h-[1521px] lg:w-[1217px] lg:aspect-auto ${onImageClick ? "cursor-zoom-in" : ""}`}
         />
       </motion.div>
       <motion.div
-        className="mx-auto flex w-full max-w-3xl flex-col justify-between gap-4 sm:flex-row"
+        className="flex flex-col justify-between gap-4 sm:flex-row"
         {...fadeUp(0.1)}
       >
         <div className="flex flex-col gap-1">
@@ -106,17 +83,16 @@ function FeatureBlock({
 function LineArtSection({ onImageClick }: { onImageClick: (src: string) => void }) {
   const fadeUp = useFadeUp();
   return (
-    <section className="flex flex-col gap-8 px-[92px]">
+    <section className="flex flex-col gap-6 px-4 lg:gap-8 lg:px-[92px]">
       <motion.h2
-        className="font-display text-4xl leading-tight tracking-[-0.02em] text-ink sm:text-5xl"
+        className="font-display text-3xl leading-tight tracking-[-0.02em] text-ink sm:text-4xl lg:text-5xl"
         {...fadeUp()}
       >
         <span className="italic">Line Art</span>
       </motion.h2>
-      <div className="flex flex-col gap-[207px] lg:flex-row lg:items-start">
+      <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-[207px]">
         <motion.div
-          className="grid gap-3"
-          style={{ gridTemplateColumns: "repeat(2, 237px)" }}
+          className="grid grid-cols-2 gap-3 lg:w-1/2"
           {...fadeUp()}
         >
           {FRAMES.map((src, i) => (
@@ -125,7 +101,7 @@ function LineArtSection({ onImageClick }: { onImageClick: (src: string) => void 
                 src={src}
                 alt=""
                 onClick={() => onImageClick(src)}
-                className="h-[237px] w-[237px] cursor-zoom-in object-cover transition-transform duration-500 ease-out hover:scale-110"
+                className="aspect-square w-full cursor-zoom-in object-cover transition-transform duration-500 ease-out hover:scale-110 lg:h-[237px] lg:w-[237px]"
               />
             </div>
           ))}
@@ -150,11 +126,11 @@ export default function MyArt() {
   return (
     <SiteLayout>
       {lbSrc && <Lightbox src={lbSrc} onClose={closeLightbox} />}
-      <div className="flex flex-col gap-[242px] pt-[242px]">
+      <div className="flex flex-col gap-16 pt-16 lg:gap-[242px] lg:pt-[242px]">
 
         {/* 1. Hero: My Creative Archive + grid + feature image */}
-        <section className="flex flex-col gap-[242px]">
-          <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-start lg:justify-center lg:gap-[224px]">
+        <section className="flex flex-col gap-12 lg:gap-[242px]">
+          <div className="flex flex-col items-start gap-6 lg:flex-row lg:items-start lg:justify-center lg:gap-[224px]">
             <SectionHeading
               title={
                 <>
@@ -171,7 +147,7 @@ export default function MyArt() {
               {INTRO}
             </motion.p>
           </div>
-          <div className="flex flex-col gap-[242px] px-[92px]">
+          <div className="flex flex-col gap-12 px-4 lg:gap-[242px] lg:px-[92px]">
             <Mosaic tiles={FRAMES} cols={5} onImageClick={openLightbox} />
             <FeatureBlock image="/assets/art-disco.jpg" onImageClick={openLightbox} />
           </div>
@@ -180,8 +156,8 @@ export default function MyArt() {
         {/* 2. Line Art 1 */}
         <LineArtSection onImageClick={openLightbox} />
 
-        {/* 3. Feature image (duplicate of hero's enlarged image) */}
-        <section className="px-[92px]">
+        {/* 3. Feature image (duplicate) */}
+        <section className="px-4 lg:px-[92px]">
           <FeatureBlock image="/assets/art-disco.jpg" onImageClick={openLightbox} />
         </section>
 
@@ -189,7 +165,7 @@ export default function MyArt() {
         <LineArtSection onImageClick={openLightbox} />
 
         {/* 5. Another feature image */}
-        <section className="px-[92px]">
+        <section className="px-4 lg:px-[92px]">
           <FeatureBlock image="/assets/art-koi.jpg" onImageClick={openLightbox} />
         </section>
 
@@ -200,8 +176,8 @@ export default function MyArt() {
         <LineArtSection onImageClick={openLightbox} />
 
         {/* 8. Archive */}
-        <section className="flex flex-col gap-16 px-[92px]">
-          <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-start lg:justify-center lg:gap-[224px]">
+        <section className="flex flex-col gap-8 px-4 lg:gap-16 lg:px-[92px]">
+          <div className="flex flex-col items-start gap-6 lg:flex-row lg:items-start lg:justify-center lg:gap-[224px]">
             <SectionHeading title="Archive" />
             <motion.p
               className="t-body max-w-[394px] text-justify text-ink lg:pt-4"
