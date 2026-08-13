@@ -18,15 +18,12 @@ const HERO_PARAS = [
 
 // Borrowed from the landing "Impact & Recognition" gallery
 const GALLERY = [
-  "https://api.builder.io/api/v1/image/assets/TEMP/5d820eb73b3a3d42a90521ef20a62783906d0748?width=572",
-  "https://api.builder.io/api/v1/image/assets/TEMP/5d820eb73b3a3d42a90521ef20a62783906d0748?width=572",
-  "https://api.builder.io/api/v1/image/assets/TEMP/42dc83651317bb4c34563b428894009e9bacf4f1?width=574",
-  "https://api.builder.io/api/v1/image/assets/TEMP/ef7cd05697d7568c77b1fa2062b355e339168a55?width=572",
-  "https://api.builder.io/api/v1/image/assets/TEMP/f35815cd67848505377f43866438c9e2d562a59e?width=564",
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/5d820eb73b3a3d42a90521ef20a62783906d0748?width=572", year: "01", title: "Detection", description: "What makes something worth noticing?" },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/5d820eb73b3a3d42a90521ef20a62783906d0748?width=572", year: "02", title: "Segmentation", description: "Defining boundaries" },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/42dc83651317bb4c34563b428894009e9bacf4f1?width=574", year: "03", title: "Tracking", description: "Change through time" },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/ef7cd05697d7568c77b1fa2062b355e339168a55?width=572", year: "04", title: "Multimodality", description: "How many ways can the same thing be understood?" },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/f35815cd67848505377f43866438c9e2d562a59e?width=564", year: "05", title: "Generation", description: "How does something new emerge from what already exists?" },
 ];
-
-const MOMENTS_DESC =
-  "Every project begins with an idea and evolves through exploration, intention, and craft.";
 
 interface Feature {
   label: string;
@@ -183,15 +180,15 @@ export default function HiddenLayers() {
           {/* Gallery cards */}
           <section className="flex flex-col gap-12">
             <div className="grid grid-cols-2 items-start gap-6 sm:grid-cols-3 lg:grid-cols-5">
-              {GALLERY.map((image, i) => (
+              {GALLERY.map((item, i) => (
                 <GalleryCard
                   key={i}
                   index={i}
-                  image={image}
+                  image={item.image}
                   imageClassName="aspect-[3/4]"
-                  title="Costal Manila"
-                  year="2025"
-                  description={MOMENTS_DESC}
+                  title={item.title}
+                  year={item.year}
+                  description={item.description}
                   onImageClick={openLightbox}
                 />
               ))}
