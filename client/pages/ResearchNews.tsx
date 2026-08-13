@@ -58,7 +58,7 @@ export default function ResearchNews() {
             alt="Research News"
             className="aspect-square w-full object-cover lg:aspect-[7/2]"
           />
-          <div className="absolute inset-0 flex flex-col items-start justify-center gap-4 px-4 pt-[40px] lg:flex-row lg:items-center lg:gap-16 lg:px-20">
+          <div className="absolute inset-0 flex flex-col items-start justify-end gap-4 px-4 pb-8 pt-16 lg:flex-row lg:items-center lg:justify-start lg:gap-16 lg:px-20 lg:pb-0 lg:pt-[40px]">
             <motion.h1
               className="t-section shrink-0 leading-tight text-white lg:leading-[60px]"
               {...fadeUp()}
@@ -68,7 +68,7 @@ export default function ResearchNews() {
               News
             </motion.h1>
             <motion.div
-              className="hidden max-w-[394px] flex-col gap-3 lg:flex"
+              className="flex max-w-[394px] flex-col gap-3"
               {...fadeUp(0.15)}
             >
               <p className="t-body font-light text-justify text-white">{INTRO_1}</p>
