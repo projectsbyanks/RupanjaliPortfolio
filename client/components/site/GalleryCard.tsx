@@ -51,7 +51,7 @@ export default function GalleryCard({
       ) : null}
       {/* body → 16px → label → 4px → year (identical across every card) */}
       {showDescription ? (
-        <p className="t-body text-justify text-neutral-400">{description}</p>
+        <p className="t-body font-heading text-justify text-neutral-400">{description}</p>
       ) : null}
       {showLabel ? (
         <div className={`flex flex-col gap-1 ${showDescription ? "mt-4" : ""}`}>
