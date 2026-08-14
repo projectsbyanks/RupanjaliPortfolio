@@ -73,7 +73,7 @@ export default function About() {
             />
           </motion.div>
           <motion.div className="flex flex-col gap-6 lg:w-2/5" {...fadeUp(0.15)}>
-            <h1 className="t-section text-ink text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px]">
+            <h1 className="t-section text-ink text-6xl leading-[62px] sm:text-7xl sm:leading-[74px] md:text-8xl md:leading-[98px] xl:text-[96px] xl:leading-[98px]">
               <span className="italic">Artist</span> behind the work
             </h1>
             <div className="flex flex-col gap-3">
@@ -110,7 +110,7 @@ export default function About() {
                   </h3>
                   <div className="flex flex-col gap-1">
                     {item.subtexts.map((s) => (
-                      <p key={s} className="font-heading font-normal text-[14px] tracking-[-0.05em] text-neutral-500">
+                      <p key={s} className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500">
                         {s}
                       </p>
                     ))}
