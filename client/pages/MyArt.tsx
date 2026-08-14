@@ -94,7 +94,7 @@ function FeatureBlock({
           <span className="t-label font-medium text-ink">Costal Manila</span>
           <span className="t-label-sub text-ink">2025</span>
         </div>
-        <p className="t-body max-w-[394px] text-justify text-ink">{DESC}</p>
+        <p className="font-heading text-[16px] leading-[22px] tracking-[0px] max-w-[394px] text-justify text-ink">{DESC}</p>
       </motion.div>
     </div>
   );
@@ -110,29 +110,7 @@ function LineArtSection({ onImageClick }: { onImageClick: (src: string) => void 
       >
         <span className="italic">Line Art</span>
       </motion.h2>
-      <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-[207px]">
-        <motion.div
-          className="grid grid-cols-2 gap-2"
-          {...fadeUp()}
-        >
-          {LINE_ART_FRAMES.map((src, i) => (
-            <div key={i} className="overflow-hidden">
-              <img
-                src={src}
-                alt=""
-                onClick={() => onImageClick(src)}
-                className="aspect-square w-full cursor-zoom-in object-cover transition-transform duration-500 ease-out hover:scale-110 lg:h-[237px] lg:w-[237px]"
-              />
-            </div>
-          ))}
-        </motion.div>
-        <motion.p
-          className="t-body max-w-[394px] text-justify text-ink"
-          {...fadeUp(0.15)}
-        >
-          {INTRO}
-        </motion.p>
-      </div>
+      <Mosaic tiles={FRAMES} onImageClick={onImageClick} />
     </section>
   );
 }
@@ -159,12 +137,6 @@ export default function MyArt() {
                 </>
               }
             />
-            <motion.p
-              className="font-heading font-[300] text-[12px] leading-[1.45] tracking-[1px] text-ink max-w-[394px] lg:pt-[52px]"
-              {...fadeUp(0.15)}
-            >
-              {INTRO}
-            </motion.p>
           </div>
           <div className="flex flex-col gap-12 px-4 lg:gap-[242px] lg:px-[92px]">
             <Mosaic tiles={FRAMES} cols={5} onImageClick={openLightbox} />
