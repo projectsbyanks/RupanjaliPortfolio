@@ -149,7 +149,7 @@ export default function MyArt() {
       <div className="flex flex-col gap-16 pt-16 lg:gap-[242px] lg:pt-20">
 
         {/* 1. Hero: My Creative Archive + grid + feature image */}
-        <section className="flex flex-col gap-12 lg:gap-[242px]">
+        <section className="flex flex-col gap-16 lg:gap-20">
           <div className="flex flex-col items-center text-center gap-6 lg:flex-row lg:items-start lg:text-left lg:justify-center lg:gap-[224px]">
             <SectionHeading
               className="text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px]"
