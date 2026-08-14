@@ -19,7 +19,7 @@ export default function StartConversation() {
           }
         />
         <motion.p
-          className="t-body max-w-[22ch] text-left text-ink lg:pt-4"
+          className="font-heading font-[300] text-[12px] leading-[1.45] tracking-[1px] max-w-[22ch] text-left text-ink lg:pt-4"
           {...fadeUp()}
         >
           If you have questions or you need to contact me to discuss ideas or art.

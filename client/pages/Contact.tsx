@@ -40,7 +40,7 @@ export default function Contact() {
 
   return (
     <SiteLayout>
-      <div className="flex flex-col gap-16 pt-16 lg:gap-[242px] lg:pt-[242px]">
+      <div className="flex flex-col gap-16 pt-16 lg:gap-[242px] lg:pt-20">
         {/* Heading + form */}
         <section className="flex flex-col gap-12 lg:flex-row lg:gap-16">
           <div className="flex flex-col gap-6 lg:w-1/3">
@@ -54,7 +54,7 @@ export default function Contact() {
               }
             />
             <motion.p
-              className="t-body max-w-[24ch] text-ink"
+              className="font-heading font-[300] text-[12px] leading-[1.45] tracking-[1px] max-w-[24ch] text-ink"
               {...fadeUp(0.15)}
             >
               If you have questions or you need to contact me to discuss ideas
