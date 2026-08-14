@@ -8,15 +8,10 @@ import { useFadeUp } from "@/lib/reveal";
 const PORTRAIT = "/assets/portrait.jpg";
 
 const BIO = [
-  "Hi, I'm an ML Applied Scientist at Microsoft and artist working at the intersection of artificial intelligence, computer vision, and visual storytelling.",
-  "I came to AI through an unconventional path. I arrived at Carnegie Mellon studying mechanical engineering and business, then changed direction after taking my first artificial intelligence course. I moved into AI research without a traditional computer science background—and without having written a line of Python before graduate school.",
-  "What made the transition feel natural was something I had been doing for years: painting.",
-  "Art had already trained me to think about perception—how we separate an object from its surroundings, recognize something from different perspectives, combine multiple forms of information, and understand change without losing identity. As I moved deeper into AI, I began encountering formal versions of questions I had intuitively explored through visual art.",
-  "That connection has continued to shape my work.",
-  "My research spans computer vision, segmentation, multimodal AI, generative modeling, and visual tracking. My work has included research at Carnegie Mellon and with DARPA-supported projects, publications at venues including ICLR, NeurIPS, and WACV, and three patent filings through my work at Microsoft.",
-  "Alongside research, I continue to create art as a way of exploring the same questions from another direction.",
-  "This portfolio brings those two parts of my life together.",
-  "I'm interested not only in what AI can create, but in what studying intelligence—human and artificial—can teach us about perception, identity, interpretation, and the way we make sense of the world.",
+  "Hi, I'm an ML Applied Scientist at Microsoft and an artist working at the intersection of artificial intelligence and visual art.",
+  "I moved into AI research at Carnegie Mellon University without a traditional computer science background—and without having written a line of Python before graduate school. What made the transition feel natural was something I had been doing for years: art.",
+  "Art had already trained me to think about perception. How we separate an object from its surroundings, recognise something across different perspectives, combine multiple forms of information, and understand change without losing identity. As I moved deeper into AI, I began encountering formal versions of questions I had intuitively explored through visual art.",
+  "That connection continues to shape my work. Alongside my research, I use art to explore many of the same questions from a different angle. Outside of work and the studio, I'm usually listening to music, boxing, or exploring my interest in health and wellness.",
 ];
 
 const RECOGNITION = [
