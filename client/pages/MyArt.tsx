@@ -13,7 +13,18 @@ const INTRO =
 const DESC =
   "Every project begins with an idea and evolves through exploration, intention, and craft.";
 
-const FRAMES = Array.from({ length: 10 }, (_, i) => `/assets/frame-${i + 1}.jpg`);
+const FRAMES = [
+  "/assets/frame-1.jpg",
+  "/assets/frame-2.jpg",
+  "/assets/frame-3.jpg",
+  "/assets/frame-4.jpg",
+  "/assets/frame-5.jpg",
+  "/assets/frame-6.jpg",
+  "/assets/portrait.jpg",
+  "/assets/frame-8.jpg",
+  "/assets/frame-9.jpg",
+  "/assets/frame-10.jpg",
+];
 
 function Mosaic({
   tiles = FRAMES,
@@ -29,9 +40,7 @@ function Mosaic({
   const fadeUp = useFadeUp();
   return (
     <motion.div
-      className={`grid grid-cols-3 gap-2 lg:gap-2 ${className}`}
-      style={{ gridTemplateColumns: undefined }}
-      // Use inline style only at desktop via a wrapper trick — Tailwind handles mobile cols
+      className={`grid grid-cols-3 gap-2 lg:grid-cols-5 lg:gap-2 ${className}`}
       {...fadeUp()}
     >
       {tiles.map((src, i) => (
