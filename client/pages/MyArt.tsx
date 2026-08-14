@@ -13,10 +13,7 @@ const INTRO =
 const DESC =
   "Every project begins with an idea and evolves through exploration, intention, and craft.";
 
-const FRAMES = [
-  "/assets/Resources/Frame 42.png",
-  ...Array.from({ length: 9 }, (_, i) => `/assets/frame-${i + 2}.jpg`),
-];
+const FRAMES = Array.from({ length: 10 }, (_, i) => `/assets/frame-${i + 1}.jpg`);
 
 function Mosaic({
   tiles = FRAMES,
