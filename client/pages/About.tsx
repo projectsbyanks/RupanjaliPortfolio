@@ -68,13 +68,14 @@ export default function About() {
             />
           </motion.div>
           <motion.div className="flex flex-col gap-6 lg:w-2/5" {...fadeUp(0.15)}>
-            <h1 className="t-section text-ink text-6xl leading-[62px] sm:text-7xl sm:leading-[74px] md:text-8xl md:leading-[98px] xl:text-[96px] xl:leading-[98px]">
-              <span className="italic">Artist</span> behind the work
+            <h1 className="font-display tracking-[-0.02em] text-ink text-6xl leading-[62px] sm:text-7xl sm:leading-[74px] md:text-8xl md:leading-[98px] xl:text-[96px] xl:leading-[98px]">
+              <span className="italic">Artist</span> behind<br />the work
             </h1>
             <div className="flex flex-col gap-3">
-              <p className={`${bioClass} first-letter:float-left first-letter:mr-2 first-letter:font-display first-letter:text-6xl first-letter:leading-[0.85] sm:first-letter:text-7xl md:first-letter:text-8xl xl:first-letter:text-[96px]`}>
-                {BIO[0]}
-              </p>
+              <div className="flex items-end gap-2">
+                <span className="font-display leading-none shrink-0 text-6xl sm:text-7xl md:text-8xl xl:text-[96px]">H</span>
+                <p className={bioClass}>{BIO[0].slice(1)}</p>
+              </div>
               {BIO.slice(1).map((p, i) => (
                 <p key={i} className={bioClass}>
                   {p}
