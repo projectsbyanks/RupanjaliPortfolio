@@ -68,7 +68,7 @@ export default function About() {
             />
           </motion.div>
           <motion.div className="flex flex-col gap-6 lg:w-2/5" {...fadeUp(0.15)}>
-            <h1 className="font-display tracking-[-0.02em] text-ink text-6xl leading-[62px] sm:text-7xl sm:leading-[74px] md:text-8xl md:leading-[98px] xl:text-[96px] xl:leading-[98px]">
+            <h1 className="font-display tracking-[-0.02em] text-ink text-6xl leading-[58px] sm:text-7xl sm:leading-[70px] md:text-8xl md:leading-[94px] xl:text-[96px] xl:leading-[94px]">
               <span className="italic">Artist</span> behind<br />the work
             </h1>
             <div className="flex flex-col gap-3">
