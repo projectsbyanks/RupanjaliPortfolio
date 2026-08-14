@@ -26,6 +26,17 @@ const FRAMES = [
   "/assets/frame-10.jpg",
 ];
 
+const LINE_ART_FRAMES = [
+  "/assets/frame-1.jpg",
+  "/assets/frame-6.jpg",
+  "/assets/frame-2.jpg",
+  "/assets/portrait.jpg",
+  "/assets/frame-3.jpg",
+  "/assets/frame-8.jpg",
+  "/assets/frame-5.jpg",
+  "/assets/frame-10.jpg",
+];
+
 function Mosaic({
   tiles = FRAMES,
   cols = 5,
@@ -101,10 +112,10 @@ function LineArtSection({ onImageClick }: { onImageClick: (src: string) => void 
       </motion.h2>
       <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-[207px]">
         <motion.div
-          className="grid grid-cols-2 gap-3 lg:w-1/2"
+          className="grid grid-cols-2 gap-2"
           {...fadeUp()}
         >
-          {FRAMES.map((src, i) => (
+          {LINE_ART_FRAMES.map((src, i) => (
             <div key={i} className="overflow-hidden">
               <img
                 src={src}
