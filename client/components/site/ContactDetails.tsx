@@ -13,7 +13,7 @@ export default function ContactDetails({
         <div className="flex flex-col gap-0">
           <div className="font-heading text-base font-normal text-ink">Phone</div>
           <div className="t-label font-medium text-[8px] text-ink lg:text-[19px]">
-            +91 9026736177
+            +1-412-996-7352
           </div>
         </div>
         <div className="flex flex-col gap-0">
