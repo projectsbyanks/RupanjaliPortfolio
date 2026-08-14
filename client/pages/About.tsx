@@ -77,7 +77,10 @@ export default function About() {
               <span className="italic">Artist</span> behind the work
             </h1>
             <div className="flex flex-col gap-3">
-              {BIO.map((p, i) => (
+              <p className={`${bioClass} first-letter:float-left first-letter:mr-2 first-letter:font-display first-letter:text-6xl first-letter:leading-[0.85] sm:first-letter:text-7xl md:first-letter:text-8xl xl:first-letter:text-[96px]`}>
+                {BIO[0]}
+              </p>
+              {BIO.slice(1).map((p, i) => (
                 <p key={i} className={bioClass}>
                   {p}
                 </p>
