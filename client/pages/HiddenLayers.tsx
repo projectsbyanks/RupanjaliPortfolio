@@ -196,17 +196,19 @@ export default function HiddenLayers() {
             </div>
           </section>
 
-          {/* Feature sections */}
-          {FEATURES.map((feature, i) => (
+          {/* Feature sections — mobile divider before each */}
+          {FEATURES.flatMap((feature, i) => [
+            <div key={`hr-${feature.label}`} className="lg:hidden h-[0.5px] w-full bg-neutral-300" />,
             <FeatureSection
               key={feature.label}
               feature={feature}
               index={i}
               onImageClick={openLightbox}
-            />
-          ))}
+            />,
+          ])}
 
           {/* Start the Conversation + footer (shared) */}
+          <div className="lg:hidden h-[0.5px] w-full bg-neutral-300" />
           <StartConversation />
           <FooterBanner />
         </div>
