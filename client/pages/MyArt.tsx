@@ -137,6 +137,12 @@ export default function MyArt() {
                 </>
               }
             />
+            <motion.p
+              className="font-heading font-[300] text-[12px] leading-[1.45] tracking-[1px] text-ink max-w-[394px] lg:pt-[52px]"
+              {...fadeUp(0.15)}
+            >
+              {INTRO}
+            </motion.p>
           </div>
           <div className="flex flex-col gap-12 px-4 lg:gap-[242px] lg:px-[92px]">
             <Mosaic tiles={FRAMES} cols={5} onImageClick={openLightbox} />
