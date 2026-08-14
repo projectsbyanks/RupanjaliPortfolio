@@ -56,7 +56,7 @@ export default function SiteNav({ linkClassName }: { linkClassName?: string }) {
           <div className="absolute inset-0 bg-black/30" />
           {/* Drawer panel */}
           <div
-            className="absolute right-0 top-0 flex h-full w-64 flex-col bg-white px-8 py-8 shadow-xl"
+            className="absolute right-0 top-0 flex h-full w-64 flex-col bg-background px-8 py-8 shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             <button

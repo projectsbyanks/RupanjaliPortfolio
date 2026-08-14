@@ -40,12 +40,12 @@ export default function SiteLayout({
   }, [transparentNav, navHeight]);
 
   return (
-    <div className="flex min-h-screen flex-col overflow-x-clip bg-white">
+    <div className="flex min-h-screen flex-col overflow-x-clip bg-background">
       {/* Sticky nav strip */}
       <div
         ref={navRef}
         className={`sticky top-0 z-40 px-5 transition-colors duration-300 ${
-          isTransparent ? "bg-transparent" : "bg-white"
+          isTransparent ? "bg-transparent" : "bg-background"
         }`}
       >
         <div className="mx-auto w-full max-w-[1400px]">
