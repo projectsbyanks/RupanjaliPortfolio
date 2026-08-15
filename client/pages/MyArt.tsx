@@ -151,34 +151,34 @@ export default function MyArt() {
         </section>
 
         {/* 2. Line Art 1 */}
-        <div className="lg:hidden h-[0.5px] w-full bg-neutral-300" />
+        <div className="h-[0.5px] w-full bg-neutral-300" />
         <LineArtSection onImageClick={openLightbox} />
 
         {/* 3. Feature image (duplicate) */}
-        <div className="lg:hidden h-[0.5px] w-full bg-neutral-300" />
+        <div className="h-[0.5px] w-full bg-neutral-300" />
         <section className="px-4 lg:px-[92px]">
           <FeatureBlock image="/assets/art-disco.jpg" onImageClick={openLightbox} />
         </section>
 
         {/* 4. Line Art 2 */}
-        <div className="lg:hidden h-[0.5px] w-full bg-neutral-300" />
+        <div className="h-[0.5px] w-full bg-neutral-300" />
         <LineArtSection onImageClick={openLightbox} />
 
         {/* 5. Another feature image */}
-        <div className="lg:hidden h-[0.5px] w-full bg-neutral-300" />
+        <div className="h-[0.5px] w-full bg-neutral-300" />
         <section className="px-4 lg:px-[92px]">
           <FeatureBlock image="/assets/art-koi.jpg" onImageClick={openLightbox} />
         </section>
 
         {/* 6. Line Art 3 */}
-        <div className="lg:hidden h-[0.5px] w-full bg-neutral-300" />
+        <div className="h-[0.5px] w-full bg-neutral-300" />
         <LineArtSection onImageClick={openLightbox} />
 
         {/* 7. Line Art 4 */}
-        <div className="lg:hidden h-[0.5px] w-full bg-neutral-300" />
+        <div className="h-[0.5px] w-full bg-neutral-300" />
         <LineArtSection onImageClick={openLightbox} />
 
-        <div className="lg:hidden h-[0.5px] w-full bg-neutral-300" />
+        <div className="h-[0.5px] w-full bg-neutral-300" />
         <StartConversation />
         <FooterBanner />
       </div>
