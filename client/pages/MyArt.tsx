@@ -128,7 +128,7 @@ export default function MyArt() {
 
         {/* 1. Hero: My Creative Archive + grid + feature image */}
         <section className="flex flex-col gap-16 lg:gap-20">
-          <div className="flex flex-col items-center text-center gap-6 lg:flex-row lg:items-start lg:text-left lg:justify-center lg:gap-[224px]">
+          <div className="flex flex-col items-center text-center gap-6 lg:items-start lg:text-left">
             <SectionHeading
               className="text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px]"
               title={
@@ -137,12 +137,6 @@ export default function MyArt() {
                 </>
               }
             />
-            <motion.p
-              className="font-heading font-[300] text-[12px] leading-[1.45] tracking-[1px] text-ink max-w-[394px] lg:pt-[52px]"
-              {...fadeUp(0.15)}
-            >
-              {INTRO}
-            </motion.p>
           </div>
           <div className="flex flex-col gap-12 px-4 lg:gap-[242px] lg:px-[92px]">
             <Mosaic tiles={FRAMES} cols={5} onImageClick={openLightbox} />

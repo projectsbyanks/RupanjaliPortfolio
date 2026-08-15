@@ -88,7 +88,7 @@ export default function ResearchNews() {
               {...fadeUp(Math.min(i * 0.08, 0.4))}
             >
               <div className="flex flex-col gap-2">
-                <h3 className="t-talk-title max-w-[72ch] text-[20px] leading-[22px] text-ink">
+                <h3 className="t-talk-title max-w-[72ch] text-[18px] leading-[20px] text-ink">
                   {talk.title}
                 </h3>
                 <span className="font-heading font-normal text-[14px] leading-none tracking-[-0.05em] text-neutral-500">
@@ -119,7 +119,7 @@ export default function ResearchNews() {
                 className="flex flex-col gap-3 py-6"
                 {...fadeUp(Math.min(i * 0.06, 0.3))}
               >
-                <h3 className="t-talk-title text-[20px] leading-[22px] text-ink">{block.title}</h3>
+                <h3 className="t-talk-title text-[18px] leading-[20px] text-ink">{block.title}</h3>
                 <ul className="flex flex-col gap-1">
                   {block.items.map((item) => (
                     <li
