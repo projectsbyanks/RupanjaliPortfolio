@@ -70,16 +70,17 @@ export default function ResearchNews() {
   return (
     <SiteLayout>
       <div className="flex flex-col gap-12 pt-16 lg:gap-[242px] lg:pt-20">
-        {/* Page title — large, no hero image */}
-        <motion.h1
-          className="t-section text-ink lg:pl-16 text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px]"
-          {...fadeUp()}
-        >
-          <span className="italic">Research</span> News
-        </motion.h1>
+        {/* Page title + list grouped — preserves original title→list gap */}
+        <div className="flex flex-col gap-12 lg:gap-16">
+          <motion.h1
+            className="t-section text-ink lg:pl-16 text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px]"
+            {...fadeUp()}
+          >
+            <span className="italic">Research</span> News
+          </motion.h1>
 
-        {/* Talks / news list with dividers */}
-        <section className="flex flex-col divide-y divide-neutral-200 lg:px-16">
+          {/* Talks / news list with dividers */}
+          <section className="flex flex-col divide-y divide-neutral-200 lg:px-16">
           {TALKS.map((talk, i) => (
             <motion.a
               key={i}
@@ -101,6 +102,7 @@ export default function ResearchNews() {
             </motion.a>
           ))}
         </section>
+        </div>
 
         {/* Research Expertise with dividers */}
         <section className="flex flex-col gap-8 lg:px-16">
