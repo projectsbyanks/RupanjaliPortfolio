@@ -26,7 +26,7 @@ function Logo({ className }: { className?: string }) {
   return (
     <NavLink to="/" className={cn("shrink-0", className)}>
       <img
-        src="/assets/Frame 156.jpg"
+        src="/assets/Resources/Signature.png"
         alt="Rupanjali Kukal"
         className="h-8 w-auto object-contain"
       />
