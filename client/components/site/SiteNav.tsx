@@ -26,7 +26,7 @@ function Logo({ className }: { className?: string }) {
   return (
     <NavLink to="/" className={cn("shrink-0", className)}>
       <img
-        src="/assets/Resources/Frame 156.jpg"
+        src="/assets/Frame 156.jpg"
         alt="Rupanjali Kukal"
         className="h-8 w-auto object-contain"
       />
@@ -88,10 +88,15 @@ export default function SiteNav({ linkClassName }: { linkClassName?: string }) {
 
   return (
     <>
-      {/* Desktop nav */}
-      <nav className="hidden w-full items-center justify-between gap-x-6 py-2 lg:flex">
-        <Logo />
-        <div className="flex items-center gap-x-6">
+      {/* Desktop nav: logo left | center links | contact right */}
+      <nav className="hidden w-full items-center py-2 lg:flex">
+        {/* Logo — left */}
+        <div className="flex flex-1 items-center">
+          <Logo />
+        </div>
+
+        {/* Center links */}
+        <div className="flex items-center gap-x-8">
           <NavLink to="/" end className={({ isActive }) => linkClass(isActive)}>
             Home
           </NavLink>
@@ -102,6 +107,10 @@ export default function SiteNav({ linkClassName }: { linkClassName?: string }) {
           <NavLink to="/about" className={({ isActive }) => linkClass(isActive)}>
             About
           </NavLink>
+        </div>
+
+        {/* Contact — right */}
+        <div className="flex flex-1 justify-end">
           <NavLink to="/contact" className={({ isActive }) => linkClass(isActive)}>
             Contact
           </NavLink>
@@ -164,14 +173,12 @@ export default function SiteNav({ linkClassName }: { linkClassName?: string }) {
                 <button
                   onClick={() => setArtOpen(!artOpen)}
                   className={cn(
-                    "flex items-center justify-between font-sf text-lg tracking-[-0.05em] text-ink transition-opacity hover:opacity-70 text-left",
+                    "flex items-center gap-1.5 font-sf text-lg tracking-[-0.05em] text-ink transition-opacity hover:opacity-70 text-left",
                     isArtActive ? "font-bold" : "font-normal",
                   )}
                 >
-                  <span className="flex items-center gap-1.5">
-                    Art
-                    <ChevronDown className={artOpen ? "rotate-180" : ""} />
-                  </span>
+                  Art
+                  <ChevronDown className={artOpen ? "rotate-180" : ""} />
                 </button>
                 {artOpen && (
                   <div className="flex flex-col gap-3 pl-4 border-l border-neutral-200">
