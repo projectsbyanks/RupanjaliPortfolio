@@ -224,7 +224,7 @@ export default function Index() {
             <img
               src="/assets/hero2.jpeg"
               alt="Rupanjali Kukal"
-              className="h-[460px] w-full object-contain"
+              className="h-[460px] w-full object-cover"
             />
           </motion.div>
         </section>
@@ -240,7 +240,7 @@ export default function Index() {
             with <span className="italic">Rupanjali Kukal</span>
           </motion.h2>
           <motion.p
-            className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] max-w-md text-ink"
+            className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] w-[92px] text-ink"
             {...fadeUp(0.15)}
           >
             Hi, I'm an AI scientist at Microsoft, and art has long been a
@@ -263,8 +263,8 @@ export default function Index() {
               alt="Hidden Layers"
               className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out hover:scale-[1.03] lg:aspect-[175/69]"
             />
-            <div className="absolute inset-0 flex flex-col justify-center px-6 sm:px-12 lg:block lg:left-12 lg:top-12 lg:max-w-md">
-              <h3 className="t-hero text-white">
+            <div className="absolute inset-0 flex flex-col justify-center px-6 sm:px-12 lg:block lg:left-12 lg:top-12">
+              <h3 className="t-hero text-white whitespace-nowrap">
                 Epoch 0: POV
               </h3>
               <p className="mt-5 max-w-[34ch] t-body text-justify text-white">
