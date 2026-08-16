@@ -159,6 +159,17 @@ function SectionHeading({
   );
 }
 
+function SectionLabel({ text }: { text: string }) {
+  return (
+    <div className="flex items-center gap-4">
+      <span className="font-sf text-[11px] tracking-[0.18em] text-ink uppercase whitespace-nowrap">
+        {text}
+      </span>
+      <div className="h-[0.5px] bg-neutral-300 max-w-[40%] flex-1" />
+    </div>
+  );
+}
+
 function ScrollButton({ dir, onClick }: { dir: "left" | "right"; onClick: () => void }) {
   return (
     <button
@@ -243,13 +254,7 @@ export default function Index() {
 
         {/* Hidden Layers */}
         <section className="flex flex-col gap-6">
-          {/* Section label with rule */}
-          <div className="flex items-center gap-4">
-            <span className="font-sf text-[11px] tracking-[0.18em] text-ink uppercase whitespace-nowrap">
-              02 — Hidden Layers
-            </span>
-            <div className="flex-1 h-[0.5px] bg-neutral-300" />
-          </div>
+          <SectionLabel text="Hidden Layers" />
           <motion.div className="relative overflow-hidden" {...fadeUp()}>
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/5bcfc09b640e04a7e7f3d84268d95c19be51d014?width=2800"
@@ -294,6 +299,7 @@ export default function Index() {
 
         {/* About Me */}
         <section className="flex flex-col gap-8">
+          <SectionLabel text="Highlights" />
           <div className="flex items-center justify-between">
             <SectionHeading
               title={
@@ -326,6 +332,7 @@ export default function Index() {
 
         {/* In Their Words */}
         <section className="flex flex-col gap-8">
+          <SectionLabel text="Testimonials" />
           <div className="flex items-center justify-between">
             <SectionHeading
               title={
@@ -347,45 +354,6 @@ export default function Index() {
               <div key={i} className="shrink-0 w-[280px]">
                 <TestimonialCard index={i} {...TESTIMONIAL} />
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* A Canvas of Intent */}
-        <section className="flex flex-col gap-16">
-          <div className="flex flex-col items-start justify-between gap-6 lg:flex-row">
-            <SectionHeading
-              title={
-                <>
-                  A Canvas of <span className="italic">Intent</span>
-                </>
-              }
-            />
-            <motion.p
-              className="t-body max-w-[48ch] text-justify text-ink lg:pt-4"
-              {...fadeUp(0.15)}
-            >
-              Every project begins with an idea and evolves through
-              exploration, intention, and craft. These selected works reflect
-              a balance of strategy and artistic expression—each designed to
-              tell a story, solve a problem, and create a lasting visual
-              impression.
-            </motion.p>
-          </div>
-          <div className="flex gap-6 overflow-x-auto pb-4">
-            {CANVAS_GALLERY.map((item, i) => (
-              <GalleryCard
-                key={i}
-                index={i}
-                image={item.image}
-                imageClassName="h-[320px] w-full object-cover md:h-[520px]"
-                title={item.title}
-                year={item.year}
-                description={item.description}
-                showDescription={false}
-                showLabel={false}
-                className={`shrink-0 ${CANVAS_WIDTHS[i]}`}
-              />
             ))}
           </div>
         </section>

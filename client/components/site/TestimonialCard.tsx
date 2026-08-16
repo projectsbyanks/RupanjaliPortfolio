@@ -39,7 +39,7 @@ export default function TestimonialCard({
           <div className="t-caption text-ink">{role}</div>
         </div>
       </div>
-      <p className="t-body mt-auto pt-6 text-left text-ink">{quote}</p>
+      <p className="t-body text-[13px] mt-auto pt-6 text-left text-ink">{quote}</p>
     </motion.div>
   );
 }
