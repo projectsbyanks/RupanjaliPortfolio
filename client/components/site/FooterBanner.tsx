@@ -7,7 +7,7 @@ export default function FooterBanner() {
   return (
     <motion.div className="overflow-hidden" {...fadeUp()}>
       <img
-        src="https://api.builder.io/api/v1/image/assets/TEMP/eb8234c9ae7d41fb82b2c2ef34371d72cad9d170?width=2800"
+        src="/assets/Resources/Footer image.png"
         alt=""
         className="aspect-[175/31] w-full object-cover"
       />
