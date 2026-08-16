@@ -3,7 +3,7 @@ import TestimonialCard from "@/components/site/TestimonialCard";
 import GalleryCard from "@/components/site/GalleryCard";
 import FooterBanner from "@/components/site/FooterBanner";
 import StartConversation from "@/components/site/StartConversation";
-import { ReactNode } from "react";
+import { ReactNode, useRef } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
 const CAPABILITIES = [
@@ -159,8 +159,27 @@ function SectionHeading({
   );
 }
 
+function ScrollButton({ dir, onClick }: { dir: "left" | "right"; onClick: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      aria-label={dir === "left" ? "Scroll left" : "Scroll right"}
+      className="flex h-7 w-7 items-center justify-center border border-neutral-300 text-ink hover:bg-neutral-50 transition-colors"
+    >
+      <svg className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d={dir === "left" ? "M15 19l-7-7 7-7" : "M9 5l7 7-7 7"} />
+      </svg>
+    </button>
+  );
+}
+
 export default function Index() {
   const reduce = useReducedMotion();
+  const testimonialsRef = useRef<HTMLDivElement>(null);
+  const aboutMeRef = useRef<HTMLDivElement>(null);
+  const scrollSection = (ref: React.RefObject<HTMLDivElement>, dir: "left" | "right") => {
+    ref.current?.scrollBy({ left: dir === "left" ? -320 : 320, behavior: "smooth" });
+  };
 
   const fadeUp = (delay = 0, y = 32) => ({
     initial: { opacity: 0, y: reduce ? 0 : y },
@@ -223,7 +242,14 @@ export default function Index() {
         </section>
 
         {/* Hidden Layers */}
-        <section className="flex flex-col gap-16">
+        <section className="flex flex-col gap-6">
+          {/* Section label with rule */}
+          <div className="flex items-center gap-4">
+            <span className="font-sf text-[11px] tracking-[0.18em] text-ink uppercase whitespace-nowrap">
+              02 — Hidden Layers
+            </span>
+            <div className="flex-1 h-[0.5px] bg-neutral-300" />
+          </div>
           <motion.div className="relative overflow-hidden" {...fadeUp()}>
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/5bcfc09b640e04a7e7f3d84268d95c19be51d014?width=2800"
@@ -266,40 +292,61 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Moments in Tech */}
-        <section className="flex flex-col gap-16">
-          <SectionHeading
-            title={
-              <>
-                <span className="italic">Moments</span> in Tech
-              </>
-            }
-          />
-          <div className="grid grid-cols-2 items-start gap-8 sm:grid-cols-3 lg:grid-cols-5">
-            {MOMENTS_IN_TECH.map((item, i) => (
+        {/* About Me */}
+        <section className="flex flex-col gap-8">
+          <div className="flex items-center justify-between">
+            <SectionHeading
+              title={
+                <>
+                  <span className="italic">About</span> Me
+                </>
+              }
+            />
+            <div className="flex gap-2">
+              <ScrollButton dir="left" onClick={() => scrollSection(aboutMeRef, "left")} />
+              <ScrollButton dir="right" onClick={() => scrollSection(aboutMeRef, "right")} />
+            </div>
+          </div>
+          <div
+            ref={aboutMeRef}
+            className="flex gap-6 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {[...MOMENTS_IN_TECH, ...MOMENTS_IN_TECH].map((item, i) => (
               <GalleryCard
                 key={i}
                 index={i}
                 title={item.title}
                 year={item.year}
                 description={item.description}
+                className="shrink-0 w-[200px]"
               />
             ))}
           </div>
         </section>
 
         {/* In Their Words */}
-        <section className="flex flex-col gap-16">
-          <SectionHeading
-            title={
-              <>
-                In Their <span className="italic">Words</span>
-              </>
-            }
-          />
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <TestimonialCard key={i} index={i} {...TESTIMONIAL} />
+        <section className="flex flex-col gap-8">
+          <div className="flex items-center justify-between">
+            <SectionHeading
+              title={
+                <>
+                  In Their <span className="italic">Words</span>
+                </>
+              }
+            />
+            <div className="flex gap-2">
+              <ScrollButton dir="left" onClick={() => scrollSection(testimonialsRef, "left")} />
+              <ScrollButton dir="right" onClick={() => scrollSection(testimonialsRef, "right")} />
+            </div>
+          </div>
+          <div
+            ref={testimonialsRef}
+            className="flex gap-6 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {Array.from({ length: 8 }).map((_, i) => (
+              <div key={i} className="shrink-0 w-[280px]">
+                <TestimonialCard index={i} {...TESTIMONIAL} />
+              </div>
             ))}
           </div>
         </section>

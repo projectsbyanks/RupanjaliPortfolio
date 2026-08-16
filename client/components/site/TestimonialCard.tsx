@@ -18,7 +18,7 @@ export default function TestimonialCard({
   const reduce = useReducedMotion();
   return (
     <motion.div
-      className="flex min-h-[340px] flex-col bg-cream p-8"
+      className="flex min-h-[220px] flex-col bg-cream p-5"
       initial={{ opacity: 0, y: reduce ? 0 : 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -39,7 +39,7 @@ export default function TestimonialCard({
           <div className="t-caption text-ink">{role}</div>
         </div>
       </div>
-      <p className="t-body mt-auto pt-16 text-left text-ink">{quote}</p>
+      <p className="t-body mt-auto pt-6 text-left text-ink">{quote}</p>
     </motion.div>
   );
 }
