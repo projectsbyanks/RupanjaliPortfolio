@@ -171,7 +171,7 @@ export default function Index() {
 
   return (
     <SiteLayout>
-      <div className="flex flex-col gap-16 pt-16 lg:gap-[242px] lg:pt-[242px]">
+      <div className="flex flex-col gap-16 pt-16 lg:gap-[100px] lg:pt-[100px]">
         {/* Hero */}
         <section className="flex flex-col gap-6">
           <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
@@ -285,55 +285,6 @@ export default function Index() {
                 description={item.description}
               />
             ))}
-          </div>
-        </section>
-
-        {/* Impact & Recognition */}
-        <section className="flex flex-col gap-16">
-          <SectionHeading
-            title={
-              <>
-                Impact & <span className="italic">Recognition</span>
-              </>
-            }
-          />
-          <div className="grid grid-cols-2 items-start gap-6 sm:grid-cols-3 lg:grid-cols-5">
-            {IMPACT_GALLERY.map((item, i) => (
-              <GalleryCard
-                key={i}
-                index={i}
-                image={item.image}
-                imageClassName="aspect-[3/4]"
-                title={item.title}
-                year={item.year}
-                description={item.description}
-              />
-            ))}
-          </div>
-        </section>
-
-        {/* Recognition & Volunteering */}
-        <section className="flex flex-col gap-16">
-          <SectionHeading
-            className="text-center"
-            title={
-              <>
-                <span className="italic">Recognition</span>
-                <br />& Volunteering
-              </>
-            }
-          />
-          <div className="flex flex-col gap-8">
-            <div className="flex flex-col items-start gap-8 lg:flex-row">
-              <AchievementText index={0} />
-              <AchievementImage index={1} />
-              <AchievementText index={2} />
-            </div>
-            <div className="flex flex-col items-start gap-8 lg:flex-row">
-              <AchievementImage index={0} />
-              <AchievementText index={1} />
-              <AchievementImage index={2} />
-            </div>
           </div>
         </section>
 
