@@ -201,7 +201,7 @@ export default function Index() {
 
   return (
     <SiteLayout>
-      <div className="flex flex-col gap-16 pt-16 lg:gap-[150px] lg:pt-[150px]">
+      <div className="flex flex-col gap-16 pt-16 lg:gap-[150px] lg:pt-[80px]">
         {/* Hero */}
         <section className="flex flex-col gap-6">
           <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
@@ -222,7 +222,7 @@ export default function Index() {
           </div>
           <motion.div className="overflow-hidden" {...fadeUp(0.1)}>
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/8e5aa3d0a748ecc7c8d780bd01e944fc6e1d6364?width=2800"
+              src="/assets/hero2.jpeg"
               alt="Rupanjali Kukal"
               className="aspect-[175/94] w-full object-cover transition-transform duration-700 ease-out hover:scale-[1.03]"
             />
@@ -230,9 +230,9 @@ export default function Index() {
         </section>
 
         {/* About / In Studio */}
-        <section className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center">
+        <section className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:-mt-[70px]">
           <motion.p
-            className="t-body max-w-md text-justify text-ink"
+            className="font-heading font-[300] text-[15px] leading-[1.65] tracking-[-0.01em] max-w-md text-ink"
             {...fadeUp()}
           >
             Art and AI often ask surprisingly similar questions: how we
@@ -243,7 +243,7 @@ export default function Index() {
             other.
           </motion.p>
           <motion.h2
-            className="text-left font-vogue text-5xl leading-[0.9] tracking-[-0.04em] text-ink sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] xl:leading-[86px]"
+            className="text-left font-vogue text-2xl leading-[0.9] tracking-[-0.04em] text-ink sm:text-3xl md:text-[36px] lg:text-[48px] xl:text-[48px] xl:leading-[46px]"
             {...fadeUp(0.15)}
           >
             In Studio
@@ -253,7 +253,7 @@ export default function Index() {
         </section>
 
         {/* Hidden Layers */}
-        <section className="flex flex-col gap-6">
+        <section className="flex flex-col gap-6 lg:-mt-[70px]">
           <SectionLabel text="Hidden Layers" />
           <motion.div className="relative overflow-hidden" {...fadeUp()}>
             <img
