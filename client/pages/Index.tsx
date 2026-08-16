@@ -224,37 +224,39 @@ export default function Index() {
             <img
               src="/assets/hero2.jpeg"
               alt="Rupanjali Kukal"
-              className="aspect-[175/94] w-full object-cover transition-transform duration-700 ease-out hover:scale-[1.03]"
+              className="h-[460px] w-full object-contain"
             />
           </motion.div>
         </section>
 
         {/* About / In Studio */}
         <section className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:-mt-[70px]">
-          <motion.p
-            className="font-heading font-[300] text-[15px] leading-[1.65] tracking-[-0.01em] max-w-md text-ink"
-            {...fadeUp()}
-          >
-            Art and AI often ask surprisingly similar questions: how we
-            recognize, separate, combine, and interpret what we see. My work
-            moves between AI research and visual art, bringing the two into
-            conversation rather than treating them as separate disciplines.
-            I'm interested in what each way of thinking can reveal about the
-            other.
-          </motion.p>
           <motion.h2
-            className="text-left font-vogue text-2xl leading-[0.9] tracking-[-0.04em] text-ink sm:text-3xl md:text-[36px] lg:text-[48px] xl:text-[48px] xl:leading-[46px]"
-            {...fadeUp(0.15)}
+            className="text-right font-vogue text-2xl leading-[0.9] tracking-[-0.04em] text-ink sm:text-3xl md:text-[36px] lg:text-[48px] xl:text-[48px] xl:leading-[46px]"
+            {...fadeUp()}
           >
             In Studio
             <br />
             with <span className="italic">Rupanjali Kukal</span>
           </motion.h2>
+          <motion.p
+            className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] max-w-md text-ink"
+            {...fadeUp(0.15)}
+          >
+            Hi, I'm an AI scientist at Microsoft, and art has long been a
+            personal way for me to make sense of the world around me. It has
+            stayed with me through different phases of my life, helping me
+            navigate change and express ideas that are not always easy to put
+            into words. Over time, I began to notice subtle connections between
+            the way I approach research and the way I create. This website is
+            an attempt to explore that intersection through the work, ideas,
+            and experiences that have shaped me.
+          </motion.p>
         </section>
 
         {/* Hidden Layers */}
         <section className="flex flex-col gap-6 lg:-mt-[70px]">
-          <SectionLabel text="Hidden Layers" />
+          <SectionLabel text="Epoch 0: POV" />
           <motion.div className="relative overflow-hidden" {...fadeUp()}>
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/5bcfc09b640e04a7e7f3d84268d95c19be51d014?width=2800"
@@ -263,9 +265,7 @@ export default function Index() {
             />
             <div className="absolute inset-0 flex flex-col justify-center px-6 sm:px-12 lg:block lg:left-12 lg:top-12 lg:max-w-md">
               <h3 className="t-hero text-white">
-                <span className="italic">Hidden</span>
-                <br />
-                Layers
+                Epoch 0: POV
               </h3>
               <p className="mt-5 max-w-[34ch] t-body text-justify text-white">
                 Where the language of artificial intelligence becomes a lens
