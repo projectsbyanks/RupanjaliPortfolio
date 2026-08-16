@@ -7,12 +7,32 @@ const ART_LINKS = [
   { label: "Art Archive", to: "/art-archive" },
 ];
 
-const NAV_LINKS = [
-  { label: "Home", to: "/" },
-  { label: "Research News", to: "/research-news" },
-  { label: "About", to: "/about" },
-  { label: "Contact", to: "/contact" },
-];
+function ChevronDown({ className }: { className?: string }) {
+  return (
+    <svg
+      className={cn("h-2.5 w-2.5 transition-transform duration-200", className)}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2.5}
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  );
+}
+
+function Logo({ className }: { className?: string }) {
+  return (
+    <NavLink to="/" className={cn("shrink-0", className)}>
+      <img
+        src="/assets/Resources/Frame 156.jpg"
+        alt="Rupanjali Kukal"
+        className="h-8 w-auto object-contain"
+      />
+    </NavLink>
+  );
+}
 
 function DesktopArtMenu({ linkClassName }: { linkClassName?: string }) {
   const { pathname } = useLocation();
@@ -22,15 +42,16 @@ function DesktopArtMenu({ linkClassName }: { linkClassName?: string }) {
     <div className="relative group">
       <span
         className={cn(
-          "font-sf text-base tracking-[-0.05em] text-ink transition-opacity hover:opacity-70 cursor-default select-none",
+          "flex items-center gap-1 font-sf text-base tracking-[-0.05em] text-ink transition-opacity hover:opacity-70 cursor-default select-none",
           isActive ? "font-bold" : "font-normal",
           linkClassName,
         )}
       >
         Art
+        <ChevronDown className="group-hover:rotate-180" />
       </span>
-      {/* Dropdown — no gap so hover stays continuous */}
-      <div className="absolute top-full left-1/2 -translate-x-1/2 z-50 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-150">
+      {/* Dropdown — left-aligned to "Art", no gap so hover stays continuous */}
+      <div className="absolute top-full left-0 z-50 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-150">
         <div className="flex flex-col bg-background border border-neutral-200 shadow-lg rounded-sm py-1 min-w-[168px]">
           {ART_LINKS.map((link) => (
             <NavLink
@@ -68,46 +89,28 @@ export default function SiteNav({ linkClassName }: { linkClassName?: string }) {
   return (
     <>
       {/* Desktop nav */}
-      <nav className="hidden w-full flex-wrap items-center justify-center gap-x-6 gap-y-2 py-2 sm:justify-between lg:flex">
-        {/* Home */}
-        <NavLink
-          to="/"
-          end
-          className={({ isActive }) => linkClass(isActive)}
-        >
-          Home
-        </NavLink>
-
-        {/* Research News */}
-        <NavLink
-          to="/research-news"
-          className={({ isActive }) => linkClass(isActive)}
-        >
-          Research News
-        </NavLink>
-
-        {/* Art dropdown */}
-        <DesktopArtMenu linkClassName={linkClassName} />
-
-        {/* About */}
-        <NavLink
-          to="/about"
-          className={({ isActive }) => linkClass(isActive)}
-        >
-          About
-        </NavLink>
-
-        {/* Contact */}
-        <NavLink
-          to="/contact"
-          className={({ isActive }) => linkClass(isActive)}
-        >
-          Contact
-        </NavLink>
+      <nav className="hidden w-full items-center justify-between gap-x-6 py-2 lg:flex">
+        <Logo />
+        <div className="flex items-center gap-x-6">
+          <NavLink to="/" end className={({ isActive }) => linkClass(isActive)}>
+            Home
+          </NavLink>
+          <NavLink to="/research-news" className={({ isActive }) => linkClass(isActive)}>
+            Research News
+          </NavLink>
+          <DesktopArtMenu linkClassName={linkClassName} />
+          <NavLink to="/about" className={({ isActive }) => linkClass(isActive)}>
+            About
+          </NavLink>
+          <NavLink to="/contact" className={({ isActive }) => linkClass(isActive)}>
+            Contact
+          </NavLink>
+        </div>
       </nav>
 
-      {/* Mobile — hamburger */}
-      <div className="flex items-center justify-end py-3 lg:hidden">
+      {/* Mobile bar — logo left, hamburger right */}
+      <div className="flex items-center justify-between py-3 lg:hidden">
+        <Logo />
         <button
           aria-label="Open menu"
           onClick={() => setOpen(true)}
@@ -165,8 +168,10 @@ export default function SiteNav({ linkClassName }: { linkClassName?: string }) {
                     isArtActive ? "font-bold" : "font-normal",
                   )}
                 >
-                  <span>Art</span>
-                  <span className="text-base leading-none">{artOpen ? "−" : "+"}</span>
+                  <span className="flex items-center gap-1.5">
+                    Art
+                    <ChevronDown className={artOpen ? "rotate-180" : ""} />
+                  </span>
                 </button>
                 {artOpen && (
                   <div className="flex flex-col gap-3 pl-4 border-l border-neutral-200">
