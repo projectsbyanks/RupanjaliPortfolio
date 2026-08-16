@@ -224,7 +224,7 @@ export default function Index() {
             <img
               src="/assets/hero2.jpeg"
               alt="Rupanjali Kukal"
-              className="h-[460px] w-full object-cover"
+              className="w-full"
             />
           </motion.div>
         </section>
@@ -315,7 +315,7 @@ export default function Index() {
           </div>
           <div
             ref={aboutMeRef}
-            className="flex gap-6 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="flex gap-6 overflow-x-auto overflow-y-hidden scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             {[...MOMENTS_IN_TECH, ...MOMENTS_IN_TECH].map((item, i) => (
               <GalleryCard
@@ -348,7 +348,7 @@ export default function Index() {
           </div>
           <div
             ref={testimonialsRef}
-            className="flex gap-6 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="flex gap-6 overflow-x-auto overflow-y-hidden scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             {Array.from({ length: 8 }).map((_, i) => (
               <div key={i} className="shrink-0 w-[280px]">
