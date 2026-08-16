@@ -240,7 +240,7 @@ export default function Index() {
             with <span className="italic">Rupanjali Kukal</span>
           </motion.h2>
           <motion.p
-            className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] w-[92px] text-ink"
+            className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] w-[600px] text-ink"
             {...fadeUp(0.15)}
           >
             Hi, I'm an AI scientist at Microsoft, and art has long been a
