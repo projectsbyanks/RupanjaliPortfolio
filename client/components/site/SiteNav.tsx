@@ -28,7 +28,7 @@ function Logo({ className }: { className?: string }) {
       <img
         src="/assets/Resources/Signature.png"
         alt="Rupanjali Kukal"
-        className="h-[60px] w-auto object-contain"
+        className="h-[60px] w-auto object-contain mix-blend-multiply"
       />
     </NavLink>
   );
