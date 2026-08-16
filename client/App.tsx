@@ -26,8 +26,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/research-news" element={<ResearchNews />} />
-          <Route path="/hidden-layers" element={<HiddenLayers />} />
-          <Route path="/my-art" element={<MyArt />} />
+          <Route path="/epoch-0-pov" element={<HiddenLayers />} />
+          <Route path="/art-archive" element={<MyArt />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
