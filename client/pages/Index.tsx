@@ -335,7 +335,7 @@ export default function Index() {
                 transition={{ duration: 0.55, ease: "easeOut", delay: Math.min(i * 0.06, 0.36) }}
               >
                 <span className="font-heading text-[18px] font-[200] leading-snug text-ink">{item.title}</span>
-                <span className="font-heading text-[18px] font-[200] text-ink">{item.year}</span>
+                <span className="font-heading text-[18px] font-[100] text-ink">{item.year}</span>
               </motion.div>
             ))}
           </div>
