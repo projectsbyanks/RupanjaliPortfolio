@@ -122,7 +122,7 @@ export default function SiteNav({ linkClassName, isTransparent = false }: { link
 
       {/* Mobile bar — logo left, hamburger right */}
       <div className="flex items-center justify-between py-3 lg:hidden">
-        <Logo />
+        <Logo isTransparent={isTransparent} />
         <button
           aria-label="Open menu"
           onClick={() => setOpen(true)}

@@ -233,7 +233,7 @@ export default function Index() {
         {/* About / In Studio */}
         <section className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:-mt-[70px]">
           <motion.h2
-            className="text-right font-vogue text-[26px] leading-[0.9] tracking-[-0.04em] text-ink sm:text-[32px] md:text-[38px] lg:text-[50px] xl:text-[50px] xl:leading-[48px]"
+            className="text-right font-vogue text-[28px] leading-[0.9] tracking-[-0.04em] text-ink sm:text-[32px] md:text-[38px] lg:text-[50px] xl:text-[50px] xl:leading-[48px]"
             {...fadeUp()}
           >
             In Studio
@@ -241,7 +241,7 @@ export default function Index() {
             with <span className="italic">Rupanjali Kukal</span>
           </motion.h2>
           <motion.p
-            className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] w-[600px] text-ink"
+            className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] w-full lg:w-[600px] text-ink"
             {...fadeUp(0.15)}
           >
             Hi, I'm an AI scientist at Microsoft, and art has long been a
