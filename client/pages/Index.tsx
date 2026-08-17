@@ -15,14 +15,16 @@ const CAPABILITIES = [
   "Generation",
 ];
 
-const MOMENTS_DESC =
-  "Every project begins with an idea and evolves through exploration, intention, and craft. ";
-
-const MOMENTS_IN_TECH = Array.from({ length: 5 }).map(() => ({
-  title: "Costal Manila",
-  year: "2025",
-  description: MOMENTS_DESC,
-}));
+const ABOUT_ME_ITEMS = [
+  { title: "Geo-R1 accepted at International Conference on Machine Learning (ICML)", year: "2026" },
+  { title: "MARS accepted at International Conference on Learning Representations (ICLR)", year: "2026" },
+  { title: "Click&Describe accepted at IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)", year: "2025" },
+  { title: "Applied Scientist at Microsoft", year: "2023" },
+  { title: "Masters of Science with thesis from Carnegie Mellon University", year: "2023" },
+  { title: "Flaire Unmanned Systems acquired by Adani Defense Systems", year: "2019" },
+  { title: "Vice President - Unmanned Aerial Systems, DTU", year: "2017–2019" },
+  { title: "Design Lead - DTU Times", year: "2018–2019" },
+];
 
 const IMPACT_GALLERY = [
   {
@@ -231,9 +233,9 @@ export default function Index() {
         </section>
 
         {/* About / In Studio */}
-        <section className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:-mt-[70px]">
+        <section className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:-mt-[70px] lg:py-[80px]">
           <motion.h2
-            className="text-center font-vogue text-[32px] leading-[0.9] tracking-[-0.04em] text-ink sm:text-[32px] md:text-[38px] lg:text-right lg:text-[50px] xl:text-[50px] xl:leading-[48px]"
+            className="text-center font-vogue text-[32px] leading-[0.9] tracking-[-0.04em] text-ink sm:text-[32px] md:text-[38px] lg:text-right lg:text-[52px] xl:text-[52px] xl:leading-[50px]"
             {...fadeUp()}
           >
             In Studio
@@ -268,7 +270,7 @@ export default function Index() {
                 Epoch 0: POV
               </motion.h2>
               <motion.p
-                className="t-body text-justify text-ink"
+                className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-justify text-ink"
                 {...fadeUp(0.1)}
               >
                 Art and AI often ask surprisingly similar questions: how we
@@ -282,7 +284,7 @@ export default function Index() {
                   <Link
                     key={item}
                     to={`/epoch-0-pov#${item.toLowerCase()}`}
-                    className="font-heading font-[400] [font-size:clamp(0.875rem,calc(4vw-10px),1.875rem)] leading-[1.3] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
+                    className="font-heading font-[400] [font-size:clamp(0.75rem,calc(4vw-10px),1.75rem)] leading-[1.3] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
                   >
                     {item} <span aria-hidden>→</span>
                   </Link>
@@ -292,7 +294,7 @@ export default function Index() {
             {/* Right column — image */}
             <motion.div className="overflow-hidden lg:w-1/2" {...fadeUp(0.1)}>
               <img
-                src="/assets/Resources/POV1 2.png"
+                src="/assets/Resources/Liliesimage.png"
                 alt="Epoch 0: POV"
                 className="w-full object-cover"
               />
@@ -320,14 +322,15 @@ export default function Index() {
             ref={aboutMeRef}
             className="flex gap-6 overflow-x-auto overflow-y-hidden scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
-            {[...MOMENTS_IN_TECH, ...MOMENTS_IN_TECH].map((item, i) => (
+            {ABOUT_ME_ITEMS.map((item, i) => (
               <GalleryCard
                 key={i}
                 index={i}
                 title={item.title}
                 year={item.year}
-                description={item.description}
-                className="shrink-0 w-[200px]"
+                description=""
+                showDescription={false}
+                className="shrink-0 w-[220px]"
               />
             ))}
           </div>
