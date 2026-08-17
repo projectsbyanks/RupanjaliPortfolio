@@ -26,11 +26,11 @@ function Logo({ className, isTransparent = false }: { className?: string; isTran
   return (
     <NavLink to="/" className={cn("shrink-0", className)}>
       <img
-        src="/assets/Resources/Signature.png"
+        src="/assets/Resources/White Signature.png"
         alt="Rupanjali Kukal"
         className={cn(
           "h-[60px] w-auto object-contain",
-          isTransparent ? "invert mix-blend-screen" : "mix-blend-multiply"
+          !isTransparent && "invert"
         )}
       />
     </NavLink>
