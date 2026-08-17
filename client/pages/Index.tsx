@@ -233,7 +233,7 @@ export default function Index() {
         {/* About / In Studio */}
         <section className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:-mt-[70px]">
           <motion.h2
-            className="text-right font-vogue text-2xl leading-[0.9] tracking-[-0.04em] text-ink sm:text-3xl md:text-[36px] lg:text-[48px] xl:text-[48px] xl:leading-[46px]"
+            className="text-right font-vogue text-[26px] leading-[0.9] tracking-[-0.04em] text-ink sm:text-[32px] md:text-[38px] lg:text-[50px] xl:text-[50px] xl:leading-[48px]"
             {...fadeUp()}
           >
             In Studio
@@ -283,7 +283,7 @@ export default function Index() {
                     key={item}
                     to={`/epoch-0-pov#${item.toLowerCase()}`}
                     className="font-heading font-[400] tracking-[-0.05em] leading-[1.3] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
-                    style={{ fontSize: 'clamp(1.125rem, calc(4vw - 2px), 2.375rem)' }}
+                    style={{ fontSize: 'clamp(1rem, calc(4vw - 4px), 2.25rem)' }}
                   >
                     {item} <span aria-hidden>→</span>
                   </Link>
