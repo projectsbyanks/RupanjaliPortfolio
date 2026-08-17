@@ -15,6 +15,9 @@ const CAPABILITIES = [
   "Generation",
 ];
 
+const MOMENTS_DESC =
+  "Every project begins with an idea and evolves through exploration, intention, and craft. ";
+
 const ABOUT_ME_ITEMS = [
   { title: "Geo-R1 accepted at International Conference on Machine Learning (ICML)", year: "2026" },
   { title: "MARS accepted at International Conference on Learning Representations (ICLR)", year: "2026" },
