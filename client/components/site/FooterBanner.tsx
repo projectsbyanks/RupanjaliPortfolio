@@ -12,7 +12,7 @@ export default function FooterBanner() {
         {...fadeUp()}
       />
       <motion.p
-        className="font-heading text-[15px] font-normal text-ink text-center"
+        className="font-heading text-[14px] font-light text-ink text-center"
         {...fadeUp(0.1)}
       >
         An archive of visual work, experiments &amp; observations. Paintings are personal works and are not available for sale. All rights reserved. © 2026 Rupanjali Kukal

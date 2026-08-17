@@ -215,7 +215,7 @@ export default function Index() {
               and Intelligence
             </motion.h1>
             <motion.p
-              className="whitespace-nowrap font-sf text-xl tracking-[-0.05em] text-ink"
+              className="whitespace-nowrap font-sf text-[18px] tracking-[-0.05em] text-ink"
               {...fadeUp(0.15)}
             >
               By Rupanjali Kukal
@@ -233,7 +233,7 @@ export default function Index() {
         {/* About / In Studio */}
         <section className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:-mt-[70px]">
           <motion.h2
-            className="text-right font-vogue text-[30px] leading-[0.9] tracking-[-0.04em] text-ink sm:text-[32px] md:text-[38px] lg:text-[50px] xl:text-[50px] xl:leading-[48px]"
+            className="text-center font-vogue text-[32px] leading-[0.9] tracking-[-0.04em] text-ink sm:text-[32px] md:text-[38px] lg:text-right lg:text-[50px] xl:text-[50px] xl:leading-[48px]"
             {...fadeUp()}
           >
             In Studio
