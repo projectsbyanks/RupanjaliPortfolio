@@ -233,7 +233,7 @@ export default function Index() {
         {/* About / In Studio */}
         <section className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:-mt-[70px]">
           <motion.h2
-            className="text-right font-vogue text-[28px] leading-[0.9] tracking-[-0.04em] text-ink sm:text-[32px] md:text-[38px] lg:text-[50px] xl:text-[50px] xl:leading-[48px]"
+            className="text-right font-vogue text-[30px] leading-[0.9] tracking-[-0.04em] text-ink sm:text-[32px] md:text-[38px] lg:text-[50px] xl:text-[50px] xl:leading-[48px]"
             {...fadeUp()}
           >
             In Studio
@@ -282,7 +282,7 @@ export default function Index() {
                   <Link
                     key={item}
                     to={`/epoch-0-pov#${item.toLowerCase()}`}
-                    className="font-heading font-[400] [font-size:clamp(0.625rem,calc(4vw-10px),1.875rem)] leading-[1.3] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
+                    className="font-heading font-[400] [font-size:clamp(0.875rem,calc(4vw-10px),1.875rem)] leading-[1.3] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
                   >
                     {item} <span aria-hidden>→</span>
                   </Link>
