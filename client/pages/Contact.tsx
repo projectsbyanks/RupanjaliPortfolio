@@ -125,6 +125,10 @@ export default function Contact() {
             <ContactDetails />
           </motion.div>
         </section>
+
+        <p className="font-heading text-[15px] font-normal text-ink text-center pb-4">
+          An archive of visual work, experiments &amp; observations. Paintings are personal works and are not available for sale. All rights reserved. © 2026 Rupanjali Kukal
+        </p>
       </div>
     </SiteLayout>
   );

@@ -49,7 +49,7 @@ export default function SiteLayout({
         }`}
       >
         <div className="mx-auto w-full max-w-[1400px]">
-          <SiteNav linkClassName={isTransparent ? "text-white" : undefined} />
+          <SiteNav linkClassName={isTransparent ? "text-white" : undefined} isTransparent={isTransparent} />
         </div>
       </div>
       {/* Pull content up behind nav on transparent-nav pages */}

@@ -22,13 +22,16 @@ function ChevronDown({ className }: { className?: string }) {
   );
 }
 
-function Logo({ className }: { className?: string }) {
+function Logo({ className, isTransparent = false }: { className?: string; isTransparent?: boolean }) {
   return (
     <NavLink to="/" className={cn("shrink-0", className)}>
       <img
         src="/assets/Resources/Signature.png"
         alt="Rupanjali Kukal"
-        className="h-[60px] w-auto object-contain mix-blend-multiply"
+        className={cn(
+          "h-[60px] w-auto object-contain",
+          isTransparent ? "invert mix-blend-screen" : "mix-blend-multiply"
+        )}
       />
     </NavLink>
   );
@@ -73,7 +76,7 @@ function DesktopArtMenu({ linkClassName }: { linkClassName?: string }) {
   );
 }
 
-export default function SiteNav({ linkClassName }: { linkClassName?: string }) {
+export default function SiteNav({ linkClassName, isTransparent = false }: { linkClassName?: string; isTransparent?: boolean }) {
   const [open, setOpen] = useState(false);
   const [artOpen, setArtOpen] = useState(false);
   const { pathname } = useLocation();
@@ -92,7 +95,7 @@ export default function SiteNav({ linkClassName }: { linkClassName?: string }) {
       <nav className="hidden w-full items-center py-2 lg:flex">
         {/* Logo — left */}
         <div className="flex flex-1 items-center">
-          <Logo />
+          <Logo isTransparent={isTransparent} />
         </div>
 
         {/* Center links */}
