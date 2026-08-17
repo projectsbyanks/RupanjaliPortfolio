@@ -326,15 +326,17 @@ export default function Index() {
             className="flex gap-6 overflow-x-auto overflow-y-hidden scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             {ABOUT_ME_ITEMS.map((item, i) => (
-              <GalleryCard
+              <motion.div
                 key={i}
-                index={i}
-                title={item.title}
-                year={item.year}
-                description=""
-                showDescription={false}
-                className="shrink-0 w-[220px]"
-              />
+                className="shrink-0 w-[220px] flex flex-col gap-1"
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.55, ease: "easeOut", delay: Math.min(i * 0.06, 0.36) }}
+              >
+                <span className="font-heading text-[18px] font-[100] leading-snug text-ink">{item.title}</span>
+                <span className="font-heading text-[18px] font-[100] text-ink">{item.year}</span>
+              </motion.div>
             ))}
           </div>
         </section>
