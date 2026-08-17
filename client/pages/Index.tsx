@@ -4,6 +4,7 @@ import GalleryCard from "@/components/site/GalleryCard";
 import FooterBanner from "@/components/site/FooterBanner";
 import StartConversation from "@/components/site/StartConversation";
 import { ReactNode, useRef } from "react";
+import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
 
 const CAPABILITIES = [
@@ -254,46 +255,48 @@ export default function Index() {
           </motion.p>
         </section>
 
-        {/* Hidden Layers */}
+        {/* Epoch 0: POV */}
         <section className="flex flex-col gap-6 lg:-mt-[70px]">
           <SectionLabel text="Epoch 0: POV" />
-          <motion.div className="relative overflow-hidden" {...fadeUp()}>
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/5bcfc09b640e04a7e7f3d84268d95c19be51d014?width=2800"
-              alt="Hidden Layers"
-              className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out hover:scale-[1.03] lg:aspect-[175/69]"
-            />
-            <div className="absolute inset-0 flex flex-col justify-center px-6 sm:px-12 lg:block lg:left-12 lg:top-12">
-              <h3 className="t-hero text-white whitespace-nowrap">
+          <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
+            {/* Left column */}
+            <div className="flex flex-col gap-8 lg:w-1/2">
+              <motion.h2
+                className="t-section italic text-ink"
+                {...fadeUp()}
+              >
                 Epoch 0: POV
-              </h3>
-              <p className="mt-5 max-w-[34ch] t-body text-justify text-white">
-                Where the language of artificial intelligence becomes a lens
-                for exploring perception, identity, and creation through art.
-              </p>
+              </motion.h2>
+              <motion.p
+                className="t-body text-justify text-ink"
+                {...fadeUp(0.1)}
+              >
+                Art and AI often ask surprisingly similar questions: how we
+                recognize, separate, combine, and interpret what we see. Long
+                before I knew their technical names, I had been exploring many
+                of the same ideas through paint. My work now brings those two
+                ways of thinking into conversation.
+              </motion.p>
+              <motion.div className="flex flex-col gap-1" {...fadeUp(0.15)}>
+                {CAPABILITIES.map((item) => (
+                  <Link
+                    key={item}
+                    to={`/epoch-0-pov#${item.toLowerCase()}`}
+                    className="t-capability text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
+                  >
+                    {item} <span aria-hidden>→</span>
+                  </Link>
+                ))}
+              </motion.div>
             </div>
-          </motion.div>
-          <div className="flex flex-col items-center justify-center gap-12 md:flex-row md:gap-24">
-            <motion.div
-              className="flex flex-col items-center gap-2"
-              {...fadeUp()}
-            >
-              {CAPABILITIES.map((item) => (
-                <div key={item} className="t-capability text-center text-ink">
-                  {item}
-                </div>
-              ))}
+            {/* Right column — image */}
+            <motion.div className="overflow-hidden lg:w-1/2" {...fadeUp(0.1)}>
+              <img
+                src="/assets/Resources/POV1 2.png"
+                alt="Epoch 0: POV"
+                className="w-full object-cover"
+              />
             </motion.div>
-            <motion.p
-              className="t-body max-w-[34ch] text-justify text-ink"
-              {...fadeUp(0.15)}
-            >
-              Art and AI often ask surprisingly similar questions: how we
-              recognize, separate, combine, and interpret what we see. Long
-              before I knew their technical names, I had been exploring many
-              of the same ideas through paint. My work now brings those two
-              ways of thinking into conversation.
-            </motion.p>
           </div>
         </section>
 

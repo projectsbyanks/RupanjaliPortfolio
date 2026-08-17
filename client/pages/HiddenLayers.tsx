@@ -106,7 +106,7 @@ function FeatureSection({
 }) {
   const fadeUp = useFadeUp();
   return (
-    <section className="flex flex-col gap-6 px-4 lg:gap-8 lg:px-[154px]">
+    <section id={feature.label.toLowerCase()} className="flex flex-col gap-6 px-4 lg:gap-8 lg:px-[154px]">
       <span className="font-heading text-[20px] font-normal tracking-[-0.02em] text-ink">
         {feature.label}
       </span>
