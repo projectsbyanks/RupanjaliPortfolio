@@ -282,8 +282,7 @@ export default function Index() {
                   <Link
                     key={item}
                     to={`/epoch-0-pov#${item.toLowerCase()}`}
-                    className="font-heading font-[400] tracking-[-0.05em] leading-[1.3] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
-                    style={{ fontSize: 'clamp(1rem, calc(4vw - 4px), 2.25rem)' }}
+                    className="font-heading font-[400] [font-size:clamp(1rem,calc(4vw-4px),2.25rem)] leading-[1.3] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
                   >
                     {item} <span aria-hidden>→</span>
                   </Link>
