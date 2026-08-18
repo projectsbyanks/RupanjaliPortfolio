@@ -91,7 +91,7 @@ const VOLUNTEERING: { title: ReactNode; date: string }[] = [
     date: "2017–2020",
   },
   {
-    title: <>Graphic Designer, <a href="https://dtutimes.dtu.ac.in/" target="_blank" rel="noopener noreferrer" className={linkClass}>DTU Times</a>, DTU (DCE)</>,
+    title: <>Design Lead, <a href="https://dtutimes.dtu.ac.in/" target="_blank" rel="noopener noreferrer" className={linkClass}>DTU Times</a>, DTU (DCE)</>,
     date: "2018–2019",
   },
 ];
