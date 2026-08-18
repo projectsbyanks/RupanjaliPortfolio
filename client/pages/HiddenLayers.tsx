@@ -16,6 +16,19 @@ const HERO_PARAS = [
   "Hidden Layers is where I attempt to bring those two practices together.",
 ];
 
+const BTS_IMAGES = [
+  "/assets/frame-1.jpg",
+  "/assets/frame-2.jpg",
+  "/assets/frame-3.jpg",
+  "/assets/frame-4.jpg",
+  "/assets/frame-5.jpg",
+  "/assets/frame-6.jpg",
+  "/assets/frame-7.jpg",
+  "/assets/frame-8.jpg",
+  "/assets/frame-9.jpg",
+  "/assets/frame-10.jpg",
+];
+
 // Borrowed from the landing "Impact & Recognition" gallery
 const GALLERY = [
   { image: "https://api.builder.io/api/v1/image/assets/TEMP/5d820eb73b3a3d42a90521ef20a62783906d0748?width=572", year: "01", title: "Detection", description: "What's something worth noticing?" },
@@ -220,6 +233,27 @@ export default function HiddenLayers() {
               onImageClick={openLightbox}
             />,
           ])}
+
+          {/* BTS */}
+          <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
+          <section className="flex flex-col gap-6">
+            <div className="flex items-center gap-4 px-4 lg:px-[154px]">
+              <span className="font-sf text-[11px] tracking-[0.18em] text-ink uppercase whitespace-nowrap">BTS</span>
+              <div className="h-[0.5px] bg-neutral-300 max-w-[40%] flex-1" />
+            </div>
+            <div className="overflow-hidden">
+              <div className="flex gap-4 animate-marquee w-max">
+                {[...BTS_IMAGES, ...BTS_IMAGES].map((src, i) => (
+                  <img
+                    key={i}
+                    src={src}
+                    alt=""
+                    className="h-[300px] w-auto object-cover shrink-0"
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
 
           {/* Start the Conversation + footer (shared) */}
           <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
