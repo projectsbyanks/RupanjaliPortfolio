@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
 import SiteLayout from "@/components/site/SiteLayout";
 import SectionHeading from "@/components/site/SectionHeading";
 import StartConversation from "@/components/site/StartConversation";
@@ -75,23 +74,25 @@ const RECOGNITION = [
   },
 ];
 
-const linkClass = "underline underline-offset-2 hover:opacity-70 transition-opacity";
-
-const VOLUNTEERING: { title: ReactNode; date: string }[] = [
+const VOLUNTEERING = [
   {
-    title: <>Teaching Assistant <a href="https://www.meche.engineering.cmu.edu/education/courses/24-683.html" target="_blank" rel="noopener noreferrer" className={linkClass}>Design for Manufacture and the Environment</a> at CMU</>,
+    title: "Teaching Assistant at CMU",
+    subtexts: [{ label: "Design for Manufacture and the Environment", href: "https://www.meche.engineering.cmu.edu/education/courses/24-683.html" }],
     date: "2021",
   },
   {
-    title: <>Co-Founder <a href="https://www.adtl.co.in/categories/flaire-unmanned-systems" target="_blank" rel="noopener noreferrer" className={linkClass}>Flaire Unmanned Systems</a> which is acquired by Adani Defense Systems</>,
+    title: "Co-Founder which is acquired by Adani Defense Systems",
+    subtexts: [{ label: "Flaire Unmanned Systems", href: "https://www.adtl.co.in/categories/flaire-unmanned-systems" }],
     date: "2019",
   },
   {
-    title: <>Vice President <a href="https://uasdtu.com/" target="_blank" rel="noopener noreferrer" className={linkClass}>Unmanned Aerial Systems, DTU(DCE)</a></>,
+    title: "Vice President",
+    subtexts: [{ label: "Unmanned Aerial Systems, DTU(DCE)", href: "https://uasdtu.com/" }],
     date: "2017–2020",
   },
   {
-    title: <>Design Lead, <a href="https://dtutimes.dtu.ac.in/" target="_blank" rel="noopener noreferrer" className={linkClass}>DTU Times</a>, DTU (DCE)</>,
+    title: "Design Lead, DTU (DCE)",
+    subtexts: [{ label: "DTU Times", href: "https://dtutimes.dtu.ac.in/" }],
     date: "2018–2019",
   },
 ];
@@ -220,6 +221,14 @@ export default function About() {
                   <h3 className="font-heading text-2xl font-normal tracking-[-0.05em] text-ink">
                     {item.title}
                   </h3>
+                  <div className="flex flex-col gap-1">
+                    {item.subtexts.map((s) => (
+                      <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+                        className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500 hover:text-ink underline underline-offset-2 transition-colors">
+                        {s.label}
+                      </a>
+                    ))}
+                  </div>
                 </div>
                 <span className="shrink-0 font-heading text-[14px] font-normal tracking-[-0.05em] text-neutral-400">
                   {item.date}
