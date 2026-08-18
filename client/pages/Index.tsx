@@ -276,11 +276,7 @@ export default function Index() {
                 className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-justify text-ink"
                 {...fadeUp(0.1)}
               >
-                Art and AI often ask surprisingly similar questions: how we
-                recognize, separate, combine, and interpret what we see. Long
-                before I knew their technical names, I had been exploring many
-                of the same ideas through paint. My work now brings those two
-                ways of thinking into conversation.
+                Art and AI often ask similar questions: how we recognize, separate, interpret, and create what we see. Over the past four years, these questions have shaped my work at Carnegie Mellon and Microsoft—from my master's thesis to papers published at top-tier AI conferences to patents and ongoing research. Alongside that work, I continued exploring many of the same ideas through art. This collection brings those parallel threads together, placing the paintings and the research that evolved alongside them in conversation.
               </motion.p>
               <motion.div className="flex flex-col gap-1" {...fadeUp(0.15)}>
                 {CAPABILITIES.map((item) => (
@@ -289,7 +285,7 @@ export default function Index() {
                     to={`/epoch-0-pov#${item.toLowerCase()}`}
                     className="font-heading font-[400] [font-size:clamp(0.75rem,calc(4vw-10px),1.75rem)] leading-[1.3] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
                   >
-                    {item} <span aria-hidden>→</span>
+                    {item} <img src="/assets/Forward arrow.svg" alt="" aria-hidden className="h-[1em] w-auto" />
                   </Link>
                 ))}
               </motion.div>
