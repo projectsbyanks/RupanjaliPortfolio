@@ -5,7 +5,30 @@ import StartConversation from "@/components/site/StartConversation";
 import FooterBanner from "@/components/site/FooterBanner";
 import { useFadeUp } from "@/lib/reveal";
 
-const PORTRAIT = "/assets/portrait.jpg";
+const PORTRAIT = "/assets/Resources/about_1%201.png";
+
+const EXPERTISE = [
+  {
+    title: "Multi-Modal Foundational Model",
+    subtexts: ["Vision Language Modelling", "Cross-Modality Model Development"],
+  },
+  {
+    title: "Geospatial Modelling",
+    subtexts: ["Geospatial Map Generation", "Human in the loop map generation and correction"],
+  },
+  {
+    title: "Perception",
+    subtexts: ["End-to-end Tracking Systems", "Track Linking, Track Fragment Association"],
+  },
+  {
+    title: "Real-Time Deep Learning Systems",
+    subtexts: ["High-Speed Off-road Segmentation", "Aerial Detection and Tracking"],
+  },
+  {
+    title: "AI Optimization",
+    subtexts: ["NNI", "ONNX Modelling", "TensorRT"],
+  },
+];
 
 const BIO = [
   "Hi, I'm an ML Applied Scientist at Microsoft and an artist working at the intersection of artificial intelligence and visual art.",
@@ -91,6 +114,69 @@ export default function About() {
         </section>
 
         {/* Recognition */}
+        <section className="flex flex-col gap-16">
+          <SectionHeading className="text-center" title="Recognition & Awards" />
+          <div className="flex flex-col border-t border-neutral-200">
+            {RECOGNITION.map((item, i) => (
+              <motion.div
+                key={i}
+                className="flex items-start gap-6 border-b border-neutral-200 py-6"
+                {...fadeUp(Math.min(i * 0.04, 0.28))}
+              >
+                <span className="w-6 shrink-0 font-body font-light text-lg tracking-[-0.05em] text-neutral-400">
+                  {i + 1}
+                </span>
+                <div className="flex flex-1 flex-col gap-2">
+                  <h3 className="font-heading text-2xl font-normal tracking-[-0.05em] text-ink">
+                    {item.title}
+                  </h3>
+                  <div className="flex flex-col gap-1">
+                    {item.subtexts.map((s) => (
+                      <p key={s} className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500">
+                        {s}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+                <span className="shrink-0 font-heading text-[14px] font-normal tracking-[-0.05em] text-neutral-400">
+                  {item.date}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Research Expertise */}
+        <section className="flex flex-col gap-16">
+          <SectionHeading className="text-center" title={<><span className="italic">Research</span> Expertise</>} />
+          <div className="flex flex-col border-t border-neutral-200">
+            {EXPERTISE.map((item, i) => (
+              <motion.div
+                key={i}
+                className="flex items-start gap-6 border-b border-neutral-200 py-6"
+                {...fadeUp(Math.min(i * 0.04, 0.28))}
+              >
+                <span className="w-6 shrink-0 font-body font-light text-lg tracking-[-0.05em] text-neutral-400">
+                  {i + 1}
+                </span>
+                <div className="flex flex-1 flex-col gap-2">
+                  <h3 className="font-heading text-2xl font-normal tracking-[-0.05em] text-ink">
+                    {item.title}
+                  </h3>
+                  <div className="flex flex-col gap-1">
+                    {item.subtexts.map((s) => (
+                      <p key={s} className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500">
+                        {s}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Recognition (duplicate) */}
         <section className="flex flex-col gap-16">
           <SectionHeading className="text-center" title="Recognition & Awards" />
           <div className="flex flex-col border-t border-neutral-200">

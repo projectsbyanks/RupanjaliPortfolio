@@ -108,7 +108,7 @@ export default function SiteNav({ linkClassName, isTransparent = false }: { link
           </NavLink>
           <DesktopArtMenu linkClassName={linkClassName} />
           <NavLink to="/about" className={({ isActive }) => linkClass(isActive)}>
-            About
+            About Me
           </NavLink>
         </div>
 
@@ -211,7 +211,7 @@ export default function SiteNav({ linkClassName, isTransparent = false }: { link
                   cn("font-sf text-lg tracking-[-0.05em] text-ink transition-opacity hover:opacity-70", isActive ? "font-bold" : "font-normal")
                 }
               >
-                About
+                About Me
               </NavLink>
 
               <NavLink
