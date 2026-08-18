@@ -177,10 +177,7 @@ export default function About() {
 
         {/* Research Expertise */}
         <section className="flex flex-col gap-16">
-          <SectionHeading
-            className="text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px]"
-            title={<><span className="italic">Research</span> Expertise</>}
-          />
+          <SectionHeading className="text-center" title={<><span className="italic">Research</span> Expertise</>} />
           <div className="flex flex-col border-t border-neutral-200">
             {EXPERTISE.map((block, i) => (
               <motion.div
