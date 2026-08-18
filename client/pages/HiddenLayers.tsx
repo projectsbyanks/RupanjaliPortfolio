@@ -1,4 +1,5 @@
-import { ReactNode, useState, useCallback } from "react";
+import { ReactNode, useState, useCallback, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import SiteLayout from "@/components/site/SiteLayout";
 import GalleryCard from "@/components/site/GalleryCard";
@@ -138,6 +139,16 @@ export default function HiddenLayers() {
   const [lbSrc, setLbSrc] = useState<string | null>(null);
   const openLightbox = useCallback((src: string) => setLbSrc(src), []);
   const closeLightbox = useCallback(() => setLbSrc(null), []);
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+    const id = hash.replace("#", "");
+    const el = document.getElementById(id);
+    if (el) {
+      setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 100);
+    }
+  }, [hash]);
 
   return (
     <SiteLayout transparentNav>
