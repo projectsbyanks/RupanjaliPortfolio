@@ -14,7 +14,6 @@ const HERO_LEAD =
 const HERO_PARAS = [
   "In machine language, we teach systems to separate objects from their surroundings, recognize them across changing perspectives, connect information from different sources, follow an identity through time, and generate something new from what they have learned. In art, one can return to those same ideas intuitively.",
   "Hidden Layers is where I attempt to bring those two practices together.",
-  "Rather than using AI to create the artwork, I use art to think through AI: taking concepts that usually live inside papers, models, and equations and translating them into visual questions about perception, identity, memory, ambiguity, and change.",
 ];
 
 // Borrowed from the landing "Impact & Recognition" gallery
@@ -161,26 +160,26 @@ export default function HiddenLayers() {
         {/* Full-bleed hero */}
         <div className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden">
           <img
-            src="/assets/hidden-hero.jpg"
-            alt="Hidden Layers"
-            onClick={() => openLightbox("/assets/hidden-hero.jpg")}
+            src="/assets/Hidden%20layers%20hero%20image.jpeg"
+            alt="Epoch 0: POV"
+            onClick={() => openLightbox("/assets/Hidden%20layers%20hero%20image.jpeg")}
             className="aspect-[3/4] w-full cursor-zoom-in object-cover lg:aspect-[16/9]"
           />
-          {/* Left-side gradient overlay — black/30 on left, fades to transparent at center */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/20 to-transparent" />
-          <div className="absolute inset-0 flex items-center px-4 pt-[40px] lg:px-20">
-            <div className="flex max-w-[640px] flex-col gap-6">
+          {/* Right-side gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-l from-black/65 via-black/20 to-transparent" />
+          <div className="absolute inset-0 flex items-center justify-end px-4 pt-[40px] lg:px-20">
+            <div className="flex max-w-[640px] flex-col gap-6 pr-4 lg:pr-[72px]">
               <motion.h1
-                className="font-display text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px] tracking-[-0.02em] text-white pl-4 lg:pl-[72px]"
+                className="font-display text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px] tracking-[-0.02em] text-white text-right"
                 {...fadeUp()}
               >
-                Hidden <span className="italic">Layers</span>
+                Epoch 0: <span className="italic">POV</span>
               </motion.h1>
-              <motion.div className="flex flex-col gap-[15px] pl-4 lg:pl-[72px]" {...fadeUp(0.15)}>
-                <p className="font-heading font-[250] text-[12px] leading-[1.45] tracking-[1px] text-white">{HERO_LEAD}</p>
+              <motion.div className="flex flex-col gap-[15px]" {...fadeUp(0.15)}>
+                <p className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-white text-right">{HERO_LEAD}</p>
                 <div className="hidden flex-col gap-[15px] lg:flex">
                   {HERO_PARAS.map((p, i) => (
-                    <p key={i} className="font-heading font-[250] text-[12px] leading-[1.45] tracking-[1px] text-white">
+                    <p key={i} className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-white text-right">
                       {p}
                     </p>
                   ))}
@@ -191,7 +190,7 @@ export default function HiddenLayers() {
         </div>
 
         {/* Rest of page with normal padding and spacing */}
-        <div className="flex flex-col gap-12 pt-6 lg:gap-[242px] lg:pt-[40px]">
+        <div className="flex flex-col gap-12 pt-6 lg:gap-[142px] lg:pt-[40px]">
           {/* Gallery cards */}
           <section className="flex flex-col gap-12">
             <div className="grid grid-cols-2 items-start gap-6 sm:grid-cols-3 lg:grid-cols-5">
@@ -213,7 +212,7 @@ export default function HiddenLayers() {
 
           {/* Feature sections — mobile divider before each */}
           {FEATURES.flatMap((feature, i) => [
-            <div key={`hr-${feature.label}`} className="h-[0.5px] w-full bg-neutral-300" />,
+            <div key={`hr-${feature.label}`} className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />,
             <FeatureSection
               key={feature.label}
               feature={feature}
@@ -223,7 +222,7 @@ export default function HiddenLayers() {
           ])}
 
           {/* Start the Conversation + footer (shared) */}
-          <div className="h-[0.5px] w-full bg-neutral-300" />
+          <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
           <StartConversation />
           <FooterBanner />
         </div>
