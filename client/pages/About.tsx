@@ -192,8 +192,8 @@ export default function About() {
                   <h3 className="font-heading text-2xl font-normal tracking-[-0.05em] text-ink">{block.title}</h3>
                   <div className="flex flex-col gap-1">
                     {block.items.map((item) => (
-                      <p key={item} className="font-heading font-normal text-[16px] tracking-[-0.05em] text-ink">
-                        {item}
+                      <p key={item} className="font-heading font-normal text-[16px] tracking-[-0.05em] text-ink flex items-start gap-2">
+                        <span aria-hidden="true">•</span><span>{item}</span>
                       </p>
                     ))}
                   </div>
