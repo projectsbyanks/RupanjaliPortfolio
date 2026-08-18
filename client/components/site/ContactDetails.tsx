@@ -12,13 +12,13 @@ export default function ContactDetails({
       <div className="flex flex-col gap-1">
         <div className="flex flex-col gap-0">
           <div className="font-heading text-base font-normal text-ink">Phone</div>
-          <div className="t-label font-medium text-[12px] text-ink lg:text-[23px]">
+          <div className="font-heading text-base font-normal text-ink">
             +1-412-996-7352
           </div>
         </div>
         <div className="flex flex-col gap-0">
           <div className="font-heading text-base font-normal text-ink">Email</div>
-          <div className="t-label font-medium text-[12px] text-ink lg:text-[23px]">
+          <div className="font-heading text-base font-normal text-ink">
             rupanjali.kukal.rk@gmail.com
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function ContactDetails({
           </svg>
         </a>
         <a
-          href="https://www.instagram.com/"
+          href="https://www.instagram.com/rupannjali09/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"

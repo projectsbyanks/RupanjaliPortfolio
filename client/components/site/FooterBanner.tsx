@@ -15,7 +15,7 @@ export default function FooterBanner() {
         className="font-heading text-[14px] font-light text-ink text-center"
         {...fadeUp(0.1)}
       >
-        An archive of visual work, experiments &amp; observations. Paintings are personal works and are not available for sale. All rights reserved. © 2026 Rupanjali Kukal
+        Paintings on this portfolio are personal work and not available for sale. All rights reserved. © 2026 Rupanjali Kukal
       </motion.p>
     </div>
   );
