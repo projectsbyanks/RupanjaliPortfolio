@@ -248,7 +248,7 @@ export default function HiddenLayers() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              <span className="italic">BTS</span>
+              Behind the <span className="italic">Scenes</span>
             </motion.h2>
             <div className="overflow-hidden">
               <div className="flex gap-4 animate-marquee w-max">
