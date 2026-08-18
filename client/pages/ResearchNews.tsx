@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useFadeUp } from "@/lib/reveal";
 
 const TALKS = [
+  { date: "May '26", title: '"Geo-R1: Unlocking VLM Geospatial Reasoning with Cross-View Reinforcement Learning" accepted at ICML 2026!' },
   { date: "Mar '26", title: 'Talk on "Data Propagation Techniques for tracking objects in Aerial and Maritime Applications" at NAML (Naval Applications of Machine Learning) 2026' },
   { date: "Mar '26", title: "Promotion at Microsoft as an ML Applied Scientist II." },
   { date: "Feb '26", title: '"MARS-A Foundational Map Auto-Regressor" accepted at ICLR 2026!' },
