@@ -176,7 +176,7 @@ export default function HiddenLayers() {
             src="/assets/Hidden%20layers%20hero%20image.jpeg"
             alt="Epoch 0: POV"
             onClick={() => openLightbox("/assets/Hidden%20layers%20hero%20image.jpeg")}
-            className="aspect-[3/4] w-full cursor-zoom-in object-cover lg:aspect-[16/9]"
+            className="aspect-[3/4] w-[calc(100%+20px)] -ml-[20px] cursor-zoom-in object-cover lg:aspect-[16/9]"
           />
           {/* Right-side gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-l from-black/65 via-black/20 to-transparent" />
@@ -241,6 +241,15 @@ export default function HiddenLayers() {
               <span className="font-sf text-[11px] tracking-[0.18em] text-ink uppercase whitespace-nowrap">BTS</span>
               <div className="h-[0.5px] bg-neutral-300 max-w-[40%] flex-1" />
             </div>
+            <motion.h2
+              className="t-section text-ink px-4 lg:px-[154px]"
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+              <span className="italic">BTS</span>
+            </motion.h2>
             <div className="overflow-hidden">
               <div className="flex gap-4 animate-marquee w-max">
                 {[...BTS_IMAGES, ...BTS_IMAGES].map((src, i) => (
