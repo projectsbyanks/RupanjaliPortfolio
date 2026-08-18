@@ -285,7 +285,7 @@ export default function Index() {
                     to={`/epoch-0-pov#${item.toLowerCase()}`}
                     className="font-heading font-[400] [font-size:clamp(0.75rem,calc(4vw-10px),1.75rem)] leading-[1.3] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
                   >
-                    {item} <img src="/assets/Forward%20arrow.svg" alt="" aria-hidden className="h-[1em] w-auto" />
+                    <img src="/assets/Forward%20arrow.svg" alt="" aria-hidden className="h-[1em] w-auto" /> {item}
                   </Link>
                 ))}
               </motion.div>
