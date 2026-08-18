@@ -150,7 +150,7 @@ export default function About() {
                   {i + 1}
                 </span>
                 <div className="flex flex-1 flex-col gap-2">
-                  <h3 className="font-heading text-2xl font-normal tracking-[-0.05em] text-ink">
+                  <h3 className="font-heading text-[18px] leading-[20px] font-normal tracking-[-0.05em] text-ink">
                     {item.title}
                   </h3>
                   <div className="flex flex-col gap-1">
@@ -190,7 +190,7 @@ export default function About() {
                   {i + 1}
                 </span>
                 <div className="flex flex-1 flex-col gap-2">
-                  <h3 className="font-heading text-2xl font-normal tracking-[-0.05em] text-ink">{block.title}</h3>
+                  <h3 className="font-heading text-[18px] leading-[20px] font-normal tracking-[-0.05em] text-ink">{block.title}</h3>
                   <div className="flex flex-col gap-1">
                     {block.items.map((item) => (
                       <p key={item} className="font-heading font-normal text-[16px] tracking-[-0.05em] text-ink flex items-start gap-2">
@@ -218,7 +218,7 @@ export default function About() {
                   {i + 1}
                 </span>
                 <div className="flex flex-1 flex-col gap-2">
-                  <h3 className="font-heading text-2xl font-normal tracking-[-0.05em] text-ink">
+                  <h3 className="font-heading text-[18px] leading-[20px] font-normal tracking-[-0.05em] text-ink">
                     {item.title}
                   </h3>
                   <div className="flex flex-col gap-1">
