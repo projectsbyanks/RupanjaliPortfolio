@@ -144,10 +144,14 @@ export default function HiddenLayers() {
   useEffect(() => {
     if (!hash) return;
     const id = hash.replace("#", "");
-    const el = document.getElementById(id);
-    if (el) {
-      setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 100);
-    }
+    const scrollToEl = () => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+    // Wait for layout to settle (hero image load affects positions)
+    const t1 = setTimeout(scrollToEl, 300);
+    const t2 = setTimeout(scrollToEl, 800);
+    return () => { clearTimeout(t1); clearTimeout(t2); };
   }, [hash]);
 
   return (
