@@ -173,9 +173,9 @@ export default function HiddenLayers() {
         {/* Full-bleed hero */}
         <div className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden">
           <img
-            src="/assets/Hidden%20layers%20hero%20image.jpeg"
+            src="/assets/Resources/Hidden%20layers%20hero%20image.jpg"
             alt="Epoch 0: POV"
-            onClick={() => openLightbox("/assets/Hidden%20layers%20hero%20image.jpeg")}
+            onClick={() => openLightbox("/assets/Resources/Hidden%20layers%20hero%20image.jpg")}
             className="aspect-[3/4] w-[calc(100%+20px)] -ml-[20px] cursor-zoom-in object-cover lg:aspect-[16/9]"
           />
           {/* Right-side gradient overlay */}
