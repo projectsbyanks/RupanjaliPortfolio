@@ -51,16 +51,16 @@ const RECOGNITION = [
   {
     title: "Drone Olympics (1st Prize in Formation Flying)",
     subtexts: [
-      { label: "Times of India - News Article" },
-      { label: "University Social Media Article" },
-      { label: "University Newspaper" },
-      { label: "Rediff - News Article" },
+      { label: "Times of India - News Article", href: "https://timesofindia.indiatimes.com/city/bengaluru/drone-olympics-15-of-17-finalists-bag-prizes/articleshow/68105834.cms" },
+      { label: "University Social Media Article", href: "https://www.instagram.com/p/C4_EHfEJPci/?img_index=1" },
+      { label: "University Newspaper", href: "https://dtutimes.dtu.ac.in/blog/uas-dtu-wins-the-drone-olympics-at-aero-india19-856" },
+      { label: "Rediff - News Article", href: "https://www.rediff.com/money/report/drones-steal-the-show-at-aero-india-2019/20190222.htm" },
     ],
     date: "2019",
   },
   {
     title: "AUV SUAS (2nd Prize in Design Category)",
-    subtexts: [{ label: "Design Paper" }],
+    subtexts: [{ label: "Design Paper", href: "https://drive.google.com/drive/folders/1OBSPKXaNaMzeNuZETj2ZkcuBc8K-a2vH" }],
     date: "2018",
   },
   {
