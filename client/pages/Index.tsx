@@ -238,7 +238,7 @@ export default function Index() {
         {/* About / In Studio */}
         <section className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:-mt-[70px] lg:py-[80px]">
           <motion.h2
-            className="text-center font-vogue text-[32px] leading-[0.9] tracking-[-0.04em] text-ink sm:text-[32px] md:text-[38px] lg:text-right lg:text-[52px] xl:text-[52px] xl:leading-[50px]"
+            className="text-center font-vogue text-[34px] leading-[0.9] tracking-[-0.04em] text-ink sm:text-[34px] md:text-[40px] lg:text-right lg:text-[54px] xl:text-[54px] xl:leading-[50px]"
             {...fadeUp()}
           >
             In Studio
