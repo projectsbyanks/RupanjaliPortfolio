@@ -188,10 +188,10 @@ export default function About() {
                 className="flex flex-col gap-3 py-6"
                 {...fadeUp(Math.min(i * 0.06, 0.3))}
               >
-                <h3 className="t-talk-title text-[18px] leading-[20px] text-ink">{block.title}</h3>
+                <h3 className="t-talk-title text-2xl leading-[20px] text-ink">{block.title}</h3>
                 <ul className="flex flex-col gap-1">
                   {block.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 font-heading font-light text-[14px] leading-[15px] tracking-[-0.05em] text-ink">
+                    <li key={item} className="flex items-start gap-2 font-heading font-light text-[16px] leading-[15px] tracking-[-0.05em] text-ink">
                       <span aria-hidden="true">•</span>
                       <span>{item}</span>
                     </li>
