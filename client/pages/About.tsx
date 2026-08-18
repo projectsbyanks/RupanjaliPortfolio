@@ -11,23 +11,23 @@ const PORTRAIT = "/assets/Resources/about_1%201.png";
 const EXPERTISE = [
   {
     title: "Multi-Modal Foundational Model",
-    subtexts: ["Vision Language Modelling", "Cross-Modality Model Development"],
+    items: ["Vision Language Modelling", "Cross-Modality Model Development"],
   },
   {
     title: "Geospatial Modelling",
-    subtexts: ["Geospatial Map Generation", "Human in the loop map generation and correction"],
+    items: ["Geospatial Map Generation", "Human in the loop map generation and correction"],
   },
   {
     title: "Perception",
-    subtexts: ["End-to-end Tracking Systems", "Track Linking, Track Fragment Association"],
+    items: ["End-to-end Tracking Systems", "Track Linking, Track Fragment Association"],
   },
   {
     title: "Real-Time Deep Learning Systems",
-    subtexts: ["High-Speed Off-road Segmentation", "Aerial Detection and Tracking"],
+    items: ["High-Speed Off-road Segmentation", "Aerial Detection and Tracking"],
   },
   {
     title: "AI Optimization",
-    subtexts: ["NNI", "ONNX Modelling", "TensorRT"],
+    items: ["NNI", "ONNX Modelling", "TensorRT"],
   },
 ];
 
@@ -176,37 +176,27 @@ export default function About() {
         </section>
 
         {/* Research Expertise */}
-        <section className="flex flex-col gap-16">
-          <SectionHeading className="text-center" title={<><span className="italic">Research</span> Expertise</>} />
-          <div className="flex flex-col border-t border-neutral-200">
-            {EXPERTISE.map((item, i) => (
+        <section className="flex flex-col gap-8">
+          <SectionHeading
+            className="text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px]"
+            title={<><span className="italic">Research</span> Expertise</>}
+          />
+          <div className="flex flex-col divide-y divide-neutral-200">
+            {EXPERTISE.map((block, i) => (
               <motion.div
                 key={i}
-                className="flex items-start gap-6 border-b border-neutral-200 py-6"
-                {...fadeUp(Math.min(i * 0.04, 0.28))}
+                className="flex flex-col gap-3 py-6"
+                {...fadeUp(Math.min(i * 0.06, 0.3))}
               >
-                <span className="w-6 shrink-0 font-body font-light text-lg tracking-[-0.05em] text-neutral-400">
-                  {i + 1}
-                </span>
-                <div className="flex flex-1 flex-col gap-2">
-                  <h3 className="font-heading text-2xl font-normal tracking-[-0.05em] text-ink">
-                    {item.title}
-                  </h3>
-                  <div className="flex flex-col gap-1">
-                    {item.subtexts.map((s) => (
-                      s.href ? (
-                        <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                          className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500 hover:text-ink underline underline-offset-2 transition-colors">
-                          {s.label}
-                        </a>
-                      ) : (
-                        <p key={s.label} className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500">
-                          {s.label}
-                        </p>
-                      )
-                    ))}
-                  </div>
-                </div>
+                <h3 className="t-talk-title text-[18px] leading-[20px] text-ink">{block.title}</h3>
+                <ul className="flex flex-col gap-1">
+                  {block.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2 font-heading font-light text-[14px] leading-[15px] tracking-[-0.05em] text-ink">
+                      <span aria-hidden="true">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
