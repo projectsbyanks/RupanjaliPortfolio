@@ -66,8 +66,7 @@ export default function Contact() {
               className="font-heading font-[300] text-[12px] leading-[1.45] tracking-[1px] max-w-[24ch] text-ink"
               {...fadeUp(0.15)}
             >
-              If you have questions or you need to contact me to discuss ideas
-              or art.
+              Let's chat! Feel free to contact me.
             </motion.p>
           </div>
 
@@ -76,7 +75,7 @@ export default function Contact() {
             className="flex w-full max-w-xl flex-col gap-6 lg:flex-1"
             {...fadeUp(0.1)}
           >
-            <Field label="Your Good Name">
+            <Field label="Name">
               <input
                 type="text"
                 name="name"
@@ -85,7 +84,7 @@ export default function Contact() {
                 className={inputClass}
               />
             </Field>
-            <Field label="Your Email ID">
+            <Field label="Email ID">
               <input
                 type="email"
                 name="email"
