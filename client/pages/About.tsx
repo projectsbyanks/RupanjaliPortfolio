@@ -42,24 +42,24 @@ const RECOGNITION = [
     title:
       "IAF Mehar Baba Swarm Drone Competition (DTU-Flaire Unmanned Aerial Systems) (1st Prize)",
     subtexts: [
-      "Times of India - News Article",
-      "The Indian Express - News Article",
+      { label: "Times of India - News Article", href: "https://timesofindia.indiatimes.com/city/bengaluru/bluru-firm-2-others-win-iaf-swarm-drone-challenge/articleshow/87245855.cms" },
+      { label: "The Indian Express - News Article", href: "https://indianexpress.com/article/cities/bangalore/iaf-announces-winners-mehar-baba-swarm-drone-competition-7588658/" },
     ],
     date: "2020",
   },
   {
     title: "Drone Olympics (1st Prize in Formation Flying)",
     subtexts: [
-      "Times of India - News Article",
-      "University Social Media Article",
-      "University Newspaper",
-      "Rediff - News Article",
+      { label: "Times of India - News Article" },
+      { label: "University Social Media Article" },
+      { label: "University Newspaper" },
+      { label: "Rediff - News Article" },
     ],
     date: "2019",
   },
   {
     title: "AUV SUAS (2nd Prize in Design Category)",
-    subtexts: ["Design Paper"],
+    subtexts: [{ label: "Design Paper" }],
     date: "2018",
   },
   {
@@ -132,9 +132,16 @@ export default function About() {
                   </h3>
                   <div className="flex flex-col gap-1">
                     {item.subtexts.map((s) => (
-                      <p key={s} className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500">
-                        {s}
-                      </p>
+                      s.href ? (
+                        <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+                          className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500 hover:text-ink underline underline-offset-2 transition-colors">
+                          {s.label}
+                        </a>
+                      ) : (
+                        <p key={s.label} className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500">
+                          {s.label}
+                        </p>
+                      )
                     ))}
                   </div>
                 </div>
@@ -165,9 +172,16 @@ export default function About() {
                   </h3>
                   <div className="flex flex-col gap-1">
                     {item.subtexts.map((s) => (
-                      <p key={s} className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500">
-                        {s}
-                      </p>
+                      s.href ? (
+                        <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+                          className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500 hover:text-ink underline underline-offset-2 transition-colors">
+                          {s.label}
+                        </a>
+                      ) : (
+                        <p key={s.label} className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500">
+                          {s.label}
+                        </p>
+                      )
                     ))}
                   </div>
                 </div>
@@ -195,9 +209,16 @@ export default function About() {
                   </h3>
                   <div className="flex flex-col gap-1">
                     {item.subtexts.map((s) => (
-                      <p key={s} className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500">
-                        {s}
-                      </p>
+                      s.href ? (
+                        <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+                          className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500 hover:text-ink underline underline-offset-2 transition-colors">
+                          {s.label}
+                        </a>
+                      ) : (
+                        <p key={s.label} className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500">
+                          {s.label}
+                        </p>
+                      )
                     ))}
                   </div>
                 </div>
