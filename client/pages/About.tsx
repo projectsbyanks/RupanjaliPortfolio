@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ReactNode } from "react";
 import SiteLayout from "@/components/site/SiteLayout";
 import SectionHeading from "@/components/site/SectionHeading";
 import StartConversation from "@/components/site/StartConversation";
@@ -71,6 +72,27 @@ const RECOGNITION = [
     title: "SAE INDIA (1st Prize in Regular Category)",
     subtexts: [],
     date: "2017",
+  },
+];
+
+const linkClass = "underline underline-offset-2 hover:opacity-70 transition-opacity";
+
+const VOLUNTEERING: { title: ReactNode; date: string }[] = [
+  {
+    title: <>Teaching Assistant <a href="https://www.meche.engineering.cmu.edu/education/courses/24-683.html" target="_blank" rel="noopener noreferrer" className={linkClass}>Design for Manufacture and the Environment</a> at CMU</>,
+    date: "2021",
+  },
+  {
+    title: <>Co-Founder <a href="https://www.adtl.co.in/categories/flaire-unmanned-systems" target="_blank" rel="noopener noreferrer" className={linkClass}>Flaire Unmanned Systems</a> which is acquired by Adani Defense Systems</>,
+    date: "2019",
+  },
+  {
+    title: <>Vice President <a href="https://uasdtu.com/" target="_blank" rel="noopener noreferrer" className={linkClass}>Unmanned Aerial Systems, DTU(DCE)</a></>,
+    date: "2017–2020",
+  },
+  {
+    title: <>Graphic Designer, <a href="https://dtutimes.dtu.ac.in/" target="_blank" rel="noopener noreferrer" className={linkClass}>DTU Times</a>, DTU (DCE)</>,
+    date: "2018–2019",
   },
 ];
 
@@ -190,11 +212,11 @@ export default function About() {
           </div>
         </section>
 
-        {/* Recognition (duplicate) */}
+        {/* Volunteering */}
         <section className="flex flex-col gap-16">
-          <SectionHeading className="text-center" title="Recognition & Awards" />
+          <SectionHeading className="text-center" title="Volunteering" />
           <div className="flex flex-col border-t border-neutral-200">
-            {RECOGNITION.map((item, i) => (
+            {VOLUNTEERING.map((item, i) => (
               <motion.div
                 key={i}
                 className="flex items-start gap-6 border-b border-neutral-200 py-6"
@@ -207,20 +229,6 @@ export default function About() {
                   <h3 className="font-heading text-2xl font-normal tracking-[-0.05em] text-ink">
                     {item.title}
                   </h3>
-                  <div className="flex flex-col gap-1">
-                    {item.subtexts.map((s) => (
-                      s.href ? (
-                        <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                          className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500 hover:text-ink underline underline-offset-2 transition-colors">
-                          {s.label}
-                        </a>
-                      ) : (
-                        <p key={s.label} className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500">
-                          {s.label}
-                        </p>
-                      )
-                    ))}
-                  </div>
                 </div>
                 <span className="shrink-0 font-heading text-[14px] font-normal tracking-[-0.05em] text-neutral-400">
                   {item.date}
