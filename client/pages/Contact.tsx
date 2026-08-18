@@ -63,7 +63,7 @@ export default function Contact() {
               }
             />
             <motion.p
-              className="font-heading font-[300] text-[12px] leading-[1.45] tracking-[1px] max-w-[24ch] text-ink"
+              className="font-heading font-[300] text-[12px] leading-[1.45] tracking-[1px] whitespace-nowrap text-ink"
               {...fadeUp(0.15)}
             >
               Let's chat! Feel free to contact me.
