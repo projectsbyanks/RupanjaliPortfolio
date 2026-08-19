@@ -17,16 +17,18 @@ const HERO_PARAS = [
 ];
 
 const BTS_IMAGES = [
-  "/assets/frame-1.jpg",
-  "/assets/frame-2.jpg",
-  "/assets/frame-3.jpg",
-  "/assets/frame-4.jpg",
-  "/assets/frame-5.jpg",
-  "/assets/frame-6.jpg",
-  "/assets/frame-7.jpg",
-  "/assets/frame-8.jpg",
-  "/assets/frame-9.jpg",
-  "/assets/frame-10.jpg",
+  "/assets/bottom%20strip/bts-1.jpg",
+  "/assets/bottom%20strip/bts-2.jpg",
+  "/assets/bottom%20strip/bts-3.jpg",
+  "/assets/bottom%20strip/bts-4.jpg",
+  "/assets/bottom%20strip/bts-5.jpg",
+  "/assets/bottom%20strip/bts-6.jpg",
+  "/assets/bottom%20strip/bts-7.jpg",
+  "/assets/bottom%20strip/bts-8.jpg",
+  "/assets/bottom%20strip/bts-9.jpg",
+  "/assets/bottom%20strip/bts-10.jpg",
+  "/assets/bottom%20strip/bts-11.jpg",
+  "/assets/bottom%20strip/bts-12.jpg",
 ];
 
 // Borrowed from the landing "Impact & Recognition" gallery
@@ -177,7 +179,7 @@ export default function HiddenLayers() {
             alt="Epoch 0: POV"
             className="aspect-[3/4] w-full object-cover lg:aspect-[16/9]"
           />
-          <div className="absolute inset-0 flex items-center justify-end px-4 pt-[40px] lg:px-20">
+          <div className="absolute inset-0 flex items-end justify-end px-4 pb-[50px] lg:px-20">
             <div className="flex max-w-[640px] flex-col gap-6 pr-4 lg:pr-[72px]">
               <motion.h1
                 className="font-display text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px] tracking-[-0.02em] text-ink text-right"
@@ -251,7 +253,7 @@ export default function HiddenLayers() {
                     key={i}
                     src={src}
                     alt=""
-                    className="h-[300px] w-auto object-cover shrink-0"
+                    className="h-[300px] w-[300px] object-cover shrink-0"
                   />
                 ))}
               </div>
