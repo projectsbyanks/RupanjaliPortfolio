@@ -185,7 +185,7 @@ export default function HiddenLayers() {
       {lbSrc && <Lightbox src={lbSrc} onClose={closeLightbox} />}
       <div className="flex flex-col">
         {/* Hero — title, image, subtitle, body */}
-        <div className="flex flex-col gap-8 px-5 lg:px-[154px]">
+        <div className="flex flex-col gap-8 pt-16 px-5 lg:pt-20 lg:px-[154px]">
           {/* Title row: "Epoch 0: POV" left, "by Rupanjali Kukal" right */}
           <div className="flex items-end justify-between gap-4">
             <motion.h1
