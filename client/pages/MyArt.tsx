@@ -50,6 +50,32 @@ const LINE_ART_FINAL_FRAMES = [
   "/assets/Resources/line_art_FINAL/10.JPG",
 ];
 
+const SOM_ART_FRAMES = [
+  "/assets/Resources/som_art_FINAL/1.JPG",
+  "/assets/Resources/som_art_FINAL/2.png",
+  "/assets/Resources/som_art_FINAL/3-converted.jpg",
+  "/assets/Resources/som_art_FINAL/4.JPG",
+  "/assets/Resources/som_art_FINAL/5-converted.jpg",
+  "/assets/Resources/som_art_FINAL/6.jpg",
+  "/assets/Resources/som_art_FINAL/7.JPG",
+  "/assets/Resources/som_art_FINAL/8.png",
+  "/assets/Resources/som_art_FINAL/9.JPG",
+  "/assets/Resources/som_art_FINAL/10-converted.jpg",
+];
+
+const FLOWER_ART_FRAMES = [
+  "/assets/Resources/flower_art_FINAL/1.JPG",
+  "/assets/Resources/flower_art_FINAL/2.jpg",
+  "/assets/Resources/flower_art_FINAL/3.jpeg",
+  "/assets/Resources/flower_art_FINAL/4.JPG",
+  "/assets/Resources/flower_art_FINAL/5.jpeg",
+  "/assets/Resources/flower_art_FINAL/6.png",
+  "/assets/Resources/flower_art_FINAL/7.PNG",
+  "/assets/Resources/flower_art_FINAL/8.jpeg",
+  "/assets/Resources/flower_art_FINAL/9.png",
+  "/assets/Resources/flower_art_FINAL/10-converted.jpg",
+];
+
 function Mosaic({
   tiles = FRAMES,
   cols = 5,
@@ -84,9 +110,11 @@ function Mosaic({
 function FeatureBlock({
   image,
   onImageClick,
+  natural = false,
 }: {
   image: string;
   onImageClick?: (src: string) => void;
+  natural?: boolean;
 }) {
   const fadeUp = useFadeUp();
   return (
@@ -94,9 +122,11 @@ function FeatureBlock({
       <motion.div className="overflow-hidden" {...fadeUp()}>
         <img
           src={image}
-          alt="Costal Manila"
+          alt=""
           onClick={onImageClick ? () => onImageClick(image) : undefined}
-          className={`w-full aspect-[4/5] object-cover transition-transform duration-700 ease-out hover:scale-[1.03] lg:h-[1521px] lg:w-[1217px] lg:aspect-auto ${onImageClick ? "cursor-zoom-in" : ""}`}
+          className={natural
+            ? `w-full object-cover transition-transform duration-700 ease-out hover:scale-[1.03] ${onImageClick ? "cursor-zoom-in" : ""}`
+            : `w-full aspect-[4/5] object-cover transition-transform duration-700 ease-out hover:scale-[1.03] lg:h-[1521px] lg:w-[1217px] lg:aspect-auto ${onImageClick ? "cursor-zoom-in" : ""}`}
         />
       </motion.div>
       <motion.div
@@ -161,7 +191,7 @@ export default function MyArt() {
           </div>
           <div className="flex flex-col gap-12 px-4 lg:gap-[242px] lg:px-[92px]">
             <Mosaic tiles={FRAMES} cols={5} onImageClick={openLightbox} />
-            <FeatureBlock image="/assets/Resources/big%20art/1-converted.jpg" onImageClick={openLightbox} />
+            <FeatureBlock image="/assets/Resources/big%20art/1-converted.jpg" natural onImageClick={openLightbox} />
           </div>
         </section>
 
@@ -169,29 +199,29 @@ export default function MyArt() {
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
         <LineArtSection title="Abstract Art" tiles={LINE_ART_FINAL_FRAMES} onImageClick={openLightbox} />
 
-        {/* 3. Feature image (duplicate) */}
+        {/* 3. Feature image 2 */}
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
         <section className="px-4 lg:px-[92px]">
-          <FeatureBlock image="/assets/art-disco.jpg" onImageClick={openLightbox} />
+          <FeatureBlock image="/assets/Resources/big%20art/2-converted.jpg" natural onImageClick={openLightbox} />
         </section>
 
-        {/* 4. Line Art 2 */}
+        {/* 4. State of Mind */}
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
-        <LineArtSection onImageClick={openLightbox} />
+        <LineArtSection title="State of Mind" tiles={SOM_ART_FRAMES} onImageClick={openLightbox} />
 
-        {/* 5. Another feature image */}
+        {/* 5. Feature image 3 */}
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
         <section className="px-4 lg:px-[92px]">
-          <FeatureBlock image="/assets/art-koi.jpg" onImageClick={openLightbox} />
+          <FeatureBlock image="/assets/Resources/big%20art/3.jpeg" natural onImageClick={openLightbox} />
         </section>
 
-        {/* 6. Line Art 3 */}
+        {/* 6. Line Art */}
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
-        <LineArtSection onImageClick={openLightbox} />
+        <LineArtSection title="Line Art" tiles={LINE_ART_FINAL_FRAMES} onImageClick={openLightbox} />
 
-        {/* 7. Line Art 4 */}
+        {/* 7. Flower Art */}
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
-        <LineArtSection onImageClick={openLightbox} />
+        <LineArtSection title="Flower Art" tiles={FLOWER_ART_FRAMES} onImageClick={openLightbox} />
 
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
         <div className="flex flex-col gap-[50px]">
