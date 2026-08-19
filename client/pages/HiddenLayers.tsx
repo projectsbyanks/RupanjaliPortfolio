@@ -31,11 +31,11 @@ const BTS_IMAGES = [
 
 // Borrowed from the landing "Impact & Recognition" gallery
 const GALLERY = [
-  { image: "https://api.builder.io/api/v1/image/assets/TEMP/5d820eb73b3a3d42a90521ef20a62783906d0748?width=572", year: "01", title: "Detection", description: "What's something worth noticing?" },
-  { image: "https://api.builder.io/api/v1/image/assets/TEMP/5d820eb73b3a3d42a90521ef20a62783906d0748?width=572", year: "02", title: "Segmentation", description: "Defining boundaries." },
-  { image: "https://api.builder.io/api/v1/image/assets/TEMP/42dc83651317bb4c34563b428894009e9bacf4f1?width=574", year: "03", title: "Tracking", description: "Changes through time." },
-  { image: "https://api.builder.io/api/v1/image/assets/TEMP/ef7cd05697d7568c77b1fa2062b355e339168a55?width=572", year: "04", title: "Multimodality", description: "One thing, many meanings." },
-  { image: "https://api.builder.io/api/v1/image/assets/TEMP/f35815cd67848505377f43866438c9e2d562a59e?width=564", year: "05", title: "Generation", description: "Creation from existence." },
+  { image: "/assets/detection.jpg", year: "01", title: "Detection", description: "What's something worth noticing?" },
+  { image: "/assets/segmentation.jpg", year: "02", title: "Segmentation", description: "Defining boundaries." },
+  { image: "/assets/tracking.jpg", year: "03", title: "Tracking", description: "Changes through time." },
+  { image: "/assets/multimodal.jpg", year: "04", title: "Multimodality", description: "One thing, many meanings." },
+  { image: "/assets/generation.jpg", year: "05", title: "Generation", description: "Creation from existence." },
 ];
 
 interface Feature {
@@ -56,7 +56,7 @@ const FEATURES: Feature[] = [
       </>
     ),
     body: "Before we can understand something, we first have to register that it is there. In AI, detection means identifying an object within a larger visual field. In human perception, noticing is more subjective. Our attention is shaped by context, memory, expectation, and experience. Two people can look at the same scene and register completely different things. This work explores that space between what is present and what becomes visible to us—and how the act of noticing shapes everything that follows.",
-    image: "/assets/fan.jpg",
+    image: "/assets/detection.jpg",
   },
   {
     label: "Segmentation",
@@ -68,7 +68,7 @@ const FEATURES: Feature[] = [
       </>
     ),
     body: "In artificial intelligence, it defines the boundaries of a scene—deciding what belongs together, what remains separate, and where one form gives way to another. Humans make these distinctions almost instinctively, but our boundaries are influenced by far more than edges or color; they shift with context, memory, and what we are looking for. This work explores how both human and machine perception turn a continuous world into distinct forms, and how the boundaries we create shape what we understand.",
-    image: "/assets/koi.jpg",
+    image: "/assets/segmentation.jpg",
   },
   {
     label: "Tracking",
@@ -80,7 +80,7 @@ const FEATURES: Feature[] = [
       </>
     ),
     body: "In artificial intelligence, it means following the same subject as it moves through time, changes position, disappears from view, or is seen from a different angle. Human perception does something similar—we recognize people, places, and objects even as their appearance changes. This work explores what allows identity to remain consistent through movement and transformation, and how we know that something changing is still the same thing.",
-    image: "/assets/fan.jpg",
+    image: "/assets/tracking.jpg",
   },
   {
     label: "Multimodality",
@@ -92,7 +92,7 @@ const FEATURES: Feature[] = [
       </>
     ),
     body: "AI systems can combine images, words, sound, clicks, and other signals to build a richer understanding than any one source can provide alone. Human perception is similarly layered: what we see is continually shaped by what we hear, read, touch, remember, and already know. This work explores how different forms of information can describe the same subject—and how meaning becomes fuller when those perspectives come together.",
-    image: "/assets/fan.jpg",
+    image: "/assets/multimodal.jpg",
   },
   {
     label: "Generation",
@@ -104,7 +104,7 @@ const FEATURES: Feature[] = [
       </>
     ),
     body: "Generative AI learns patterns, relationships, and structures from existing information, then uses them to produce something new. Artistic creation is different, but it also draws from accumulated experience—images we have seen, memories, influences, techniques, and ideas recombined into forms that did not exist before. This work explores that relationship between learning and making, and the space between what we inherit and what we create.",
-    image: "/assets/fan.jpg",
+    image: "/assets/generation.jpg",
   },
 ];
 
