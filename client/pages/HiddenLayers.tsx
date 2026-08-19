@@ -175,7 +175,7 @@ export default function HiddenLayers() {
           <img
             src="/assets/Resources/Hidden%20layers%20hero%20image.png"
             alt="Epoch 0: POV"
-            className="aspect-[3/4] w-[calc(100%+20px)] -ml-[20px] object-cover lg:aspect-[16/9]"
+            className="aspect-[3/4] w-full object-cover lg:aspect-[16/9]"
           />
           <div className="absolute inset-0 flex items-center justify-end px-4 pt-[40px] lg:px-20">
             <div className="flex max-w-[640px] flex-col gap-6 pr-4 lg:pr-[72px]">
