@@ -192,9 +192,7 @@ export default function HiddenLayers() {
               className="font-display text-[60px] leading-[0.92] tracking-[-0.02em] text-ink sm:text-[80px] lg:text-[96px]"
               {...fadeUp()}
             >
-              Epoch 0:
-              <br />
-              <span className="italic">POV</span>
+              Epoch 0: <span className="italic">POV</span>
             </motion.h1>
             <motion.span
               className="font-heading text-[13px] font-normal tracking-[-0.01em] text-ink pb-1 shrink-0"
