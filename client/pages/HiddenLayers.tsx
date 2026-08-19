@@ -8,12 +8,11 @@ import FooterBanner from "@/components/site/FooterBanner";
 import Lightbox from "@/components/site/Lightbox";
 import { useFadeUp } from "@/lib/reveal";
 
-const HERO_LEAD =
-  "Where art and artificial intelligence become two ways of asking the same questions. The materials in Machine Language and Art are different—code and data in one, color and form in the other—but look closely at how meaning is constructed.";
+const HERO_SUBTITLE = "Same Point,\nMade Twice";
 
-const HERO_PARAS = [
-  "In machine language, we teach systems to separate objects from their surroundings, recognize them across changing perspectives, connect information from different sources, follow an identity through time, and generate something new from what they have learned. In art, one can return to those same ideas intuitively.",
-  "Hidden Layers is where I attempt to bring those two practices together.",
+const HERO_BODY = [
+  "Art and artificial intelligence are two ways of asking the same questions. The materials are different — code and data in one, color and form in the other — but the underlying ideas overlap. In machine perception, we teach systems to separate objects from their surroundings, recognize them across changing perspectives, connect information from different sources, track identity over time, and generate something new from what they've learned. In painting, I've been working through those same ideas intuitively, without naming them this way.",
+  "This collection puts the painting next to the paper. If you're technical, it's a different way of seeing concepts you already know formally. If not, it's my attempt to explain how perception — machine or human — actually works.",
 ];
 
 const BTS_IMAGES = [
@@ -185,37 +184,57 @@ export default function HiddenLayers() {
     <SiteLayout>
       {lbSrc && <Lightbox src={lbSrc} onClose={closeLightbox} />}
       <div className="flex flex-col">
-        {/* Full-bleed hero */}
-        <div className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden">
-          <img
-            src="/assets/Resources/Hidden%20layers%20hero%20image.png"
-            alt="Epoch 0: POV"
-            className="aspect-[3/4] w-full object-cover lg:aspect-[16/9]"
-          />
-          <div className="absolute inset-0 flex items-start justify-end px-4 pt-6 lg:items-center lg:pt-0 lg:pb-[18%] lg:px-20">
-            <div className="flex max-w-[640px] flex-col gap-6 pr-4 lg:pr-[72px]">
-              <motion.h1
-                className="font-display text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px] tracking-[-0.02em] text-ink text-right"
-                {...fadeUp()}
-              >
-                Epoch 0: <span className="italic">POV</span>
-              </motion.h1>
-              <motion.div className="flex flex-col gap-[15px]" {...fadeUp(0.15)}>
-                <p className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-ink text-right">{HERO_LEAD}</p>
-                <div className="flex flex-col gap-[15px]">
-                  {HERO_PARAS.map((p, i) => (
-                    <p key={i} className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-ink text-right">
-                      {p}
-                    </p>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
+        {/* Hero — title, image, subtitle, body */}
+        <div className="flex flex-col gap-8 px-5 lg:px-[154px]">
+          {/* Title row: "Epoch 0: POV" left, "by Rupanjali Kukal" right */}
+          <div className="flex items-end justify-between gap-4">
+            <motion.h1
+              className="font-display text-[60px] leading-[0.92] tracking-[-0.02em] text-ink sm:text-[80px] lg:text-[96px]"
+              {...fadeUp()}
+            >
+              Epoch 0:
+              <br />
+              <span className="italic">POV</span>
+            </motion.h1>
+            <motion.span
+              className="font-heading text-[13px] font-normal tracking-[-0.01em] text-ink pb-1 shrink-0"
+              {...fadeUp(0.1)}
+            >
+              by Rupanjali Kukal
+            </motion.span>
           </div>
+
+          {/* Hero image */}
+          <motion.div className="overflow-hidden" {...fadeUp(0.15)}>
+            <img
+              src="/assets/Resources/Hidden%20layers%20hero%20image.png"
+              alt="Epoch 0: POV"
+              className="w-full object-cover"
+            />
+          </motion.div>
+
+          {/* "Same Point, Made Twice" */}
+          <motion.h2
+            className="font-display text-[40px] leading-[1.0] tracking-[-0.02em] text-ink sm:text-[56px] lg:text-[72px]"
+            {...fadeUp(0.2)}
+          >
+            Same Point,
+            <br />
+            Made Twice
+          </motion.h2>
+
+          {/* Body */}
+          <motion.div className="flex flex-col gap-4 max-w-[72ch]" {...fadeUp(0.25)}>
+            {HERO_BODY.map((p, i) => (
+              <p key={i} className="font-heading text-[15px] lg:text-[16px] leading-[1.58] tracking-[0px] text-ink">
+                {p}
+              </p>
+            ))}
+          </motion.div>
         </div>
 
         {/* Rest of page with normal padding and spacing */}
-        <div className="flex flex-col gap-12 pt-6 lg:gap-[142px] lg:pt-[40px]">
+        <div className="flex flex-col gap-12 pt-12 lg:gap-[142px] lg:pt-[60px]">
           {/* Gallery cards */}
           <section className="flex flex-col gap-4 lg:gap-12">
             {/* Mobile: horizontal scroll, 2 cards visible at a time */}
