@@ -142,6 +142,17 @@ function FeatureSection({
             {feature.label}
           </h3>
           <p className="font-heading text-[16px] leading-[22px] tracking-[0px] max-w-md pl-0 text-justify text-ink lg:pl-[100px]">{feature.body}</p>
+          <p className="font-heading text-[14px] leading-[20px] tracking-[0px] max-w-md pl-0 text-neutral-400 lg:pl-[100px]">
+            Links to my technical work on perception can be found{" "}
+            <a
+              href="https://rupanjalikukal.com/research-news"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-neutral-600 transition-colors"
+            >
+              here
+            </a>
+          </p>
         </motion.div>
       </div>
     </section>
