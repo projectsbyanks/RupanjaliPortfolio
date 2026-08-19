@@ -7,11 +7,13 @@ import FooterBanner from "@/components/site/FooterBanner";
 import Lightbox from "@/components/site/Lightbox";
 import { useFadeUp } from "@/lib/reveal";
 
-const INTRO =
-  "She is a graphic designer based in Seattle, crafting thoughtful visuals where strategy meets artistic expression. Every project begins with an idea and evolves through exploration, intention, and craft.";
-
-const DESC =
-  "Every project begins with an idea and evolves through exploration, intention, and craft.";
+const BIG_ART = [
+  { title: "Daughter of an Angel", year: "2025", description: "A reflection on grief, loss, and the subtle ways connection endures." },
+  { title: "A Quiet Forest", year: "2025", description: "My first 5ft × 4ft painting, born from emotions too powerful to remain contained" },
+  { title: "Untamable", year: "2026", medium: "Acrylics with texture" },
+  { title: "Microcosm / Macrocosm", year: "2023", medium: "Fluid Acrylics" },
+  { title: "Golden", year: "2024", medium: "Acrylics infused with Watercolour" },
+];
 
 const FRAMES = [
   "/assets/header%20art%20finaL/1.jpeg",
@@ -124,10 +126,18 @@ function FeatureBlock({
   image,
   onImageClick,
   natural = false,
+  title,
+  year,
+  description,
+  medium,
 }: {
   image: string;
   onImageClick?: (src: string) => void;
   natural?: boolean;
+  title?: string;
+  year?: string;
+  description?: string;
+  medium?: string;
 }) {
   const fadeUp = useFadeUp();
   return (
@@ -142,16 +152,19 @@ function FeatureBlock({
             : `w-full aspect-[4/5] object-cover transition-transform duration-700 ease-out hover:scale-[1.03] lg:h-[1521px] lg:w-[1217px] lg:aspect-auto ${onImageClick ? "cursor-zoom-in" : ""}`}
         />
       </motion.div>
-      <motion.div
-        className="flex flex-col justify-between gap-4 sm:flex-row"
-        {...fadeUp(0.1)}
-      >
-        <div className="flex flex-col gap-1">
-          <span className="t-label font-medium text-ink">Costal Manila</span>
-          <span className="t-label-sub text-ink">2025</span>
-        </div>
-        <p className="font-heading text-[16px] leading-[22px] tracking-[0px] max-w-[394px] text-justify text-ink">{DESC}</p>
-      </motion.div>
+      {(title || description || medium) && (
+        <motion.div
+          className="flex flex-col justify-between gap-4 sm:flex-row"
+          {...fadeUp(0.1)}
+        >
+          <div className="flex flex-col gap-1">
+            {title && <span className="font-heading text-[16px] font-normal tracking-[-0.02em] text-ink">{title}</span>}
+            {year && <span className="font-heading text-[14px] font-normal tracking-[-0.02em] text-neutral-500">{year}</span>}
+          </div>
+          {description && <p className="font-heading text-[16px] leading-[22px] tracking-[0px] max-w-[394px] text-justify text-ink">{description}</p>}
+          {medium && <p className="font-heading text-[14px] leading-[22px] tracking-[0px] max-w-[394px] text-ink text-neutral-500">Medium: {medium}</p>}
+        </motion.div>
+      )}
     </div>
   );
 }
@@ -204,7 +217,7 @@ export default function MyArt() {
           </div>
           <div className="flex flex-col gap-12 px-4 lg:gap-[150px] lg:px-[92px]">
             <Mosaic tiles={FRAMES} cols={5} onImageClick={openLightbox} />
-            <FeatureBlock image="/assets/Resources/big%20art/1-converted.jpg" natural onImageClick={openLightbox} />
+            <FeatureBlock image="/assets/Resources/big%20art/1-converted.jpg" natural onImageClick={openLightbox} {...BIG_ART[0]} />
           </div>
         </section>
 
@@ -215,7 +228,7 @@ export default function MyArt() {
         {/* 3. Feature image 2 */}
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
         <section className="px-4 lg:px-[92px]">
-          <FeatureBlock image="/assets/Resources/big%20art/2-converted.jpg" natural onImageClick={openLightbox} />
+          <FeatureBlock image="/assets/Resources/big%20art/2-converted.jpg" natural onImageClick={openLightbox} {...BIG_ART[1]} />
         </section>
 
         {/* 4. State of Mind */}
@@ -225,13 +238,13 @@ export default function MyArt() {
         {/* 5. Feature image 3 */}
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
         <section className="px-4 lg:px-[92px]">
-          <FeatureBlock image="/assets/Resources/big%20art/3-converted.jpg" natural onImageClick={openLightbox} />
+          <FeatureBlock image="/assets/Resources/big%20art/3-converted.jpg" natural onImageClick={openLightbox} {...BIG_ART[2]} />
         </section>
 
         {/* 5b. Feature image 4 */}
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
         <section className="px-4 lg:px-[92px]">
-          <FeatureBlock image="/assets/Resources/big%20art/4-converted.jpg" natural onImageClick={openLightbox} />
+          <FeatureBlock image="/assets/Resources/big%20art/4-converted.jpg" natural onImageClick={openLightbox} {...BIG_ART[3]} />
         </section>
 
         {/* 6. Line Art */}
@@ -241,7 +254,7 @@ export default function MyArt() {
         {/* 6b. Feature image 5 */}
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
         <section className="px-4 lg:px-[92px]">
-          <FeatureBlock image="/assets/Resources/big%20art/5-converted.jpg" natural onImageClick={openLightbox} />
+          <FeatureBlock image="/assets/Resources/big%20art/5-converted.jpg" natural onImageClick={openLightbox} {...BIG_ART[4]} />
         </section>
 
         {/* 7. Flower Art */}
