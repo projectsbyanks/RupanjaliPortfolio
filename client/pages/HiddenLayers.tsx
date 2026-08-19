@@ -185,9 +185,9 @@ export default function HiddenLayers() {
       {lbSrc && <Lightbox src={lbSrc} onClose={closeLightbox} />}
       <div className="flex flex-col">
         {/* Hero — title, image, subtitle, body */}
-        <div className="flex flex-col gap-8 pt-16 px-5 lg:pt-20 lg:px-[154px]">
+        <div className="flex flex-col gap-8 pt-16 lg:pt-20">
           {/* Title row: "Epoch 0: POV" left, "by Rupanjali Kukal" right */}
-          <div className="flex items-end justify-between gap-4">
+          <div className="flex items-end justify-between gap-4 px-5 lg:px-[154px]">
             <motion.h1
               className="font-display text-[60px] leading-[0.92] tracking-[-0.02em] text-ink sm:text-[80px] lg:text-[96px]"
               {...fadeUp()}
@@ -202,8 +202,8 @@ export default function HiddenLayers() {
             </motion.span>
           </div>
 
-          {/* Hero image */}
-          <motion.div className="overflow-hidden" {...fadeUp(0.15)}>
+          {/* Hero image — always 20px margin each side */}
+          <motion.div className="mx-5 overflow-hidden" {...fadeUp(0.15)}>
             <img
               src="/assets/Resources/Hidden%20layers%20hero%20image.png"
               alt="Epoch 0: POV"
@@ -213,7 +213,7 @@ export default function HiddenLayers() {
 
           {/* "Same Point, Made Twice" */}
           <motion.h2
-            className="font-display text-[40px] leading-[1.0] tracking-[-0.02em] text-ink sm:text-[56px] lg:text-[72px]"
+            className="font-display text-[40px] leading-[1.0] tracking-[-0.02em] text-ink sm:text-[56px] lg:text-[72px] px-5 lg:px-[154px]"
             {...fadeUp(0.2)}
           >
             Same Point,
@@ -222,7 +222,7 @@ export default function HiddenLayers() {
           </motion.h2>
 
           {/* Body */}
-          <motion.div className="flex flex-col gap-4 max-w-[72ch]" {...fadeUp(0.25)}>
+          <motion.div className="flex flex-col gap-4 max-w-[72ch] px-5 lg:px-[154px]" {...fadeUp(0.25)}>
             {HERO_BODY.map((p, i) => (
               <p key={i} className="font-heading text-[15px] lg:text-[16px] leading-[1.58] tracking-[0px] text-ink">
                 {p}
