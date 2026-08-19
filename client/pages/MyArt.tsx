@@ -158,7 +158,7 @@ function FeatureBlock({
           {...fadeUp(0.1)}
         >
           <div className="flex flex-col gap-1">
-            {title && <span className="font-heading text-[16px] font-normal tracking-[-0.02em] text-ink">{title}</span>}
+            {title && <span className="font-heading text-[16px] font-medium tracking-[-0.02em] text-ink">{title}</span>}
             {year && <span className="font-heading text-[14px] font-normal tracking-[-0.02em] text-neutral-500">{year}</span>}
           </div>
           {description && <p className="font-heading text-[16px] leading-[22px] tracking-[0px] max-w-[394px] text-justify text-ink">{description}</p>}
