@@ -6,7 +6,7 @@ export default function FooterBanner() {
   return (
     <div className="flex flex-col gap-3">
       <motion.img
-        src="/assets/footer.jpeg"
+        src="/assets/Resources/footer%201.png"
         alt=""
         className="w-full object-cover"
         {...fadeUp()}
