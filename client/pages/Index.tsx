@@ -263,7 +263,7 @@ export default function Index() {
         {/* Epoch 0: POV */}
         <section className="flex flex-col gap-6 lg:-mt-[70px]">
           <SectionLabel text="Epoch 0: POV" />
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
+          <div className="flex flex-col-reverse gap-10 lg:flex-row lg:items-start lg:gap-16">
             {/* Left column */}
             <div className="flex flex-col gap-8 lg:w-1/2">
               <motion.h2
@@ -283,7 +283,7 @@ export default function Index() {
                   <Link
                     key={item}
                     to={`/epoch-0-pov#${item.toLowerCase()}`}
-                    className="font-heading font-[400] [font-size:clamp(0.75rem,calc(4vw-10px),1.75rem)] leading-[1.3] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
+                    className="font-heading font-[400] [font-size:clamp(0.875rem,calc(4vw-10px),1.75rem)] leading-[1.3] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
                   >
                     {item} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden className="h-[1em] w-auto shrink-0 fill-current"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
                   </Link>
