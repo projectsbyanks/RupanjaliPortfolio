@@ -39,6 +39,25 @@ const BIO = [
 
 const RECOGNITION = [
   {
+    title: "MARS-A Foundational Map Auto-Regressor",
+    subtexts: [
+      { label: "MARS Paper accepted at International Conference on Learning Representations (ICLR) 2026", href: "https://iclr.cc/virtual/2026/poster/10009581" },
+      { label: "Blog - AI-Enabled Map Production Using Microsoft's MARS Model", href: "https://techcommunity.microsoft.com/blog/microsoft-planetary-computer-blog/ai-enabled-map-production-using-microsofts-mars-model/4542498" },
+      { label: "Blog - Introducing Physical-World Intelligence: How GeoAI Is Helping Expand Enterprise AI", href: "https://techcommunity.microsoft.com/blog/microsoft-planetary-computer-blog/introducing-physical-world-intelligence-how-geoai-is-helping-expand-enterprise-a/4541309" },
+    ],
+    date: "2026",
+  },
+  {
+    title: 'Microsoft Patent Award for "MARS-A Foundational Map Auto-Regressor"',
+    subtexts: [],
+    date: "2025",
+  },
+  {
+    title: 'Microsoft Patent Award for "Click&Describe: Multimodal Aerial Grounding and Tracking"',
+    subtexts: [],
+    date: "2024",
+  },
+  {
     title:
       "IAF Mehar Baba Swarm Drone Competition (DTU-Flaire Unmanned Aerial Systems) (1st Prize)",
     subtexts: [
