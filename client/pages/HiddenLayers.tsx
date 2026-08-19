@@ -195,7 +195,7 @@ export default function HiddenLayers() {
               Epoch 0: <span className="italic">POV</span>
             </motion.h1>
             <motion.span
-              className="font-heading text-[13px] font-normal tracking-[-0.01em] text-ink pb-1 shrink-0"
+              className="font-sf text-[18px] tracking-[-0.05em] text-ink pb-1 shrink-0 whitespace-nowrap"
               {...fadeUp(0.1)}
             >
               by Rupanjali Kukal
