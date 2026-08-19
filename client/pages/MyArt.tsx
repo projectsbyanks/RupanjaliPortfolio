@@ -215,9 +215,21 @@ export default function MyArt() {
           <FeatureBlock image="/assets/Resources/big%20art/3.jpeg" natural onImageClick={openLightbox} />
         </section>
 
+        {/* 5b. Feature image 4 */}
+        <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
+        <section className="px-4 lg:px-[92px]">
+          <FeatureBlock image="/assets/Resources/big%20art/4-converted.jpg" natural onImageClick={openLightbox} />
+        </section>
+
         {/* 6. Line Art */}
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
         <LineArtSection title="Line Art" tiles={LINE_ART_FINAL_FRAMES} onImageClick={openLightbox} />
+
+        {/* 6b. Feature image 5 */}
+        <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
+        <section className="px-4 lg:px-[92px]">
+          <FeatureBlock image="/assets/Resources/big%20art/5-converted.jpg" natural onImageClick={openLightbox} />
+        </section>
 
         {/* 7. Flower Art */}
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
