@@ -187,7 +187,7 @@ export default function HiddenLayers() {
         {/* Hero — title, image, subtitle, body */}
         <div className="flex flex-col gap-8 pt-16 lg:pt-20">
           {/* Title row: "Epoch 0: POV" left, "by Rupanjali Kukal" right */}
-          <div className="flex items-end justify-between gap-4 px-5 lg:px-[154px]">
+          <div className="flex items-end justify-between gap-4 px-5">
             <motion.h1
               className="font-display text-[60px] leading-[0.92] tracking-[-0.02em] text-ink sm:text-[80px] lg:text-[96px]"
               {...fadeUp()}
