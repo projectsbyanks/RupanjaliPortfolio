@@ -103,7 +103,7 @@ export default function About() {
   const fadeUp = useFadeUp();
   return (
     <SiteLayout>
-      <div className="flex flex-col gap-16 pt-16 lg:gap-[242px] lg:pt-20">
+      <div className="flex flex-col gap-16 pt-16 lg:gap-[150px] lg:pt-20">
         {/* Artist Behind the Work */}
         <section className="flex flex-col items-center gap-10 lg:flex-row lg:items-start lg:justify-center lg:gap-16">
           <motion.div className="overflow-hidden lg:w-2/5" {...fadeUp()}>
