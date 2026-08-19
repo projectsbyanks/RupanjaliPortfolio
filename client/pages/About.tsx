@@ -127,11 +127,6 @@ export default function About() {
                   {p}
                 </p>
               ))}
-              <p className={`${bioClass} italic`}>
-                I build machines that learn to see.
-                <br />
-                I make art to understand what seeing means.
-              </p>
             </div>
           </motion.div>
         </section>
