@@ -230,7 +230,7 @@ export default function Index() {
             <img
               src="/assets/hero2.jpeg"
               alt="Rupanjali Kukal"
-              className="w-full"
+              className="w-full h-[70vh] object-cover lg:h-auto"
             />
           </motion.div>
         </section>
