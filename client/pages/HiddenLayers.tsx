@@ -188,7 +188,7 @@ export default function HiddenLayers() {
             alt="Epoch 0: POV"
             className="aspect-[3/4] w-full object-cover lg:aspect-[16/9]"
           />
-          <div className="absolute inset-0 flex items-center justify-end px-4 pb-[18%] lg:px-20">
+          <div className="absolute inset-0 flex items-start justify-end px-4 pt-6 lg:items-center lg:pt-0 lg:pb-[18%] lg:px-20">
             <div className="flex max-w-[640px] flex-col gap-6 pr-4 lg:pr-[72px]">
               <motion.h1
                 className="font-display text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px] tracking-[-0.02em] text-ink text-right"
@@ -198,7 +198,7 @@ export default function HiddenLayers() {
               </motion.h1>
               <motion.div className="flex flex-col gap-[15px]" {...fadeUp(0.15)}>
                 <p className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-ink text-right">{HERO_LEAD}</p>
-                <div className="hidden flex-col gap-[15px] lg:flex">
+                <div className="flex flex-col gap-[15px]">
                   {HERO_PARAS.map((p, i) => (
                     <p key={i} className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-ink text-right">
                       {p}
@@ -214,7 +214,31 @@ export default function HiddenLayers() {
         <div className="flex flex-col gap-12 pt-6 lg:gap-[142px] lg:pt-[40px]">
           {/* Gallery cards */}
           <section className="flex flex-col gap-12">
-            <div className="grid grid-cols-2 items-start gap-6 sm:grid-cols-3 lg:grid-cols-5">
+            {/* Mobile: horizontal scroll, 2 cards visible at a time */}
+            <div className="flex gap-4 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:hidden">
+              {GALLERY.map((item, i) => (
+                <div
+                  key={i}
+                  className="w-[45vw] shrink-0 cursor-pointer"
+                  onClick={() => {
+                    const el = document.getElementById(item.title.toLowerCase());
+                    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }}
+                >
+                  <GalleryCard
+                    index={i}
+                    image={item.image}
+                    imageClassName="aspect-[3/4]"
+                    title={item.title}
+                    year={item.year}
+                    description={item.description}
+                    descriptionClassName={i === 0 ? "!text-left" : ""}
+                  />
+                </div>
+              ))}
+            </div>
+            {/* Desktop: grid */}
+            <div className="hidden lg:grid lg:grid-cols-5 items-start gap-6">
               {GALLERY.map((item, i) => (
                 <div
                   key={i}
