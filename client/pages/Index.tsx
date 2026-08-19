@@ -263,7 +263,7 @@ export default function Index() {
         {/* Epoch 0: POV */}
         <section className="flex flex-col gap-6 lg:-mt-[70px]">
           <SectionLabel text="Epoch 0: POV" />
-          <div className="flex flex-col-reverse gap-10 lg:flex-row lg:items-start lg:gap-16">
+          <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
             {/* Left column */}
             <div className="flex flex-col gap-8 lg:w-1/2">
               <motion.h2
@@ -272,6 +272,14 @@ export default function Index() {
               >
                 Epoch 0: POV
               </motion.h2>
+              {/* Image shown here on mobile only — sits between title and para */}
+              <motion.div className="overflow-hidden lg:hidden" {...fadeUp(0.1)}>
+                <img
+                  src="/assets/Resources/Liliesimage.png"
+                  alt="Epoch 0: POV"
+                  className="w-full object-cover"
+                />
+              </motion.div>
               <motion.p
                 className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-left text-ink"
                 {...fadeUp(0.1)}
@@ -290,8 +298,8 @@ export default function Index() {
                 ))}
               </motion.div>
             </div>
-            {/* Right column — image */}
-            <motion.div className="overflow-hidden lg:w-1/2" {...fadeUp(0.1)}>
+            {/* Right column — image on desktop only */}
+            <motion.div className="hidden lg:block overflow-hidden lg:w-1/2" {...fadeUp(0.1)}>
               <img
                 src="/assets/Resources/Liliesimage.png"
                 alt="Epoch 0: POV"
