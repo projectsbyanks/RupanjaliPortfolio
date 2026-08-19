@@ -22,6 +22,12 @@ export default function ContactDetails({
             rupanjali.kukal.rk@gmail.com
           </div>
         </div>
+        <div className="flex flex-col gap-0">
+          <div className="font-heading text-base font-normal text-ink">Location</div>
+          <div className="font-heading text-base font-normal text-ink">
+            Seattle, WA, USA
+          </div>
+        </div>
       </div>
       <div className="flex items-center gap-4">
         <a
