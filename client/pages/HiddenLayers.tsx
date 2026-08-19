@@ -167,7 +167,7 @@ export default function HiddenLayers() {
   }, [hash]);
 
   return (
-    <SiteLayout transparentNav>
+    <SiteLayout>
       {lbSrc && <Lightbox src={lbSrc} onClose={closeLightbox} />}
       <div className="flex flex-col">
         {/* Full-bleed hero */}
@@ -180,16 +180,16 @@ export default function HiddenLayers() {
           <div className="absolute inset-0 flex items-center justify-end px-4 pt-[40px] lg:px-20">
             <div className="flex max-w-[640px] flex-col gap-6 pr-4 lg:pr-[72px]">
               <motion.h1
-                className="font-display text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px] tracking-[-0.02em] text-white text-right"
+                className="font-display text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px] tracking-[-0.02em] text-ink text-right"
                 {...fadeUp()}
               >
                 Epoch 0: <span className="italic">POV</span>
               </motion.h1>
               <motion.div className="flex flex-col gap-[15px]" {...fadeUp(0.15)}>
-                <p className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-white text-right">{HERO_LEAD}</p>
+                <p className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-ink text-right">{HERO_LEAD}</p>
                 <div className="hidden flex-col gap-[15px] lg:flex">
                   {HERO_PARAS.map((p, i) => (
-                    <p key={i} className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-white text-right">
+                    <p key={i} className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-ink text-right">
                       {p}
                     </p>
                   ))}
