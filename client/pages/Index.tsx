@@ -273,7 +273,7 @@ export default function Index() {
                 Epoch 0: POV
               </motion.h2>
               <motion.p
-                className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-justify text-ink"
+                className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-left text-ink"
                 {...fadeUp(0.1)}
               >
                 Art and AI often ask similar questions: how we recognize, separate, interpret, and create what we see. Over the past four years, these questions have shaped my work at Carnegie Mellon and Microsoft—from my master's thesis to papers published at top-tier AI conferences to patents and ongoing research. Alongside that work, I continued exploring many of the same ideas through art. This collection brings those parallel threads together, placing the paintings and the research that evolved alongside them in conversation.
