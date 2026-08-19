@@ -218,23 +218,8 @@ export default function HiddenLayers() {
         <div className="flex flex-col gap-12 pt-6 lg:gap-[142px] lg:pt-[40px]">
           {/* Gallery cards */}
           <section className="flex flex-col gap-4 lg:gap-12">
-            {/* Mobile scroll arrows */}
-            <div className="flex justify-end gap-2 px-4 lg:hidden">
-              {(["left", "right"] as const).map((dir) => (
-                <button
-                  key={dir}
-                  onClick={() => scrollGallery(dir)}
-                  aria-label={dir === "left" ? "Scroll left" : "Scroll right"}
-                  className="flex h-7 w-7 items-center justify-center border border-neutral-300 text-ink hover:bg-neutral-50 transition-colors"
-                >
-                  <svg className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d={dir === "left" ? "M15 19l-7-7 7-7" : "M9 5l7 7-7 7"} />
-                  </svg>
-                </button>
-              ))}
-            </div>
             {/* Mobile: horizontal scroll, 2 cards visible at a time */}
-            <div ref={galleryRef} className="flex gap-4 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:hidden">
+            <div ref={galleryRef} className="flex gap-4 overflow-x-auto overflow-y-hidden scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:hidden">
               {GALLERY.map((item, i) => (
                 <div
                   key={i}
@@ -254,6 +239,21 @@ export default function HiddenLayers() {
                     descriptionClassName={i === 0 ? "!text-left" : ""}
                   />
                 </div>
+              ))}
+            </div>
+            {/* Mobile scroll arrows — below the scroll strip */}
+            <div className="flex justify-end gap-2 px-4 lg:hidden">
+              {(["left", "right"] as const).map((dir) => (
+                <button
+                  key={dir}
+                  onClick={() => scrollGallery(dir)}
+                  aria-label={dir === "left" ? "Scroll left" : "Scroll right"}
+                  className="flex h-7 w-7 items-center justify-center border border-neutral-300 text-ink hover:bg-neutral-50 transition-colors"
+                >
+                  <svg className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d={dir === "left" ? "M15 19l-7-7 7-7" : "M9 5l7 7-7 7"} />
+                  </svg>
+                </button>
               ))}
             </div>
             {/* Desktop: grid */}
