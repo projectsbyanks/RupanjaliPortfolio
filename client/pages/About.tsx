@@ -97,7 +97,7 @@ const VOLUNTEERING = [
   },
 ];
 
-const bioClass = "font-heading font-[300] text-[12px] leading-[1.45] tracking-[1px] text-ink";
+const bioClass = "font-heading font-normal text-[16px] leading-[1.6] tracking-[0px] text-ink";
 
 export default function About() {
   const fadeUp = useFadeUp();
