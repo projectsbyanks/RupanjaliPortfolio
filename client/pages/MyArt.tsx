@@ -188,7 +188,7 @@ export default function MyArt() {
   return (
     <SiteLayout>
       {lbSrc && <Lightbox src={lbSrc} onClose={closeLightbox} />}
-      <div className="flex flex-col gap-16 pt-16 lg:gap-[242px] lg:pt-20">
+      <div className="flex flex-col gap-16 pt-16 lg:gap-[150px] lg:pt-20">
 
         {/* 1. Hero: My Creative Archive + grid + feature image */}
         <section className="flex flex-col gap-16 lg:gap-20">
@@ -202,7 +202,7 @@ export default function MyArt() {
               }
             />
           </div>
-          <div className="flex flex-col gap-12 px-4 lg:gap-[242px] lg:px-[92px]">
+          <div className="flex flex-col gap-12 px-4 lg:gap-[150px] lg:px-[92px]">
             <Mosaic tiles={FRAMES} cols={5} onImageClick={openLightbox} />
             <FeatureBlock image="/assets/Resources/big%20art/1-converted.jpg" natural onImageClick={openLightbox} />
           </div>
