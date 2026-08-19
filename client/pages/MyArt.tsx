@@ -37,6 +37,19 @@ const LINE_ART_FRAMES = [
   "/assets/frame-10.jpg",
 ];
 
+const LINE_ART_FINAL_FRAMES = [
+  "/assets/Resources/line_art_FINAL/1.png",
+  "/assets/Resources/line_art_FINAL/2.JPG",
+  "/assets/Resources/line_art_FINAL/3.JPG",
+  "/assets/Resources/line_art_FINAL/4.JPG",
+  "/assets/Resources/line_art_FINAL/5.JPG",
+  "/assets/Resources/line_art_FINAL/6-converted.jpg",
+  "/assets/Resources/line_art_FINAL/7.png",
+  "/assets/Resources/line_art_FINAL/8.JPG",
+  "/assets/Resources/line_art_FINAL/9-converted.jpg",
+  "/assets/Resources/line_art_FINAL/10.JPG",
+];
+
 function Mosaic({
   tiles = FRAMES,
   cols = 5,
@@ -100,7 +113,15 @@ function FeatureBlock({
   );
 }
 
-function LineArtSection({ onImageClick }: { onImageClick: (src: string) => void }) {
+function LineArtSection({
+  onImageClick,
+  title = "Line Art",
+  tiles = FRAMES,
+}: {
+  onImageClick: (src: string) => void;
+  title?: string;
+  tiles?: string[];
+}) {
   const fadeUp = useFadeUp();
   return (
     <section className="flex flex-col gap-6 px-4 lg:gap-8 lg:px-[92px]">
@@ -108,9 +129,9 @@ function LineArtSection({ onImageClick }: { onImageClick: (src: string) => void 
         className="font-display text-3xl leading-tight tracking-[-0.02em] text-ink sm:text-4xl lg:text-5xl"
         {...fadeUp()}
       >
-        <span className="italic">Line Art</span>
+        <span className="italic">{title}</span>
       </motion.h2>
-      <Mosaic tiles={FRAMES} onImageClick={onImageClick} />
+      <Mosaic tiles={tiles} onImageClick={onImageClick} />
     </section>
   );
 }
@@ -140,13 +161,13 @@ export default function MyArt() {
           </div>
           <div className="flex flex-col gap-12 px-4 lg:gap-[242px] lg:px-[92px]">
             <Mosaic tiles={FRAMES} cols={5} onImageClick={openLightbox} />
-            <FeatureBlock image="/assets/art-disco.jpg" onImageClick={openLightbox} />
+            <FeatureBlock image="/assets/Resources/big%20art/1-converted.jpg" onImageClick={openLightbox} />
           </div>
         </section>
 
-        {/* 2. Line Art 1 */}
+        {/* 2. Abstract Art */}
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
-        <LineArtSection onImageClick={openLightbox} />
+        <LineArtSection title="Abstract Art" tiles={LINE_ART_FINAL_FRAMES} onImageClick={openLightbox} />
 
         {/* 3. Feature image (duplicate) */}
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
