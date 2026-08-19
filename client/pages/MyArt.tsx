@@ -14,16 +14,16 @@ const DESC =
   "Every project begins with an idea and evolves through exploration, intention, and craft.";
 
 const FRAMES = [
-  "/assets/frame-1.jpg",
-  "/assets/frame-2.jpg",
-  "/assets/frame-3.jpg",
-  "/assets/frame-4.jpg",
-  "/assets/frame-5.jpg",
-  "/assets/frame-6.jpg",
-  "/assets/portrait.jpg",
-  "/assets/frame-8.jpg",
-  "/assets/frame-9.jpg",
-  "/assets/frame-10.jpg",
+  "/assets/header%20art%20finaL/1.jpeg",
+  "/assets/header%20art%20finaL/2.jpeg",
+  "/assets/header%20art%20finaL/3.jpg",
+  "/assets/header%20art%20finaL/4.PNG",
+  "/assets/header%20art%20finaL/5.JPG",
+  "/assets/header%20art%20finaL/6.JPG",
+  "/assets/header%20art%20finaL/7.jpg",
+  "/assets/header%20art%20finaL/8.png",
+  "/assets/header%20art%20finaL/9.JPG",
+  "/assets/header%20art%20finaL/10.JPG",
 ];
 
 const LINE_ART_FRAMES = [
