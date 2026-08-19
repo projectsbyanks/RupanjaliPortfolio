@@ -225,7 +225,7 @@ export default function MyArt() {
         {/* 5. Feature image 3 */}
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
         <section className="px-4 lg:px-[92px]">
-          <FeatureBlock image="/assets/Resources/big%20art/3.jpeg" natural onImageClick={openLightbox} />
+          <FeatureBlock image="/assets/Resources/big%20art/3-converted.jpg" natural onImageClick={openLightbox} />
         </section>
 
         {/* 5b. Feature image 4 */}
