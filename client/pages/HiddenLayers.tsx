@@ -138,7 +138,7 @@ function FeatureSection({
           className="flex flex-col items-start gap-6 text-left lg:flex-1"
           {...fadeUp(0.15)}
         >
-          <h3 className="font-display text-3xl leading-[1.05] tracking-[-0.02em] text-ink text-left sm:text-[40px] lg:pl-[100px]">
+          <h3 className="font-display text-[34px] leading-[1.05] tracking-[-0.02em] text-ink text-left sm:text-[40px] lg:pl-[100px]">
             {feature.label}
           </h3>
           <p className="font-heading text-[16px] leading-[22px] tracking-[0px] max-w-md pl-0 text-justify text-ink lg:pl-[100px]">{feature.body}</p>
