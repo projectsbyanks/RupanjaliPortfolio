@@ -19,7 +19,7 @@ const FRAMES = [
   "/assets/header%20art%20finaL/3.jpg",
   "/assets/header%20art%20finaL/4.PNG",
   "/assets/header%20art%20finaL/5.JPG",
-  "/assets/header%20art%20finaL/6.JPG",
+  "/assets/header%20art%20finaL/6-converted.jpg",
   "/assets/header%20art%20finaL/7.jpg",
   "/assets/header%20art%20finaL/8.png",
   "/assets/header%20art%20finaL/9.JPG",
