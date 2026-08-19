@@ -119,7 +119,7 @@ function AchievementImage({ index = 0 }: { index?: number }) {
   );
 }
 
-const TESTIMONIAL = {
+const TESTIMONIAL_PLACEHOLDER = {
   avatar:
     "https://api.builder.io/api/v1/image/assets/TEMP/cb678df6fc237b45c984844b1b60ddc5cc139c87?width=120",
   name: "Anne Winslet",
@@ -127,6 +127,16 @@ const TESTIMONIAL = {
   quote:
     "Here are a few words from the people I've had the pleasure of collaborating with along the way.",
 };
+
+const TESTIMONIALS = [
+  {
+    avatar: "/assets/Resources/Testimonial%201.png",
+    name: "Nakull Wadhawan",
+    role: "Founder, IndieAn",
+    quote:
+      "Rupanjali's work is genuinely thought-provoking. What I love about it is how naturally she connects technology with perception, creativity and art, and it doesn't feel forced.",
+  },
+];
 
 const CANVAS_GALLERY = [
   "https://api.builder.io/api/v1/image/assets/TEMP/8e5a2f36b0bbdb01eca558a2f5cb39a4d19eb6d4?width=760",
@@ -367,7 +377,7 @@ export default function Index() {
           >
             {Array.from({ length: 8 }).map((_, i) => (
               <div key={i} className="shrink-0 w-[280px]">
-                <TestimonialCard index={i} {...TESTIMONIAL} />
+                <TestimonialCard index={i} {...(TESTIMONIALS[i] ?? TESTIMONIAL_PLACEHOLDER)} />
               </div>
             ))}
           </div>
