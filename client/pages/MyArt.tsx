@@ -37,6 +37,19 @@ const LINE_ART_FRAMES = [
   "/assets/frame-10.jpg",
 ];
 
+const ABSTRACT_ART_FRAMES = [
+  "/assets/Resources/abstract_art_FINAL/1.jpeg",
+  "/assets/Resources/abstract_art_FINAL/2-converted.jpg",
+  "/assets/Resources/abstract_art_FINAL/3-converted.jpg",
+  "/assets/Resources/abstract_art_FINAL/4-converted.jpg",
+  "/assets/Resources/abstract_art_FINAL/5-converted.jpg",
+  "/assets/Resources/abstract_art_FINAL/6-converted.jpg",
+  "/assets/Resources/abstract_art_FINAL/7-converted.jpg",
+  "/assets/Resources/abstract_art_FINAL/8-converted.jpg",
+  "/assets/Resources/abstract_art_FINAL/9.PNG",
+  "/assets/Resources/abstract_art_FINAL/10-converted.jpg",
+];
+
 const LINE_ART_FINAL_FRAMES = [
   "/assets/Resources/line_art_FINAL/1.png",
   "/assets/Resources/line_art_FINAL/2.JPG",
@@ -197,7 +210,7 @@ export default function MyArt() {
 
         {/* 2. Abstract Art */}
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
-        <LineArtSection title="Abstract Art" tiles={LINE_ART_FINAL_FRAMES} onImageClick={openLightbox} />
+        <LineArtSection title="Abstract Art" tiles={ABSTRACT_ART_FRAMES} onImageClick={openLightbox} />
 
         {/* 3. Feature image 2 */}
         <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
