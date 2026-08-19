@@ -49,7 +49,7 @@ export default function Contact() {
 
   return (
     <SiteLayout>
-      <div className="flex flex-col gap-16 pt-16 lg:gap-[242px] lg:pt-20">
+      <div className="flex flex-col pt-16 lg:pt-20">
         {/* Heading + form */}
         <section className="flex flex-col gap-12 lg:flex-row lg:gap-16">
           <div className="flex flex-col gap-6 lg:w-1/3">
@@ -112,7 +112,7 @@ export default function Contact() {
         </section>
 
         {/* Image + contact details */}
-        <section className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
+        <section className="mt-16 lg:mt-[100px] flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
           <motion.div className="overflow-hidden" {...fadeUp()}>
             <img
               src={CONTACT_IMAGE}
@@ -125,7 +125,7 @@ export default function Contact() {
           </motion.div>
         </section>
 
-        <p className="font-heading text-[15px] font-normal text-ink text-center pb-4">
+        <p className="mt-3 font-heading text-[14px] font-light text-ink text-center pb-4">
           Paintings on this portfolio are personal work and not available for sale. All rights reserved. © 2026 Rupanjali Kukal
         </p>
       </div>

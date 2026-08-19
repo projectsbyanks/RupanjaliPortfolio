@@ -34,7 +34,7 @@ const BIO = [
   "Hi, I'm an ML Applied Scientist at Microsoft and an artist working at the intersection of artificial intelligence and visual art.",
   "I moved into AI research at Carnegie Mellon University without a traditional computer science background—and without having written a line of Python before graduate school. What made the transition feel natural was something I had been doing for years: art.",
   "Art had already trained me to think about perception. How we separate an object from its surroundings, recognise something across different perspectives, combine multiple forms of information, and understand change without losing identity. As I moved deeper into AI, I began encountering formal versions of questions I had intuitively explored through visual art.",
-  "That connection continues to shape my work. Alongside my research, I use art to explore many of the same questions from a different angle. Outside of work and the studio, I'm usually listening to music, boxing, or exploring my interest in health and wellness.",
+  "That connection continues to shape my work. Alongside my research, I use art to explore many of the same questions from a different angle. Outside of work and the studio, I'm usually listening to music, boxing, or exploring my interest in health, wellness and photography.",
 ];
 
 const RECOGNITION = [
