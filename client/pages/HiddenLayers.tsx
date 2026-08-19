@@ -173,9 +173,9 @@ export default function HiddenLayers() {
         {/* Full-bleed hero */}
         <div className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden">
           <img
-            src="/assets/Resources/Hidden%20layers%20hero%20image.jpg"
+            src="/assets/Resources/Hidden%20layers%20hero%20image.png"
             alt="Epoch 0: POV"
-            onClick={() => openLightbox("/assets/Resources/Hidden%20layers%20hero%20image.jpg")}
+            onClick={() => openLightbox("/assets/Resources/Hidden%20layers%20hero%20image.png")}
             className="aspect-[3/4] w-[calc(100%+20px)] -ml-[20px] cursor-zoom-in object-cover lg:aspect-[16/9]"
           />
           {/* Right-side gradient overlay */}
@@ -208,17 +208,24 @@ export default function HiddenLayers() {
           <section className="flex flex-col gap-12">
             <div className="grid grid-cols-2 items-start gap-6 sm:grid-cols-3 lg:grid-cols-5">
               {GALLERY.map((item, i) => (
-                <GalleryCard
+                <div
                   key={i}
-                  index={i}
-                  image={item.image}
-                  imageClassName="aspect-[3/4]"
-                  title={item.title}
-                  year={item.year}
-                  description={item.description}
-                  descriptionClassName={i === 0 ? "!text-left" : ""}
-                  onImageClick={openLightbox}
-                />
+                  className="cursor-pointer"
+                  onClick={() => {
+                    const el = document.getElementById(item.title.toLowerCase());
+                    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }}
+                >
+                  <GalleryCard
+                    index={i}
+                    image={item.image}
+                    imageClassName="aspect-[3/4]"
+                    title={item.title}
+                    year={item.year}
+                    description={item.description}
+                    descriptionClassName={i === 0 ? "!text-left" : ""}
+                  />
+                </div>
               ))}
             </div>
           </section>
@@ -235,21 +242,11 @@ export default function HiddenLayers() {
           ])}
 
           {/* BTS */}
-          <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
           <section className="flex flex-col gap-6">
             <div className="flex items-center gap-4 px-4 lg:px-[154px]">
-              <span className="font-sf text-[11px] tracking-[0.18em] text-ink uppercase whitespace-nowrap">BTS</span>
+              <span className="font-sf text-[11px] tracking-[0.18em] text-ink uppercase whitespace-nowrap">Behind The Scenes</span>
               <div className="h-[0.5px] bg-neutral-300 max-w-[40%] flex-1" />
             </div>
-            <motion.h2
-              className="t-section text-ink px-4 lg:px-[154px]"
-              initial={{ opacity: 0, y: 32 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            >
-              Behind the <span className="italic">Scenes</span>
-            </motion.h2>
             <div className="overflow-hidden">
               <div className="flex gap-4 animate-marquee w-max">
                 {[...BTS_IMAGES, ...BTS_IMAGES].map((src, i) => (
@@ -265,9 +262,10 @@ export default function HiddenLayers() {
           </section>
 
           {/* Start the Conversation + footer (shared) */}
-          <div className="h-[0.5px] w-[40%] mx-auto bg-neutral-300" />
-          <StartConversation />
-          <FooterBanner />
+          <div className="flex flex-col gap-[100px]">
+            <StartConversation />
+            <FooterBanner />
+          </div>
         </div>
       </div>
     </SiteLayout>
