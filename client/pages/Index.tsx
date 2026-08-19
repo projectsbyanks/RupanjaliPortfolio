@@ -366,9 +366,10 @@ export default function Index() {
         </section>
 
         {/* Start the Conversation */}
-        <StartConversation />
-
-        <FooterBanner />
+        <div className="flex flex-col gap-[50px]">
+          <StartConversation />
+          <FooterBanner />
+        </div>
       </div>
     </SiteLayout>
   );

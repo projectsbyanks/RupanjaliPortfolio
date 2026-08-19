@@ -239,8 +239,10 @@ export default function About() {
         </section>
 
         {/* Start the Conversation + footer (shared) */}
-        <StartConversation />
-        <FooterBanner />
+        <div className="flex flex-col gap-[50px]">
+          <StartConversation />
+          <FooterBanner />
+        </div>
       </div>
     </SiteLayout>
   );

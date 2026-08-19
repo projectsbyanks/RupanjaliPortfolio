@@ -82,11 +82,11 @@ export default function ResearchNews() {
         </section>
         </div>
 
-        {/* Start the Conversation (shared) */}
-        <StartConversation />
-
-        {/* Footer banner (shared) */}
-        <FooterBanner />
+        {/* Start the Conversation + footer (shared) */}
+        <div className="flex flex-col gap-[50px]">
+          <StartConversation />
+          <FooterBanner />
+        </div>
       </div>
     </SiteLayout>
   );

@@ -173,8 +173,10 @@ export default function MyArt() {
         <LineArtSection onImageClick={openLightbox} />
 
         <div className="h-[0.5px] w-full bg-neutral-300" />
-        <StartConversation />
-        <FooterBanner />
+        <div className="flex flex-col gap-[50px]">
+          <StartConversation />
+          <FooterBanner />
+        </div>
       </div>
     </SiteLayout>
   );
