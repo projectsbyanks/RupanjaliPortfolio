@@ -179,7 +179,7 @@ export default function HiddenLayers() {
             alt="Epoch 0: POV"
             className="aspect-[3/4] w-full object-cover lg:aspect-[16/9]"
           />
-          <div className="absolute inset-0 flex items-end justify-end px-4 pb-[50px] lg:px-20">
+          <div className="absolute inset-0 flex items-center justify-end px-4 pb-[18%] lg:px-20">
             <div className="flex max-w-[640px] flex-col gap-6 pr-4 lg:pr-[72px]">
               <motion.h1
                 className="font-display text-6xl leading-[61px] sm:text-7xl sm:leading-[73px] md:text-8xl md:leading-[97px] xl:text-[96px] tracking-[-0.02em] text-ink text-right"
