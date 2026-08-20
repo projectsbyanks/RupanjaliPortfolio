@@ -301,7 +301,7 @@ export default function Index() {
                   <Link
                     key={item}
                     to={`/epoch-0-pov#${item.toLowerCase()}`}
-                    className="font-heading font-normal text-[17px] lg:text-[28px] leading-[1.3] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
+                    className="font-heading font-normal text-[18px] leading-[20px] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
                   >
                     {item} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden className="h-[1em] w-auto shrink-0 fill-current"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
                   </Link>
@@ -349,7 +349,7 @@ export default function Index() {
                 transition={{ duration: 0.55, ease: "easeOut", delay: Math.min(i * 0.06, 0.36) }}
               >
                 <span className="font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] text-ink">{item.title}</span>
-                <span className="font-heading text-[14px] font-normal tracking-[-0.02em] text-ink">{item.year}</span>
+                <span className="font-heading text-[14px] font-normal tracking-[-0.02em] text-neutral-400">{item.year}</span>
               </motion.div>
             ))}
           </div>
