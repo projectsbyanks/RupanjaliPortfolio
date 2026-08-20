@@ -36,10 +36,10 @@ export default function TestimonialCard({
         />
         <div className="flex flex-col gap-1">
           <div className="t-testimonial-name text-ink">{name}</div>
-          <div className="t-caption text-ink">{role}</div>
+          <div className="font-heading text-[14px] font-normal tracking-[-0.02em] text-ink">{role}</div>
         </div>
       </div>
-      <p className="t-body [font-size:clamp(0.76rem,calc(2.5vw-3px),1.0625rem)] mt-auto pt-6 text-left text-ink">{quote}</p>
+      <p className="font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] mt-auto pt-6 text-left text-ink">{quote}</p>
     </motion.div>
   );
 }

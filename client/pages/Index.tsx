@@ -256,7 +256,7 @@ export default function Index() {
             with <span className="italic">Rupanjali Kukal</span>
           </motion.h2>
           <motion.p
-            className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] w-full lg:w-[600px] text-ink"
+            className="font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] w-full lg:w-[600px] text-ink"
             {...fadeUp(0.15)}
           >
             Hi, I'm an AI scientist at Microsoft, and art has long been a
@@ -291,7 +291,7 @@ export default function Index() {
                 />
               </motion.div>
               <motion.p
-                className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-left text-ink"
+                className="font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] text-left text-ink"
                 {...fadeUp(0.1)}
               >
                 Art and AI often ask similar questions: how we recognize, separate, interpret, and create what we see. Over the past four years, these questions have shaped my work at Carnegie Mellon and Microsoft—from my master's thesis to papers published at top-tier AI conferences to patents and ongoing research. Alongside that work, I continued exploring many of the same ideas through art. This collection brings those parallel threads together, placing the paintings and the research that evolved alongside them in conversation.
@@ -301,7 +301,7 @@ export default function Index() {
                   <Link
                     key={item}
                     to={`/epoch-0-pov#${item.toLowerCase()}`}
-                    className="font-heading font-[400] text-[17px] lg:text-[28px] leading-[1.3] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
+                    className="font-heading font-normal text-[17px] lg:text-[28px] leading-[1.3] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
                   >
                     {item} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden className="h-[1em] w-auto shrink-0 fill-current"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
                   </Link>
@@ -348,8 +348,8 @@ export default function Index() {
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.55, ease: "easeOut", delay: Math.min(i * 0.06, 0.36) }}
               >
-                <span className="font-heading text-[17px] font-[400] leading-snug text-ink">{item.title}</span>
-                <span className="font-heading text-[18px] font-[100] text-ink">{item.year}</span>
+                <span className="font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] text-ink">{item.title}</span>
+                <span className="font-heading text-[14px] font-normal tracking-[-0.02em] text-ink">{item.year}</span>
               </motion.div>
             ))}
           </div>
