@@ -383,9 +383,9 @@ export default function Index() {
             ref={testimonialsRef}
             className="flex gap-6 overflow-x-auto overflow-y-hidden scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
-            {Array.from({ length: 8 }).map((_, i) => (
+            {TESTIMONIALS.map((t, i) => (
               <div key={i} className="shrink-0 w-[280px]">
-                <TestimonialCard index={i} {...(TESTIMONIALS[i] ?? TESTIMONIAL_PLACEHOLDER)} />
+                <TestimonialCard index={i} {...t} />
               </div>
             ))}
           </div>
