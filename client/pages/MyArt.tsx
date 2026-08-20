@@ -161,7 +161,7 @@ function FeatureBlock({
             {title && <span className="font-heading text-[16px] font-medium tracking-[-0.02em] text-ink">{title}</span>}
             {year && <span className="font-heading text-[14px] font-normal tracking-[-0.02em] text-neutral-500">{year}</span>}
           </div>
-          {description && <p className="font-heading text-[16px] leading-[22px] tracking-[0px] max-w-[394px] text-justify text-ink">{description}</p>}
+          {description && <p className="font-heading text-[16px] leading-[22px] tracking-[0px] max-w-[394px] text-left text-ink">{description}</p>}
           {medium && <p className="font-heading text-[14px] leading-[22px] tracking-[0px] max-w-[394px] text-ink text-neutral-500">Medium: {medium}</p>}
         </motion.div>
       )}
