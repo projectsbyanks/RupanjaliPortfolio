@@ -53,12 +53,12 @@ export default function GalleryCard({
       ) : null}
       {/* body → 16px → label → 4px → year (identical across every card) */}
       {showDescription ? (
-        <p className={`t-body font-heading text-[16px] tracking-[0px] text-justify text-neutral-400 ${descriptionClassName}`}>{description}</p>
+        <p className={`font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] text-neutral-400 ${descriptionClassName}`}>{description}</p>
       ) : null}
       {showLabel ? (
         <div className={`flex flex-col gap-1 ${showDescription ? "mt-4" : ""}`}>
-          <span className="t-label font-medium text-ink">{title}</span>
-          <span className="t-label-sub text-ink">{year}</span>
+          <span className="font-heading font-normal text-[18px] leading-[20px] tracking-[-0.05em] text-ink">{title}</span>
+          <span className="font-heading text-[14px] font-normal tracking-[-0.02em] text-ink">{year}</span>
         </div>
       ) : null}
     </motion.div>

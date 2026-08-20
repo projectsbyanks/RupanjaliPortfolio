@@ -223,7 +223,7 @@ export default function HiddenLayers() {
             </motion.h2>
             <motion.div className="flex flex-col gap-4 flex-1" {...fadeUp(0.25)}>
               {HERO_BODY.map((p, i) => (
-                <p key={i} className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-ink">
+                <p key={i} className="font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] text-ink">
                   {p}
                 </p>
               ))}
