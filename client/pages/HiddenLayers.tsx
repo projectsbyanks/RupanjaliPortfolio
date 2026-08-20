@@ -187,7 +187,7 @@ export default function HiddenLayers() {
         {/* Hero — title, image, subtitle, body */}
         <div className="flex flex-col gap-8 pt-16 lg:pt-20">
           {/* Title row: "Epoch 0: POV" left, "by Rupanjali Kukal" right */}
-          <div className="flex items-end justify-between gap-4 px-5">
+          <div className="flex items-end justify-between gap-4">
             <motion.h1
               className="font-display text-[60px] leading-[0.92] tracking-[-0.02em] text-ink sm:text-[80px] lg:text-[96px]"
               {...fadeUp()}
@@ -202,8 +202,8 @@ export default function HiddenLayers() {
             </motion.span>
           </div>
 
-          {/* Hero image — always 20px margin each side */}
-          <motion.div className="mx-5 overflow-hidden" {...fadeUp(0.15)}>
+          {/* Hero image */}
+          <motion.div className="overflow-hidden" {...fadeUp(0.15)}>
             <img
               src="/assets/Resources/Epoch%20hero%20section%20image.png"
               alt="Epoch 0: POV"
@@ -212,7 +212,7 @@ export default function HiddenLayers() {
           </motion.div>
 
           {/* "Same Point, Made Twice" + body */}
-          <section className="flex flex-col items-start gap-10 px-5 lg:flex-row lg:items-stretch lg:py-[80px] lg:px-[154px]">
+          <section className="flex flex-col items-start gap-10 lg:flex-row lg:items-stretch lg:py-[80px] lg:px-[154px]">
             <motion.h2
               className="font-vogue text-[36px] leading-[0.9] tracking-[-0.04em] text-ink sm:text-[36px] md:text-[42px] lg:text-[56px] xl:text-[56px] xl:leading-[50px] shrink-0"
               {...fadeUp(0.2)}
