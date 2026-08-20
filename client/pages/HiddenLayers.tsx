@@ -221,9 +221,9 @@ export default function HiddenLayers() {
               <br />
               Made Twice
             </motion.h2>
-            <motion.div className="flex flex-col gap-6 w-full lg:w-[600px]" {...fadeUp(0.25)}>
+            <motion.div className="flex flex-col gap-4 w-full lg:w-[600px]" {...fadeUp(0.25)}>
               {HERO_BODY.map((p, i) => (
-                <p key={i} className="font-heading font-[300] text-[18px] leading-[1.65] tracking-[-0.01em] text-ink">
+                <p key={i} className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-ink">
                   {p}
                 </p>
               ))}
