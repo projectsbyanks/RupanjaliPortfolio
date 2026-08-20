@@ -238,13 +238,13 @@ export default function About() {
                   <div className="flex flex-col gap-1">
                     {item.subtexts.map((s) => (
                       <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                        className="font-heading font-normal text-[16px] tracking-[-0.05em] text-neutral-500 hover:text-ink underline underline-offset-2 transition-colors">
+                        className="font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] text-neutral-500 hover:text-ink underline underline-offset-2 transition-colors">
                         {s.label}
                       </a>
                     ))}
                   </div>
                 </div>
-                <span className="shrink-0 font-heading text-[14px] font-normal tracking-[-0.05em] text-neutral-400">
+                <span className="shrink-0 font-heading text-[14px] font-normal tracking-[-0.02em] text-neutral-400">
                   {item.date}
                 </span>
               </motion.div>
