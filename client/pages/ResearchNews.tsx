@@ -73,7 +73,7 @@ export default function ResearchNews() {
                   <h3 className="t-talk-title max-w-[72ch] text-[18px] leading-[20px] text-ink">
                     {talk.title}
                   </h3>
-                  <span className="font-heading font-normal text-[14px] leading-none tracking-[-0.05em] text-neutral-500">
+                  <span className="font-heading font-normal text-[14px] leading-none tracking-[-0.02em] text-neutral-500">
                     {talk.location ? `${talk.location} | ${talk.date}` : talk.date}
                   </span>
                 </div>
