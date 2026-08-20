@@ -299,7 +299,7 @@ export default function HiddenLayers() {
           </section>
 
           {/* Collections label */}
-          <div className="flex items-center gap-4 px-4 lg:px-[154px]">
+          <div className="flex items-center gap-4 px-4 lg:px-[154px] lg:-my-[62px]">
             <span className="font-sf text-[11px] tracking-[0.18em] text-ink uppercase whitespace-nowrap">Collections</span>
             <div className="h-[0.5px] bg-neutral-300 flex-1" />
           </div>
