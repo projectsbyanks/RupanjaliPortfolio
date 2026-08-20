@@ -11,12 +11,6 @@ export default function ContactDetails({
       </div>
       <div className="flex flex-col gap-1">
         <div className="flex flex-col gap-0">
-          <div className="font-heading text-base font-normal text-ink">Phone</div>
-          <div className="font-heading text-base font-normal text-ink">
-            +1-412-996-7352
-          </div>
-        </div>
-        <div className="flex flex-col gap-0">
           <div className="font-heading text-base font-normal text-ink">Email</div>
           <div className="font-heading text-base font-normal text-ink">
             rupanjali.kukal.rk@gmail.com
