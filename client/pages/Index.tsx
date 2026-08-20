@@ -288,41 +288,36 @@ export default function Index() {
           >
             Epoch 0: POV
           </motion.h2>
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
-            {/* Left: list items + para */}
-            <div className="flex flex-col gap-8 lg:shrink-0">
-              <motion.div className="flex flex-col gap-1" {...fadeUp(0.1)}>
-                {CAPABILITIES.map((item) => (
-                  <Link
-                    key={item}
-                    to={`/epoch-0-pov#${item.toLowerCase()}`}
-                    className="font-heading font-normal text-[18px] leading-[20px] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
-                  >
-                    {item} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden className="h-[1em] w-auto shrink-0 fill-current"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
-                  </Link>
-                ))}
-              </motion.div>
-              <motion.p
-                className="font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] text-left text-ink lg:max-w-[380px]"
-                {...fadeUp(0.15)}
-              >
-                Art and AI often ask similar questions: how we recognize, separate, interpret, and create what we see. Over the past four years, these questions have shaped my work at Carnegie Mellon and Microsoft—from my master's thesis to papers published at top-tier AI conferences to patents and ongoing research. Alongside that work, I continued exploring many of the same ideas through art. This collection brings those parallel threads together, placing the paintings and the research that evolved alongside them in conversation.
-              </motion.p>
-            </div>
-            {/* Right: paintings marquee */}
-            <div className="overflow-hidden flex-1">
-              <div className="flex gap-4 animate-marquee w-max">
-                {[...HOME_MARQUEE_IMAGES, ...HOME_MARQUEE_IMAGES].map((src, i) => (
-                  <img
-                    key={i}
-                    src={src}
-                    alt=""
-                    className="h-[300px] w-[300px] object-cover shrink-0"
-                  />
-                ))}
-              </div>
+          {/* Paintings marquee */}
+          <div className="overflow-hidden">
+            <div className="flex gap-4 animate-marquee w-max">
+              {[...HOME_MARQUEE_IMAGES, ...HOME_MARQUEE_IMAGES].map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt=""
+                  className="h-[300px] w-[300px] object-cover shrink-0"
+                />
+              ))}
             </div>
           </div>
+          <motion.p
+            className="font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] text-left text-ink max-w-[600px]"
+            {...fadeUp(0.1)}
+          >
+            Art and AI often ask similar questions: how we recognize, separate, interpret, and create what we see. Over the past four years, these questions have shaped my work at Carnegie Mellon and Microsoft—from my master's thesis to papers published at top-tier AI conferences to patents and ongoing research. Alongside that work, I continued exploring many of the same ideas through art. This collection brings those parallel threads together, placing the paintings and the research that evolved alongside them in conversation.
+          </motion.p>
+          <motion.div className="flex flex-col gap-1" {...fadeUp(0.15)}>
+            {CAPABILITIES.map((item) => (
+              <Link
+                key={item}
+                to={`/epoch-0-pov#${item.toLowerCase()}`}
+                className="font-heading font-normal text-[18px] leading-[20px] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
+              >
+                {item} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden className="h-[1em] w-auto shrink-0 fill-current"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+              </Link>
+            ))}
+          </motion.div>
         </section>
 
         {/* About Me */}
