@@ -301,23 +301,25 @@ export default function Index() {
               ))}
             </div>
           </div>
-          <motion.p
-            className="font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] text-left text-ink"
-            {...fadeUp(0.1)}
-          >
-            Art and AI often ask similar questions: how we recognize, separate, interpret, and create what we see. Over the past four years, these questions have shaped my work at Carnegie Mellon and Microsoft—from my master's thesis to papers published at top-tier AI conferences to patents and ongoing research. Alongside that work, I continued exploring many of the same ideas through art. This collection brings those parallel threads together, placing the paintings and the research that evolved alongside them in conversation.
-          </motion.p>
-          <motion.div className="flex flex-col gap-1" {...fadeUp(0.15)}>
-            {CAPABILITIES.map((item) => (
-              <Link
-                key={item}
-                to={`/epoch-0-pov#${item.toLowerCase()}`}
-                className="font-heading font-normal text-[18px] leading-[20px] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
-              >
-                {item} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden className="h-[1em] w-auto shrink-0 fill-current"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
-              </Link>
-            ))}
-          </motion.div>
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-center lg:gap-16">
+            <motion.div className="flex flex-col gap-1 lg:shrink-0" {...fadeUp(0.1)}>
+              {CAPABILITIES.map((item) => (
+                <Link
+                  key={item}
+                  to={`/epoch-0-pov#${item.toLowerCase()}`}
+                  className="font-heading font-normal text-[18px] leading-[20px] tracking-[-0.05em] text-ink hover:opacity-60 transition-opacity flex items-center gap-3"
+                >
+                  {item} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden className="h-[1em] w-auto shrink-0 fill-current"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+                </Link>
+              ))}
+            </motion.div>
+            <motion.p
+              className="font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] text-left text-ink lg:max-w-[520px]"
+              {...fadeUp(0.15)}
+            >
+              Art and AI often ask similar questions: how we recognize, separate, interpret, and create what we see. Over the past four years, these questions have shaped my work at Carnegie Mellon and Microsoft—from my master's thesis to papers published at top-tier AI conferences to patents and ongoing research. Alongside that work, I continued exploring many of the same ideas through art. This collection brings those parallel threads together, placing the paintings and the research that evolved alongside them in conversation.
+            </motion.p>
+          </div>
         </section>
 
         {/* About Me */}
