@@ -11,8 +11,8 @@ import { useFadeUp } from "@/lib/reveal";
 const HERO_SUBTITLE = "Same Point,\nMade Twice";
 
 const HERO_BODY = [
-  "Art and artificial intelligence are two ways of asking the same questions. The materials are different — code and data in one, color and form in the other — but the underlying ideas overlap. In machine perception, we teach systems to separate objects from their surroundings, recognize them across changing perspectives, connect information from different sources, track identity over time, and generate something new from what they've learned. In painting, I've been working through those same ideas intuitively, without naming them this way.",
-  "This collection puts the painting next to the paper. If you're technical, it's a different way of seeing concepts you already know formally. If not, it's my attempt to explain how perception — machine or human — actually works.",
+  "Machine perception and painting are built from different materials — code and data in one, color and form in the other — but I keep finding the same questions underneath both. How do you separate a thing from its background? How do you recognize it again from a different angle, in different light? How do you follow its identity as it moves through time, or fuse what you're seeing with what you already know? In my research, I teach systems to do this formally. In my paintings, I've been doing it intuitively for years without naming it — and putting the two side by side is how I noticed they were the same inquiry.",
+  "This collection puts the painting next to the paper. If you're technical, it's a different way of seeing concepts you already know formally. If not, I attempt to explain how perception — machine or human — actually works.",
 ];
 
 const BTS_IMAGES = [
