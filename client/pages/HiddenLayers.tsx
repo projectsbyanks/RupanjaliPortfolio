@@ -233,12 +233,6 @@ export default function HiddenLayers() {
 
         {/* Rest of page with normal padding and spacing */}
         <div className="flex flex-col gap-12 pt-12 lg:gap-[142px] lg:pt-[60px]">
-          {/* Collections label */}
-          <div className="flex items-center gap-4 px-4 lg:px-[154px]">
-            <span className="font-sf text-[11px] tracking-[0.18em] text-ink uppercase whitespace-nowrap">Collections</span>
-            <div className="h-[0.5px] bg-neutral-300 flex-1" />
-          </div>
-
           {/* Gallery cards */}
           <section className="flex flex-col gap-4 lg:gap-12">
             {/* Mobile: horizontal scroll, 2 cards visible at a time */}
@@ -303,6 +297,12 @@ export default function HiddenLayers() {
               ))}
             </div>
           </section>
+
+          {/* Collections label */}
+          <div className="flex items-center gap-4 px-4 lg:px-[154px]">
+            <span className="font-sf text-[11px] tracking-[0.18em] text-ink uppercase whitespace-nowrap">Collections</span>
+            <div className="h-[0.5px] bg-neutral-300 flex-1" />
+          </div>
 
           {/* Feature sections */}
           {FEATURES.map((feature, i) => (
