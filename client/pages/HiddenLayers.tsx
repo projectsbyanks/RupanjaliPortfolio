@@ -205,7 +205,7 @@ export default function HiddenLayers() {
           {/* Hero image — always 20px margin each side */}
           <motion.div className="mx-5 overflow-hidden" {...fadeUp(0.15)}>
             <img
-              src="/assets/Resources/Hidden%20layers%20hero%20image.png"
+              src="/assets/Resources/Epoch%20hero%20section%20image.png"
               alt="Epoch 0: POV"
               className="w-full object-cover"
             />
