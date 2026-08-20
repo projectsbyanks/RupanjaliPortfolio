@@ -314,7 +314,7 @@ export default function Index() {
               ))}
             </motion.div>
             <motion.p
-              className="font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] text-left text-ink lg:max-w-[520px]"
+              className="font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] text-left text-ink lg:max-w-[700px]"
               {...fadeUp(0.15)}
             >
               Art and AI often ask similar questions: how we recognize, separate, interpret, and create what we see. Over the past four years, these questions have shaped my work at Carnegie Mellon and Microsoft—from my master's thesis to papers published at top-tier AI conferences to patents and ongoing research. Alongside that work, I continued exploring many of the same ideas through art. This collection brings those parallel threads together, placing the paintings and the research that evolved alongside them in conversation.
