@@ -19,7 +19,7 @@ export default function StartConversation() {
           }
         />
         <motion.p
-          className="font-heading font-[300] text-[12px] leading-[1.45] tracking-[1px] whitespace-nowrap text-left text-ink lg:pt-4"
+          className="font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] whitespace-nowrap text-left text-ink lg:pt-4"
           {...fadeUp()}
         >
           Let's chat! Feel free to contact me.
