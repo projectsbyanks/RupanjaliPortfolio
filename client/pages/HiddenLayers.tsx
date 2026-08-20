@@ -211,17 +211,17 @@ export default function HiddenLayers() {
             />
           </motion.div>
 
-          {/* "Same Point, Made Twice" + body — same layout as homepage "In Studio" section */}
-          <section className="flex flex-col items-center gap-10 px-5 lg:flex-row lg:items-center lg:justify-center lg:py-[80px] lg:px-[154px]">
+          {/* "Same Point, Made Twice" + body */}
+          <section className="flex flex-col items-start gap-10 px-5 lg:flex-row lg:items-stretch lg:py-[80px] lg:px-[154px]">
             <motion.h2
-              className="text-center font-vogue text-[36px] leading-[0.9] tracking-[-0.04em] text-ink sm:text-[36px] md:text-[42px] lg:text-right lg:text-[56px] xl:text-[56px] xl:leading-[50px] shrink-0"
+              className="font-vogue text-[36px] leading-[0.9] tracking-[-0.04em] text-ink sm:text-[36px] md:text-[42px] lg:text-[56px] xl:text-[56px] xl:leading-[50px] shrink-0"
               {...fadeUp(0.2)}
             >
               Same Point,
               <br />
               Made Twice
             </motion.h2>
-            <motion.div className="flex flex-col gap-4 w-full lg:w-[600px]" {...fadeUp(0.25)}>
+            <motion.div className="flex flex-col gap-4 flex-1" {...fadeUp(0.25)}>
               {HERO_BODY.map((p, i) => (
                 <p key={i} className="font-heading font-[300] text-[15px] leading-[1.58] tracking-[-0.01em] text-ink">
                   {p}
