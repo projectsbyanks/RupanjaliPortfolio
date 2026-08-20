@@ -302,16 +302,16 @@ export default function Index() {
             </div>
           </div>
           {/* Two-column: numbered list | divider | paragraph (desktop); para above list (mobile) */}
-          <div className="flex flex-col gap-8 lg:flex-row-reverse lg:items-start lg:gap-0">
-            {/* Para — first in DOM = first on mobile; right column on desktop */}
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-0">
+            {/* Para — first on mobile (order default), right column on desktop (order-2) */}
             <motion.p
-              className="font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] text-left text-ink lg:pl-12 lg:max-w-[600px]"
+              className="font-heading font-normal text-[15px] leading-[1.58] tracking-[0px] text-left text-ink lg:pl-12 lg:max-w-[600px] lg:order-2"
               {...fadeUp(0.1)}
             >
               Art and AI often ask similar questions: how we recognize, separate, interpret, and create what we see. Over the past four years, these questions have shaped my work at Carnegie Mellon and Microsoft—from my master's thesis to papers published at top-tier AI conferences to patents and ongoing research. Alongside that work, I continued exploring many of the same ideas through art. This collection brings those parallel threads together, placing the paintings and the research that evolved alongside them in conversation.
             </motion.p>
-            {/* List — second in DOM = second on mobile; left column on desktop */}
-            <motion.div className="flex flex-col gap-4 lg:pr-12 lg:border-r lg:border-neutral-200 lg:shrink-0" {...fadeUp(0.15)}>
+            {/* List — second on mobile, left column on desktop (order-1) */}
+            <motion.div className="flex flex-col gap-4 lg:pr-12 lg:border-r lg:border-neutral-200 lg:shrink-0 lg:order-1" {...fadeUp(0.15)}>
               {CAPABILITIES.map((item, i) => (
                 <Link
                   key={item}
