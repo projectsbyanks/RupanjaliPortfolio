@@ -184,18 +184,18 @@ export default function SiteNav({ linkClassName, isTransparent = false }: { link
                 <button
                   onClick={() => setArtOpen(!artOpen)}
                   className={cn(
-                    "flex items-center gap-1.5 font-sf text-lg tracking-[-0.05em] text-ink transition-opacity hover:opacity-70 text-left",
+                    "flex items-center gap-1.5 font-sf text-lg tracking-[-0.05em] text-ink transition-opacity hover:opacity-70 text-left w-full overflow-hidden",
                     isArtActive ? "font-bold" : "font-normal",
                   )}
                 >
-                  Art
+                  <span className="shrink-0">Art</span>
                   {ART_LINKS.find((l) => l.to === pathname) && (
                     <>
-                      <span className="opacity-40 font-normal">/</span>
-                      <span>{ART_LINKS.find((l) => l.to === pathname)!.label}</span>
+                      <span className="opacity-40 font-normal shrink-0">/</span>
+                      <span className="truncate">{ART_LINKS.find((l) => l.to === pathname)!.label}</span>
                     </>
                   )}
-                  <ChevronDown className={artOpen ? "rotate-180" : ""} />
+                  <ChevronDown className={cn("shrink-0", artOpen ? "rotate-180" : "")} />
                 </button>
                 {artOpen && (
                   <div className="flex flex-col gap-3 pl-4 border-l border-neutral-200">
