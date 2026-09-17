@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 
 const ART_LINKS = [
   { label: "Epoch 0: POV", to: "/epoch-0-pov" },
+  { label: "Epoch 1: State of Mind", to: "/epoch-1-state-of-mind" },
   { label: "Art Archive", to: "/art-archive" },
 ];
 

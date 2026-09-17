@@ -16,6 +16,7 @@ function ScrollToTop() {
 import Index from "./pages/Index";
 import ResearchNews from "./pages/ResearchNews";
 import HiddenLayers from "./pages/HiddenLayers";
+import EpochOne from "./pages/EpochOne";
 import MyArt from "./pages/MyArt";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/research-news" element={<ResearchNews />} />
           <Route path="/epoch-0-pov" element={<HiddenLayers />} />
+          <Route path="/epoch-1-state-of-mind" element={<EpochOne />} />
           <Route path="/art-archive" element={<MyArt />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
