@@ -116,7 +116,7 @@ function FeatureSection({
 }: {
   feature: Feature;
   index: number;
-  onImageClick: (src: string) => void;
+  onImageClick: () => void;
 }) {
   const fadeUp = useFadeUp();
   return (
@@ -129,7 +129,7 @@ function FeatureSection({
           <img
             src={feature.image}
             alt={feature.label}
-            onClick={() => onImageClick(feature.image)}
+            onClick={onImageClick}
             className="w-full cursor-zoom-in object-cover transition-transform duration-700 ease-out hover:scale-[1.03]"
           />
         </motion.div>
@@ -158,9 +158,9 @@ function FeatureSection({
 
 export default function HiddenLayers() {
   const fadeUp = useFadeUp();
-  const [lbSrc, setLbSrc] = useState<string | null>(null);
-  const openLightbox = useCallback((src: string) => setLbSrc(src), []);
-  const closeLightbox = useCallback(() => setLbSrc(null), []);
+  const [lightbox, setLightbox] = useState<{ images: string[]; index: number } | null>(null);
+  const openLightbox = useCallback((images: string[], index: number) => setLightbox({ images, index }), []);
+  const closeLightbox = useCallback(() => setLightbox(null), []);
   const galleryRef = useRef<HTMLDivElement>(null);
   const scrollGallery = (dir: "left" | "right") => {
     galleryRef.current?.scrollBy({ left: dir === "left" ? -200 : 200, behavior: "smooth" });
@@ -182,7 +182,7 @@ export default function HiddenLayers() {
 
   return (
     <SiteLayout>
-      {lbSrc && <Lightbox src={lbSrc} onClose={closeLightbox} />}
+      {lightbox && <Lightbox images={lightbox.images} initialIndex={lightbox.index} onClose={closeLightbox} />}
       <div className="flex flex-col">
         {/* Hero — title, image, subtitle, body */}
         <div className="flex flex-col gap-8 pt-16 lg:pt-20">
@@ -310,7 +310,7 @@ export default function HiddenLayers() {
               key={feature.label}
               feature={feature}
               index={i}
-              onImageClick={openLightbox}
+              onImageClick={() => openLightbox(FEATURES.map(f => f.image), i)}
             />
           ))}
 

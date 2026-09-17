@@ -100,7 +100,7 @@ function Mosaic({
   tiles?: string[];
   cols?: number;
   className?: string;
-  onImageClick?: (src: string) => void;
+  onImageClick?: (images: string[], index: number) => void;
 }) {
   const fadeUp = useFadeUp();
   return (
@@ -113,7 +113,7 @@ function Mosaic({
           <img
             src={src}
             alt=""
-            onClick={onImageClick ? () => onImageClick(src) : undefined}
+            onClick={onImageClick ? () => onImageClick(tiles, i) : undefined}
             className={`aspect-square w-full object-cover transition-transform duration-500 ease-out hover:scale-110 lg:h-[237px] lg:w-[237px] ${onImageClick ? "cursor-zoom-in" : ""}`}
           />
         </div>
@@ -132,7 +132,7 @@ function FeatureBlock({
   medium,
 }: {
   image: string;
-  onImageClick?: (src: string) => void;
+  onImageClick?: (images: string[], index: number) => void;
   natural?: boolean;
   title?: string;
   year?: string;
@@ -146,7 +146,7 @@ function FeatureBlock({
         <img
           src={image}
           alt=""
-          onClick={onImageClick ? () => onImageClick(image) : undefined}
+          onClick={onImageClick ? () => onImageClick([image], 0) : undefined}
           className={natural
             ? `w-full object-cover transition-transform duration-700 ease-out hover:scale-[1.03] ${onImageClick ? "cursor-zoom-in" : ""}`
             : `w-full aspect-[4/5] object-cover transition-transform duration-700 ease-out hover:scale-[1.03] lg:h-[1521px] lg:w-[1217px] lg:aspect-auto ${onImageClick ? "cursor-zoom-in" : ""}`}
@@ -174,7 +174,7 @@ function LineArtSection({
   title = "Line Art",
   tiles = FRAMES,
 }: {
-  onImageClick: (src: string) => void;
+  onImageClick: (images: string[], index: number) => void;
   title?: string;
   tiles?: string[];
 }) {
@@ -194,13 +194,13 @@ function LineArtSection({
 
 export default function MyArt() {
   const fadeUp = useFadeUp();
-  const [lbSrc, setLbSrc] = useState<string | null>(null);
-  const openLightbox = useCallback((src: string) => setLbSrc(src), []);
-  const closeLightbox = useCallback(() => setLbSrc(null), []);
+  const [lightbox, setLightbox] = useState<{ images: string[]; index: number } | null>(null);
+  const openLightbox = useCallback((images: string[], index: number) => setLightbox({ images, index }), []);
+  const closeLightbox = useCallback(() => setLightbox(null), []);
 
   return (
     <SiteLayout>
-      {lbSrc && <Lightbox src={lbSrc} onClose={closeLightbox} />}
+      {lightbox && <Lightbox images={lightbox.images} initialIndex={lightbox.index} onClose={closeLightbox} />}
       <div className="flex flex-col gap-16 pt-16 lg:gap-[150px] lg:pt-20">
 
         {/* 1. Hero: My Creative Archive + grid + feature image */}
