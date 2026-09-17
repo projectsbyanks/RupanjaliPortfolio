@@ -40,7 +40,8 @@ function Logo({ className, isTransparent = false }: { className?: string; isTran
 
 function DesktopArtMenu({ linkClassName }: { linkClassName?: string }) {
   const { pathname } = useLocation();
-  const isActive = ART_LINKS.some((l) => l.to === pathname);
+  const activeLink = ART_LINKS.find((l) => l.to === pathname);
+  const isActive = !!activeLink;
 
   return (
     <div className="relative group">
@@ -52,6 +53,12 @@ function DesktopArtMenu({ linkClassName }: { linkClassName?: string }) {
         )}
       >
         Art
+        {activeLink && (
+          <>
+            <span className="opacity-40 font-normal">/</span>
+            <span>{activeLink.label}</span>
+          </>
+        )}
         <ChevronDown className="group-hover:rotate-180" />
       </span>
       {/* Dropdown — left-aligned to "Art", no gap so hover stays continuous */}
