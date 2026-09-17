@@ -189,6 +189,12 @@ export default function SiteNav({ linkClassName, isTransparent = false }: { link
                   )}
                 >
                   Art
+                  {ART_LINKS.find((l) => l.to === pathname) && (
+                    <>
+                      <span className="opacity-40 font-normal">/</span>
+                      <span>{ART_LINKS.find((l) => l.to === pathname)!.label}</span>
+                    </>
+                  )}
                   <ChevronDown className={artOpen ? "rotate-180" : ""} />
                 </button>
                 {artOpen && (
