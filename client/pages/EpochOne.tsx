@@ -7,7 +7,7 @@ export default function EpochOne() {
   return (
     <SiteLayout>
       <div className="flex flex-col gap-16 pt-16 lg:gap-[150px] lg:pt-20">
-        <section className="flex flex-col gap-6">
+        <section className="flex flex-col items-center justify-center text-center gap-6 min-h-[60vh]">
           <motion.h1
             className="font-display text-[60px] leading-[0.92] tracking-[-0.02em] text-ink sm:text-[80px] lg:text-[96px]"
             {...fadeUp()}
