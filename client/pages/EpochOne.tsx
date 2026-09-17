@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import SiteLayout from "@/components/site/SiteLayout";
-import FooterBanner from "@/components/site/FooterBanner";
 import { useFadeUp } from "@/lib/reveal";
 
 export default function EpochOne() {
@@ -23,7 +22,6 @@ export default function EpochOne() {
           </motion.p>
         </section>
 
-        <FooterBanner />
       </div>
     </SiteLayout>
   );
